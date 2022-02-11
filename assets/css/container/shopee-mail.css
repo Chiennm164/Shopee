@@ -122,7 +122,7 @@
 }
 
 .shopeeMail__content-items-img1 {
-    background: url('/assets/img/shopeeMail/items/item1.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item1.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img2 {
