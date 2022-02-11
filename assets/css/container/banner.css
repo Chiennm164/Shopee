@@ -25,21 +25,21 @@
 .banner__slider-img {
     width: 100%;
     height: 100%;
-    background: url("/assets/img/slider/banner/b109d9f8f6e4d8c065156090e79b4ea1_xxhdpi.png") center / cover no-repeat;
+    background: url("https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/banner/0ffa7030b1b3a933a6a3340465d4f2f6_xhdpi.png") center / cover no-repeat;
 }
 
 .banner__content-right-up {
     grid-area: rtu;
     width: 100%;
     height: 115px;
-    background: url("/assets/img/slider/banner/4f796b10b9524a3f75d8599a2e63bb7d_xhdpi.png") center / cover no-repeat;
+    background: url("https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/banner/4f796b10b9524a3f75d8599a2e63bb7d_xhdpi.png") center / cover no-repeat;
 }
 
 .banner__content-right-down {
     grid-area: rtd;
     width: 100%;
     height: 115px;
-    background: url('/assets/img/slider/banner/0ffa7030b1b3a933a6a3340465d4f2f6_xhdpi.png') center / cover no-repeat;
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/banner/b109d9f8f6e4d8c065156090e79b4ea1_xxhdpi.png') center / cover no-repeat;
 }
 
 .banner__slider-img,
@@ -80,35 +80,35 @@ div[class*="slider__navbar-img"] {
 }
 
 .slider__navbar-img1 {
-    background: url('/assets/img/slider/navbar/1.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/1.png');
 }
 
 .slider__navbar-img2 {
-    background: url('/assets/img/slider/navbar/2.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/2.png');
 }
 
 .slider__navbar-img3 {
-    background: url('/assets/img/slider/navbar/3.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/3.png');
 }
 
 .slider__navbar-img4 {
-    background: url('/assets/img/slider/navbar/4.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/4.png');
 }
 
 .slider__navbar-img5 {
-    background: url('/assets/img/slider/navbar/5.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/5.png');
 }
 
 .slider__navbar-img6 {
-    background: url('/assets/img/slider/navbar/6.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/6.png');
 }
 
 .slider__navbar-img7 {
-    background: url('/assets/img/slider/navbar/7.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/7.png');
 }
 
 .slider__navbar-img8 {
-    background: url('/assets/img/slider/navbar/8.png');
+    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/slider/navbar/8.png');
 }
 
 .slider__navbar-description {
