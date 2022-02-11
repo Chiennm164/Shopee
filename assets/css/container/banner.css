@@ -80,35 +80,35 @@ div[class*="slider__navbar-img"] {
 }
 
 .slider__navbar-img1 {
-    background: url('./assets/img/slider/navbar/1.jfif');
+    background: url('/assets/img/slider/navbar/1.jfif');
 }
 
 .slider__navbar-img2 {
-    background: url('./assets/img/slider/navbar/2.jfif');
+    background: url('/assets/img/slider/navbar/2.jfif');
 }
 
 .slider__navbar-img3 {
-    background: url('./assets/img/slider/navbar/3.jfif');
+    background: url('/assets/img/slider/navbar/3.jfif');
 }
 
 .slider__navbar-img4 {
-    background: url('./assets/img/slider/navbar/4.jfif');
+    background: url('/assets/img/slider/navbar/4.jfif');
 }
 
 .slider__navbar-img5 {
-    background: url('./assets/img/slider/navbar/5.jfif');
+    background: url('/assets/img/slider/navbar/5.jfif');
 }
 
 .slider__navbar-img6 {
-    background: url('./assets/img/slider/navbar/6.jfif');
+    background: url('/assets/img/slider/navbar/6.jfif');
 }
 
 .slider__navbar-img7 {
-    background: url('./assets/img/slider/navbar/7.jfif');
+    background: url('/assets/img/slider/navbar/7.jfif');
 }
 
 .slider__navbar-img8 {
-    background: url('./assets/img/slider/navbar/8.jfif');
+    background: url('/assets/img/slider/navbar/8.jfif');
 }
 
 .slider__navbar-description {
