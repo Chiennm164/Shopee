@@ -92,7 +92,7 @@
     position: absolute;
     width: 32px;
     height: 40px;
-    background: url('./assets/img/topSearch//spantop.jfif') center / cover no-repeat;
+    background: url('/assets/img/topSearch/spantop.png') center / cover no-repeat;
 }
 
 .topSearch__body-img {

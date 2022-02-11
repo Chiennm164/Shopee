@@ -39,7 +39,7 @@
 .flashSale__header-title-img {
     width: 100%;
     height: 100%;
-    background: url('/assets/img/flashsale/flashsale.jfif') center / contain no-repeat;
+    background: url('/assets/img/flashsale/flashsale.png') center / contain no-repeat;
 }
 
 .flashSale__header-time {
@@ -124,7 +124,7 @@
     width: 172px;
     height: 172px;
     position: absolute;
-    background: url('./assets/img/flashsale//bgsale.jfif') center / cover no-repeat;
+    background: url('/assets/img/flashsale/bgsale.png') center / cover no-repeat;
 }
 
 .flashSale__cart-bground-item {
@@ -166,8 +166,9 @@
     font-size: 12px;
     line-height: 20px;
     width: 150px;
+    padding-top: 2px;
     height: 20px;
-    background: url('./assets/img/flashsale/bgprice.jfif') center / contain no-repeat;
+    background: url('/assets/img/flashsale/bgprice.png') center / contain no-repeat;
 }
 
 .flashSale__ratiosale {
