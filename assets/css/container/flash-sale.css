@@ -1,0 +1,207 @@
+#flashSale {
+    min-height: 60px;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.container__flashSale {
+    display: flex;
+    min-height: 302px;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.flashSale__header {
+    display: flex;
+    height: 61px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 2px solid #f9f9f9;
+}
+
+.flashSale__header-left {
+    padding: 15px;
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flashSale__header-title {
+    padding: 0 0 0 15px;
+    width: 130px;
+    height: 30px;
+}
+
+.flashSale__header-title-img {
+    width: 100%;
+    height: 100%;
+    background: url('/assets/img/flashsale/flashsale.jfif') center / contain no-repeat;
+}
+
+.flashSale__header-time {
+    padding: 0 20px;
+}
+
+.flashSale__header-time-list-items {
+    display: flex;
+    font-size: 14px;
+    color: #fff;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flashSale__header-time-items {
+    width: 30px;
+    line-height: 22px;
+    height: 28px;
+    border: 4px solid;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 900;
+    background-color: var(--text-color);
+}
+
+.flashSale__header-right {
+    padding-right: 25px;
+    line-height: 25px;
+    height: 30px;
+}
+
+.flashSale__header-show {
+    cursor: pointer;
+}
+
+.flashSale__header-show-text {
+    color: rgb(254, 101, 50);
+}
+
+.flashSale__header-show-span {
+    font-size: 12px;
+}
+
+.flashSale__body {
+    display: block;
+}
+
+.flashSale__body-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.flashSale__body-items {
+    position: relative;
+    width: 200px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    justify-content: space-around;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.flashSale__cart-item1 {
+    width: 173px;
+    height: 173px;
+    position: relative;
+}
+
+.flashSale__cart-bground {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+    width: 172px;
+    height: 172px;
+    position: absolute;
+    background: url('./assets/img/flashsale//bgsale.jfif') center / cover no-repeat;
+}
+
+.flashSale__cart-bground-item {
+    background-color: rgb(254, 101, 50);
+    top: 0;
+    right: 0;
+    z-index: 0;
+    bottom: 0;
+    width: 172px;
+    height: 172px;
+    position: absolute;
+}
+
+.flashSale__cart-item1-img {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    top: 12px;
+    left: 12px;
+}
+
+.flashSale__cart-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flashSale__cart-price-number {
+    color: rgb(254, 101, 50);
+    font-size: 18px;
+    letter-spacing: 1.1px;
+}
+
+.flashSale__cart-price-percent {
+    text-align: center;
+    color: var(--white-color);
+    font-size: 12px;
+    line-height: 20px;
+    width: 150px;
+    height: 20px;
+    background: url('./assets/img/flashsale/bgprice.jfif') center / contain no-repeat;
+}
+
+.flashSale__ratiosale {
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    right: 0;
+    width: 44px;
+    height: 40px;
+    /* padding: 22px 8px; */
+    background-color: rgba(255, 212, 36, .9);
+}
+
+.flashSale__ratiosale::after {
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    position: absolute;
+    border-color: transparent rgba(255, 212, 36, .9);
+    border-style: solid;
+    border-width: 0px 22px 4px;
+}
+
+.flashSale__ratiosale-number {
+    padding-top: 5px;
+    color: rgb(254, 101, 50);
+}
+
+.flashSale__ratiosale-text {
+    text-transform: uppercase;
+    color: var(--white-color);
+}

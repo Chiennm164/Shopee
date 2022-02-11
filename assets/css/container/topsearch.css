@@ -1,0 +1,126 @@
+#topSearch {
+    min-height: 60px;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+}
+
+.container__topSearch {
+    min-height: 60px;
+    background-color: var(--white-color);
+}
+
+.topSearch__header {
+    min-height: 60px;
+    display: flex;
+    background-color: var(--white-color);
+    border-bottom: 2px solid var(--gray-color);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.topSearch__header-left {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.topSearch__header-title-logo {
+    color: #d0011b;
+}
+
+.topSearch__header-title-logo,
+.topSearch__header-showAll,
+.topSearch__header-showAll-span {
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topSearch__header-right {
+    display: block;
+}
+
+.topSearch__header-showAll {
+    color: #d0011b;
+}
+
+.topSearch__header-showAll-span {
+    font-size: 14px;
+    color: #d0011b;
+}
+
+.topSearch__body {
+    min-height: 290px;
+}
+
+.topSearch__body-list-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.topSearch__body-item {
+    height: 290px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topSearch__body-content {
+    width: 180px;
+    display: flex;
+    position: relative;
+    height: 180px;
+    background-color: yellowgreen;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.topSearch__body-top {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 32px;
+    height: 40px;
+    background: url('./assets/img/topSearch//spantop.jfif') center / cover no-repeat;
+}
+
+.topSearch__body-img {
+    width: 100%;
+    height: 100%;
+    padding: -10px;
+    object-fit: contain;
+}
+
+.topSearch__body-img-content {
+    position: absolute;
+    width: 130px;
+    bottom: 2px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #bdbdbd;
+    height: 24px;
+    font-size: 14px;
+    color: var(--white-color);
+}
+
+.topSearch__body-title {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    color: #555555;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.4;
+}
