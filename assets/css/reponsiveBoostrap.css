@@ -1,0 +1,191 @@
+  /* breakpoint 1200px x<1200 */
+  
+  @media (min-width: 1200px) {}
+  /*  */
+  /* 992px x < 1199.98px  */
+  
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+      .banner__content {
+          min-height: 185px;
+      }
+      .first-simpleBanner__img2,
+      .first-simpleBanner__img {
+          min-height: 85px;
+      }
+      .category__list-items {
+          grid-template-columns: repeat(auto-fill, 90px);
+      }
+      .category__items-description {
+          font-size: 12px;
+      }
+      .shopeeMail__header-title-logo,
+      .shopeeMail__header-title,
+      .shopeeMail__header-title-span,
+      .shopeeMail__header-showAll,
+      .shopeeMail__header-showAll-span {
+          font-size: 14px;
+      }
+      .topSearch__body-item {
+          max-width: 140px;
+      }
+      .topSearch__body-content {
+          font-size: 16px;
+      }
+  }
+  /* breakpoint 992px  x< 992px */
+  
+  @media (min-width: 992px) {
+      .hiden-on-tablet {
+          display: none;
+      }
+      .topSearch__body-item {
+          height: 290px;
+      }
+  }
+  /*768px x < 991.98px  */
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+      .header__navbar,
+      .header-with-search {
+          min-width: 720px;
+          padding: 0;
+      }
+      .hiden-on-tablet {
+          display: none;
+      }
+      .banner__content {
+          min-height: 140px;
+      }
+      div[class*="slider__navbar-img"] {
+          min-height: 35px;
+      }
+      .slider__navbar-description {
+          font-size: 12px;
+      }
+      .first-simpleBanner__img2,
+      .first-simpleBanner__img {
+          min-height: 63px;
+      }
+      .category__list-items {
+          grid-template-columns: repeat(auto-fill, 174px);
+      }
+      .shopeeMail__header-title-logo,
+      .shopeeMail__header-title,
+      .shopeeMail__header-title-span,
+      .shopeeMail__header-showAll,
+      .shopeeMail__header-showAll-span {
+          padding: 0 5px;
+          text-decoration: none;
+          font-size: 12px;
+      }
+      .topSearch__body-item {
+          height: 290px;
+          max-width: 100px;
+      }
+      .topSearch__body-img-content {
+          font-size: 12px;
+      }
+      .topSearch__body-title {
+          font-size: 14px;
+      }
+      .shopeeMail__content-items-content {
+          font-size: 14px;
+      }
+  }
+  /* breakpoint 768px  (x <768 )*/
+  
+  @media (max-width: 768px) {
+      div[class*="slider__navbar-img"] {
+          min-height: 32px;
+      }
+      .slider__navbar-description {
+          font-size: 10px;
+      }
+      #header {
+          margin-bottom: 5px;
+          height: 80px;
+      }
+      .navbar__item-avatar-img {
+          width: 17px;
+          height: 17px;
+          margin-right: 2px;
+      }
+      .shopeeMail__header-title-logo,
+      .shopeeMail__header-title,
+      .shopeeMail__header-title-span,
+      .shopeeMail__header-showAll,
+      .shopeeMail__header-showAll-span {
+          padding: 0 5px;
+          text-decoration: none;
+          font-size: 12px;
+      }
+      .topSearch__body-list-items {
+          flex-wrap: wrap;
+      }
+  }
+  /* 576px x < 767.98px  */
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+      .hiden-on-mobile {
+          display: none;
+      }
+       :root {
+          --height-header-with-search: 60px
+      }
+      .header-with-search {
+          padding: 0;
+      }
+      .banner__content {
+          min-height: 155px;
+      }
+      .header__navbar-item {
+          padding: 0;
+          font-size: 11px;
+      }
+      .navbar__item-icon {
+          font-size: 11px;
+      }
+      .header-with-search {
+          height: 35px;
+      }
+      .first-simpleBanner__img2,
+      .first-simpleBanner__img {
+          min-height: 44px;
+      }
+      .category__list-items {
+          grid-template-columns: repeat(auto-fill, 128px);
+      }
+      .topSearch__body-item {
+          max-width: 150px;
+      }
+  }
+  /* breakpoint 576pxs  (x<576) */
+  
+  @media (min-width: 576px) {}
+  /* x < 576px  */
+  
+  @media (max-width: 575.98px) {
+      .hiden-on-mobile-s {
+          display: none;
+      }
+       :root {
+          --height-header: 60px;
+          --height-header-with-search: 60px
+      }
+      .header-with-search {
+          padding: 0;
+      }
+      .banner__content {
+          min-height: 135px;
+      }
+      #header {
+          height: 60px;
+      }
+      .first-simpleBanner__img2,
+      .first-simpleBanner__img {
+          min-height: 40px;
+      }
+      .category__list-items {
+          grid-template-columns: repeat(auto-fill, 114px);
+      }
+  }

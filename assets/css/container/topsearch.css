@@ -60,13 +60,12 @@
 .topSearch__body-list-items {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .topSearch__body-item {
     height: 290px;
-    width: 200px;
+    max-width: 180px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -76,11 +75,10 @@
 }
 
 .topSearch__body-content {
-    width: 180px;
+    width: 100%;
     display: flex;
     position: relative;
     height: 180px;
-    background-color: yellowgreen;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -92,7 +90,7 @@
     position: absolute;
     width: 32px;
     height: 40px;
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/topSearch/spantop.png') center / cover no-repeat;
+    background: url('/assets/img/topSearch/spantop.png') center / cover no-repeat;
 }
 
 .topSearch__body-img {
@@ -104,7 +102,7 @@
 
 .topSearch__body-img-content {
     position: absolute;
-    width: 130px;
+    width: 100%;
     bottom: 2px;
     line-height: 24px;
     text-align: center;
@@ -115,9 +113,9 @@
 }
 
 .topSearch__body-title {
-    width: 180px;
+    width: 100%;
     height: 50px;
-    font-size: 18px;
+    font-size: 17px;
     color: #555555;
     text-transform: capitalize;
     font-weight: 400;

@@ -21,7 +21,7 @@
 
 .category__list-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-columns: repeat(auto-fill, 116px);
     grid-template-rows: 150px 150px;
     cursor: pointer;
     justify-content: center;
@@ -63,7 +63,8 @@
 .category__items-description {
     display: block;
     height: 45px;
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px;
     text-align: center;
+    word-wrap: break-word;
 }

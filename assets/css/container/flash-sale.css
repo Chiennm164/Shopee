@@ -6,7 +6,7 @@
 
 .container__flashSale {
     display: flex;
-    min-height: 302px;
+    min-height: 350px;
     background-color: #fff;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,7 +39,7 @@
 .flashSale__header-title-img {
     width: 100%;
     height: 100%;
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/flashsale/flashsale.png') center / contain no-repeat;
+    background: url('/assets/img/flashsale/flashsale.png') center / contain no-repeat;
 }
 
 .flashSale__header-time {
@@ -85,26 +85,24 @@
 }
 
 .flashSale__body {
-    display: block;
+    display: flex;
 }
 
 .flashSale__body-list {
     display: flex;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-around;
 }
 
 .flashSale__body-items {
     position: relative;
-    width: 200px;
-    height: 240px;
+    min-width: 196px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px 0;
     justify-content: space-around;
     cursor: pointer;
     text-decoration: none;
@@ -124,7 +122,7 @@
     width: 172px;
     height: 172px;
     position: absolute;
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/flashsale/bgsale.png') center / cover no-repeat;
+    background: url('/assets/img/flashsale/bgsale.png') center / cover no-repeat;
 }
 
 .flashSale__cart-bground-item {
@@ -167,9 +165,8 @@
     font-size: 12px;
     line-height: 20px;
     width: 150px;
-    padding-top: 2px;
     height: 20px;
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/flashsale/bgprice.png') center / contain no-repeat;
+    background: url('/assets/img/flashsale/bgprice.png') center / contain no-repeat;
 }
 
 .flashSale__ratiosale {

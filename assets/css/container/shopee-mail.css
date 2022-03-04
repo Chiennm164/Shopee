@@ -78,11 +78,9 @@
 
 .shopeeMail__content-slider {
     display: block;
-    width: 390px;
-    height: 462px;
-    background-image: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/slider/slider.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    min-width: 100%;
+    min-height: 462px;
+    background: url('/assets/img/shopeeMail/slider/slider.png') center / cover no-repeat;
 }
 
 .shopeeMail__content-right {
@@ -122,35 +120,35 @@
 }
 
 .shopeeMail__content-items-img1 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item1.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item1.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img2 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item2.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item2.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img3 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item3.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item3.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img4 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item4.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item4.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img5 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item5.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item5.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img6 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item6.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item6.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img7 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item7.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item7.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-img8 {
-    background: url('https://raw.githubusercontent.com/Chiennm164/Shopee/main/assets/img/shopeeMail/items/item8.png') center / contain no-repeat;
+    background: url('/assets/img/shopeeMail/items/item8.png') center / contain no-repeat;
 }
 
 .shopeeMail__content-items-content {
