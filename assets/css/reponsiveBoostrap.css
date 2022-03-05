@@ -31,6 +31,13 @@
       .topSearch__body-content {
           font-size: 16px;
       }
+      .suggest__list-items-wrap {
+          padding: 12px 5px;
+      }
+      .flashSale__body-items {
+          position: relative;
+          padding: 10px 36px;
+      }
   }
   /* breakpoint 992px  x< 992px */
   
@@ -187,5 +194,11 @@
       }
       .category__list-items {
           grid-template-columns: repeat(auto-fill, 114px);
+      }
+      .main-history-item-img {
+          height: 20px;
+      }
+      .main-history-item-name {
+          font-size: 12px;
       }
   }

@@ -1,4 +1,4 @@
-#suggest {
+.suggest {
     min-height: 60px;
     background-color: #f5f5f5;
 }
@@ -16,7 +16,6 @@
     font-size: 18px;
     padding: 0 0 0 40px;
     font-weight: 400;
-    margin: 0 0 10px 0;
     line-height: 61px;
     text-align: left;
     border-bottom: 1px solid #ccc;
@@ -26,15 +25,15 @@
 }
 
 .suggest__list-items {
-    justify-content: space-between;
-    min-width: 1200px;
-    max-width: 1200px;
+    justify-content: space-evenly;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .suggest__list-items-wrap {
     display: block;
-    padding: 0 10px;
+    padding: 12px 0px;
 }
 
 .suggest__items {
@@ -55,6 +54,7 @@
     border-bottom-right-radius: 3px;
     position: relative;
     flex-direction: column;
+    background-color: #fff;
     align-items: center;
 }
 
@@ -69,7 +69,8 @@
 .suggest__items-link {
     display: none;
     width: 101%;
-    margin-top: 1px;
+    position: absolute;
+    bottom: -24px;
     margin-left: -1px;
     line-height: 30px;
     text-align: center;
