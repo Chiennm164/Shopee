@@ -1,0 +1,226 @@
+.header {
+    background-color: rgb(238, 77, 45);
+}
+
+.header__wapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.header__left {
+    display: flex;
+}
+
+.header__left-logo {
+    width: 18%;
+    height: 100%;
+}
+
+.header__left-logo-img {
+    width: 100%;
+}
+
+.header__left-text {
+    font-size: 25px;
+    color: #fff;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.header__right-link-help {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.login-content {
+    min-height: 400px;
+    background-color: rgb(238, 77, 45);
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.content-container {
+    width: 1200px;
+    padding-bottom: 20px;
+}
+
+.content-wapper {
+    display: flex;
+    background: url('/assets/img/user/login.png') center / contain no-repeat;
+    min-height: 700px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content__form {
+    border-radius: 2px;
+    margin-right: 130px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 14%);
+}
+
+.content__form-wapper {
+    min-height: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 360px;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.content__form-login {}
+
+.content__form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__form-title-wapper {
+    padding: 0px 10px 15px 10px;
+    margin-top: -8px;
+}
+
+.content__form-title {
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    font-size: 22px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content__form-message {
+    display: none;
+    font-size: 15px;
+    color: red;
+    border: 1px solid red;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 2px;
+    line-height: 1.3;
+}
+
+.content__form-message-span {
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 10px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 2px;
+}
+
+.content__form-message p {
+    padding: 0px 10px;
+}
+
+.form-login__label-repassword,
+.form-login__label-email,
+.form-login__label-username,
+.form-login__label-password {
+    font-size: 15px;
+    padding: 8px 2px;
+    color: #222;
+}
+
+.form-login__input-email,
+.form-login__input-repassword,
+.form-login__input-username,
+.form-login__input-password {
+    height: 35px;
+    outline: none;
+}
+
+.content__form-group-checkbox {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.content__form-checkbox {
+    margin-right: 10px;
+}
+
+.content__form-group-checkbox p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.form-login__btn-submit {
+    width: 100%;
+    height: 100%;
+    margin: 15px 0 0 0;
+    padding: 10px 10px;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgb(238, 77, 45);
+    color: #fff;
+}
+
+.content__form-password-retrieval {
+    padding: 20px 0 5px 5px;
+}
+
+.password-retrieval__link {
+    text-decoration: none;
+    color: #05a;
+}
+
+.content__form-login-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.content__form-login-more a {
+    width: 100px;
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .87);
+    border-radius: 2px;
+    color: #05a;
+    cursor: pointer;
+}
+
+.form-login__btn-submit:hover,
+.content__form-password-retrieval:hover,
+.content__form-link-register:hover,
+.content__form-login-more a:hover {
+    opacity: 0.7;
+}
+
+.content__form-link-register {
+    text-decoration: none;
+    color: #05a;
+    cursor: pointer;
+    text-align: left;
+    padding: 20px 0px 10px 10px;
+    font-size: 15px;
+}
+
+.content__form-span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__form-space {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    height: 1px;
+}
+
+.content__form-span-text {
+    color: #ccc;
+    padding: 0 15px;
+}

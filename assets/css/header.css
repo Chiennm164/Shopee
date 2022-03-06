@@ -441,6 +441,7 @@
     position: absolute;
     left: 0;
     top: 43px;
+    z-index: 2;
     width: 100%;
     box-shadow: 0 1px 4px 0 rgb(0 0 0 / 26%);
 }
