@@ -10,7 +10,9 @@
     display: flex;
 }
 
-.profile__nav {}
+.profile__nav {
+    display: block;
+}
 
 .profile__nav-title {
     display: flex;
@@ -32,9 +34,13 @@
     padding-left: 20px;
 }
 
-.profile__nav-body {}
+.profile__nav-body {
+    display: block;
+}
 
-.profile__nav-body-list {}
+.profile__nav-body-list {
+    display: block;
+}
 
 .profile__nav-body-items {
     list-style-type: none;
@@ -64,13 +70,21 @@
     flex-direction: column;
 }
 
-.profile__user-infor-file {}
+.profile__user-infor-file {
+    display: block;
+}
 
-.profile__user-infor-bank {}
+.profile__user-infor-bank {
+    display: block;
+}
 
-.profile__user-infor-address {}
+.profile__user-infor-address {
+    display: block;
+}
 
-.profile__user-infor-changePassword {}
+.profile__user-infor-changePassword {
+    display: block;
+}
 
 .profile__user-padding {
     margin-left: 30px;
@@ -89,7 +103,9 @@
     flex-direction: column;
 }
 
-.profile__main-header {}
+.profile__main-header {
+    display: block;
+}
 
 .profile__main-body {
     display: flex;
@@ -156,7 +172,9 @@
     border-left: 1px solid #ccc;
 }
 
-.profile-body__upavatar {}
+.profile-body__upavatar {
+    display: block;
+}
 
 .profile-body__upavatar-img {
     width: 100px;

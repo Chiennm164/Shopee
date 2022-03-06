@@ -75,7 +75,9 @@
     padding: 15px;
 }
 
-.content__form-login {}
+.content__form-login {
+    display: block;
+}
 
 .content__form-group {
     display: flex;
