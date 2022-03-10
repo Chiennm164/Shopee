@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>signup</title>
     <!-- link reset css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- link fonts -->
@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap.min.js">
 
-    <!-- register css  -->
-    <link rel="stylesheet" href="/assets/css/user/register.css">
+    <!-- signup css  -->
+    <link rel="stylesheet" href="/assets/css/user/signup.css">
     <!-- base css  -->
     <link rel="stylesheet" href="assets/css/base.css">
     <!-- footer css -->
@@ -46,7 +46,7 @@
         </div>
     </header>
 
-    <div class="login-content">
+    <div class="signup-content">
         <div class="content-container">
             <div class="content-wapper">
                 <div class="content__form">
@@ -60,51 +60,46 @@
                             <p>Bạn đăng kí không thành công. Vui lòng đăng kí lại <br> hoặc thử đăng kí bằng cách khác</p>
                             <span class="content__form-message-span ti-close"></span>
                         </div>
-                        <form action="" class="content__form-login">
+                        <form action="" class="content__form-signup">
                             <div class="content__form-group">
-                                <label for="" class="form-login__label-username">Tên Tài Khoản</label>
-                                <input type="text" name="username" class="form-login__input-username" placeholder="">
+                                <label for="username" class="form-signup__label">Tên Tài Khoản</label>
+                                <input type="text" id="username" name="username" class="form-signup-input" placeholder="">
                             </div>
                             <div class="content__form-group">
-                                <label for="" class="form-login__label-password">Mật Khẩu</label>
-                                <input type="password" name="password" placeholder="" class="form-login__input-password">
+                                <label for="password" class="form-signup__label">Mật Khẩu</label>
+                                <input type="text" id="password" name="password" placeholder="" class="form-signup-input">
                             </div>
                             <div class="content__form-group">
-                                <label for="" class="form-login__label-repassword">Nhập Lại Mật Khẩu </label>
-                                <input type="password" name="repassword" class="form-login__input-repassword" placeholder="">
+                                <label for="repassword" class="form-signup__label">Nhập Lại Mật Khẩu </label>
+                                <input type="text" id="repassword" name="repassword" class="form-signup-input" placeholder="">
                             </div>
                             <div class="content__form-group">
-                                <label for="" class="form-login__label-email">Email</label>
-                                <input type="email" name="email" placeholder="" class="form-login__input-email">
+                                <label for="email" class="form-signup__label">Email</label>
+                                <input type="email" id="email" name="email" placeholder="" class="form-signup-input">
                             </div>
                             <div class="content__form-group">
                                 <div class="content__form-group-checkbox">
-                                    <input type="checkbox" name="" id="" class="content__form-checkbox">
+                                    <input type="checkbox" name="" id="checkbox-signup" class="content__form-checkbox">
                                     <p>Đồng ý với Shopee về các Điều khoản dịch vụ <br>& Chính sách bảo mật</p>
                                 </div>
-
                             </div>
-                            <a src=" " type="submit" class="form-login__btn-submit">Đăng Kí</a>
+                            <a href="#" type="submit" class="form-signup__btn-submit" id="btn-submit-signup">Đăng Kí</a>
                         </form>
-
                         <div class="content__form-span">
                             <span class="content__form-space">
-
                             </span>
                             <p class="content__form-span-text">
                                 Hoặc
                             </p>
                             <span class="content__form-space"></span>
-
-
                         </div>
 
-                        <div class="content__form-login-more">
+                        <div class="content__form-signup-more">
                             <a src="" class="ti-facebook">Facebook</a>
                             <a src="" class="ti-google">Gmail</a>
                             <a src="" class="ti-apple">Apple</a>
                         </div>
-                        <a class="content__form-link-register">Đăng nhập  tại đây</a>
+                        <a class="content__form-link-signup">Đăng nhập  tại đây</a>
                     </div>
 
 
@@ -299,7 +294,7 @@
 
             </div>
         </footer>
-
+        <script src="/assets/js/signup.js"></script>
 </body>
 
 </html>

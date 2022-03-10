@@ -322,43 +322,41 @@
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Tên Đăng Nhập</label>
                                         <span class="form-label-edit-profile-space"></span>
-                                        <input type="text" name="username" placeholder="Mako" class="form-input-edit-profile">
+                                        <a type="text" name="username" class="form-input-edit-profile">Mako</a>
                                     </div>
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Tên </label>
                                         <span class="form-label-edit-profile-space"></span>
 
-                                        <input type="text" name="lastname" placeholder="mCn164" class="form-input-edit-profile">
+                                        <input type="text" value="mCn164" name="lastname" placeholder="Vui lòng nhập tên của bạn" class="form-input-edit-profile">
                                     </div>
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Email</label>
                                         <span class="form-label-edit-profile-space"></span>
 
-                                        <input type="email" name="useremail" placeholder="simple@gmail.com" class="form-input-edit-profile">
+                                        <input type="email" name="useremail" value="simple@gmail.com" placeholder="your email" class="form-input-edit-profile">
                                     </div>
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Số Điện Thoại</label>
                                         <span class="form-label-edit-profile-space"></span>
 
-                                        <input type="number" name="userphone" placeholder="012345678" class="form-input-edit-profile">
+                                        <input type="tel" name="userphone" value="012345678" placeholder="Số điện thoại của bạn" class="form-input-edit-profile">
                                     </div>
-                                    <div class="form-edit-profile-group">
-                                        <label for="" class="form-label-edit-profile">Địa chỉ</label>
-                                        <span class="form-label-edit-profile-space"></span>
 
-                                        <input type="text" name="useraddress" placeholder="Mako" class="form-input-edit-profile">
-                                    </div>
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Ngày Sinh</label>
                                         <span class="form-label-edit-profile-space"></span>
-
-                                        <input type="number" name="userbirthday" placeholder="22/02/2022" class="form-input-edit-profile">
+                                        <input type="date" name="userbirthday" placeholder="Ngày sinh" class="form-input-edit-profile">
                                     </div>
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Giới Tính</label>
                                         <span class="form-label-edit-profile-space"></span>
-
-                                        <input type="text" name="usergender" placeholder="Nam" class="form-input-edit-profile">
+                                        <input type="radio" id="form-edit-profile-gender-male" name="usergender" value="Nam" class="form-input-edit-profile-gender">
+                                        <label for="form-edit-profile-gender-male">Nam</label>
+                                        <input type="radio" id="form-edit-profile-gender-female" name="usergender" value="Nam" class="form-input-edit-profile-gender">
+                                        <label for="form-edit-profile-gender-female">Nữ</label>
+                                        <input type="radio" id="form-edit-profile-gender-orther" name="usergender" value="Nam" class="form-input-edit-profile-gender">
+                                        <label for="form-edit-profile-gender-orther">Khác</label>
                                     </div>
                                     <button class="btn-edit-profile">Lưu</button>
                                 </form>

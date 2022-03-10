@@ -143,6 +143,13 @@
     flex: 1;
     height: 100%;
     outline: none;
+    text-align: left;
+    line-height: 35px;
+}
+
+.form-input-edit-profile-gender {
+    width: 60px;
+    height: 20px;
 }
 
 .btn-edit-profile {
@@ -154,6 +161,7 @@
     background-color: red;
     margin-top: 30px;
     margin-left: 120px;
+    border-radius: 2px;
 }
 
 

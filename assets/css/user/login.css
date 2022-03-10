@@ -120,15 +120,13 @@
     padding: 0px 10px;
 }
 
-.form-login__label-username,
-.form-login__label-password {
+.form-login__label {
     font-size: 15px;
     padding: 12px 2px;
     color: #222;
 }
 
-.form-login__input-username,
-.form-login__input-password {
+.form-login__input {
     height: 35px;
     outline: none;
 }
@@ -144,6 +142,7 @@
     cursor: pointer;
     background-color: rgb(238, 77, 45);
     color: #fff;
+    text-decoration: none;
 }
 
 .content__form-password-retrieval {

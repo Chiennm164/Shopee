@@ -35,7 +35,7 @@
     opacity: 0.9;
 }
 
-.login-content {
+.signup-content {
     min-height: 400px;
     background-color: rgb(238, 77, 45);
     flex-direction: column;
@@ -75,7 +75,7 @@
     padding: 15px;
 }
 
-.content__form-login {
+.content__form-signup {
     display: block;
 }
 
@@ -122,19 +122,13 @@
     padding: 0px 10px;
 }
 
-.form-login__label-repassword,
-.form-login__label-email,
-.form-login__label-username,
-.form-login__label-password {
+.form-signup__label {
     font-size: 15px;
     padding: 8px 2px;
     color: #222;
 }
 
-.form-login__input-email,
-.form-login__input-repassword,
-.form-login__input-username,
-.form-login__input-password {
+.form-signup-input {
     height: 35px;
     outline: none;
 }
@@ -155,7 +149,7 @@
     font-size: 14px;
 }
 
-.form-login__btn-submit {
+.form-signup__btn-submit {
     width: 100%;
     height: 100%;
     margin: 15px 0 0 0;
@@ -166,6 +160,7 @@
     cursor: pointer;
     background-color: rgb(238, 77, 45);
     color: #fff;
+    text-decoration: none;
 }
 
 .content__form-password-retrieval {
@@ -177,14 +172,14 @@
     color: #05a;
 }
 
-.content__form-login-more {
+.content__form-signup-more {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 5px 0;
 }
 
-.content__form-login-more a {
+.content__form-signup-more a {
     width: 100px;
     padding: 8px 10px;
     text-align: center;
@@ -194,19 +189,19 @@
     cursor: pointer;
 }
 
-.form-login__btn-submit:hover,
+.form-signup__btn-submit:hover,
 .content__form-password-retrieval:hover,
-.content__form-link-register:hover,
-.content__form-login-more a:hover {
+.content__form-link-signup:hover,
+.content__form-signup-more a:hover {
     opacity: 0.7;
 }
 
-.content__form-link-register {
+.content__form-link-signup {
     text-decoration: none;
     color: #05a;
     cursor: pointer;
     text-align: left;
-    padding: 20px 0px 10px 10px;
+    padding: 15px 0px 10px 10px;
     font-size: 15px;
 }
 

@@ -1,22 +1,38 @@
 {
     "sliderBanner": [{
-        "id": 1,
-        "src": "./assets/img/slider/banner/slider1.png"
-    }, {
-        "id": 2,
-        "src": "./assets/img/slider/banner/slider2.png"
-    }, {
-        "id": 3,
-        "src": "./assets/img/slider/banner/slider3.png"
-    }, {
-        "id": 4,
-        "src": "./assets/img/slider/banner/slider4.png"
-    }, {
-        "id": 5,
-        "src": "./assets/img/slider/banner/slider5.png"
-    }, {
-        "id": 6,
-        "src": "./assets/img/slider/banner/slider6.png"
-    }]
+            "id": 1,
+            "src": "./assets/img/slider/banner/slider1.png"
+        },
+        {
+            "id": 2,
+            "src": "./assets/img/slider/banner/slider2.png"
+        },
+        {
+            "id": 3,
+            "src": "./assets/img/slider/banner/slider3.png"
+        },
+        {
+            "id": 4,
+            "src": "./assets/img/slider/banner/slider4.png"
+        },
+        {
+            "id": 5,
+            "src": "./assets/img/slider/banner/slider5.png"
+        },
+        {
+            "id": 6,
+            "src": "./assets/img/slider/banner/slider6.png"
+        }
+    ],
+    "user": [
 
+    ],
+    "product": [{
+        "id": 1,
+        "nameProduct": "text",
+        "nameUser": "text",
+        "price": 0,
+        "amount": 0,
+        "type": "text"
+    }]
 }
