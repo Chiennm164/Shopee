@@ -1,38 +1,108 @@
 {
-    "sliderBanner": [{
-            "id": 1,
-            "src": "./assets/img/slider/banner/slider1.png"
-        },
-        {
-            "id": 2,
-            "src": "./assets/img/slider/banner/slider2.png"
-        },
-        {
-            "id": 3,
-            "src": "./assets/img/slider/banner/slider3.png"
-        },
-        {
-            "id": 4,
-            "src": "./assets/img/slider/banner/slider4.png"
-        },
-        {
-            "id": 5,
-            "src": "./assets/img/slider/banner/slider5.png"
-        },
-        {
-            "id": 6,
-            "src": "./assets/img/slider/banner/slider6.png"
-        }
-    ],
-    "user": [
-
-    ],
-    "product": [{
-        "id": 1,
-        "nameProduct": "text",
-        "nameUser": "text",
-        "price": 0,
-        "amount": 0,
-        "type": "text"
-    }]
+  "sliderBanner": [
+    {
+      "id": 1,
+      "src": "./assets/img/slider/banner/slider1.png"
+    },
+    {
+      "id": 2,
+      "src": "./assets/img/slider/banner/slider2.png"
+    },
+    {
+      "id": 3,
+      "src": "./assets/img/slider/banner/slider3.png"
+    },
+    {
+      "id": 4,
+      "src": "./assets/img/slider/banner/slider4.png"
+    },
+    {
+      "id": 5,
+      "src": "./assets/img/slider/banner/slider5.png"
+    },
+    {
+      "id": 6,
+      "src": "./assets/img/slider/banner/slider6.png"
+    }
+  ],
+  "user": [
+    {
+      "id": 0,
+      "createdAt": 1646905726773,
+      "userName": "username1",
+      "passWord": "password",
+      "fullName": "text",
+      "avatar": "src",
+      "email": "mako@email",
+      "address": "text",
+      "phone": 0,
+      "birthday": "time",
+      "gender": "text",
+      "state": "noactive",
+      "money": 0,
+      "point": 0,
+      "salesman": "false"
+    },
+    {
+      "id": 1,
+      "createdAt": 1646923546002,
+      "userName": "chienthien98na",
+      "passWord": "password",
+      "fullName": "text",
+      "avatar": "src",
+      "email": "mako@email2",
+      "address": "text",
+      "phone": 0,
+      "birthday": "time",
+      "gender": "text",
+      "state": "active",
+      "money": 0,
+      "point": 0,
+      "salesman": "false"
+    },
+    {
+      "id": 2,
+      "createdAt": 1646963434660,
+      "userName": "chienthien98na2222",
+      "passWord": "password",
+      "fullName": "text",
+      "avatar": "src",
+      "email": "mako@email2222",
+      "address": "text",
+      "phone": 0,
+      "birthday": "time",
+      "gender": "text",
+      "state": "noactive",
+      "money": 0,
+      "point": 0,
+      "salesman": "false"
+    },
+    {
+      "id": 3,
+      "createdAt": 1646963646262,
+      "userName": "username12",
+      "passWord": "password12",
+      "fullName": "text",
+      "avatar": "src",
+      "email": "mako@email22",
+      "address": "text",
+      "phone": 0,
+      "birthday": "time",
+      "gender": "text",
+      "state": "noactive",
+      "money": 0,
+      "point": 0,
+      "salesman": "false"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "nameProduct": "text",
+      "nameUser": "text",
+      "price": 0,
+      "amount": 0,
+      "type": "text"
+    }
+  ]
 }

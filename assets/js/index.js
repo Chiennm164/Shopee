@@ -3,89 +3,84 @@ const $$ = document.querySelectorAll.bind(document)
 var profile = $(".profile")
 var usersignup = $(".usersignup")
 var userlogin = $(".userlogin")
-
 var logout = $(".profile-logout")
 const apiUser = "http://localhost:3000/user"
 
 
 function start() {
-    getUser()
+    handlerUser()
     sliderShow()
-    handleLogOut()
 }
 start()
 
+function handlerUser() {
+    getUser(), handleLogOut()
 
-function getUser() {
-    fetch(apiUser).then(function(response) {
-        return response.json();
-    }).then(function(users) {
-        handleLogin(users)
-        handleLogOut(users)
+    function getUser() {
+        fetch(apiUser).then(function(response) {
+            return response.json();
+        }).then(function(users) {
+            checkLogin(users)
+            handleLogOut(users)
 
-    })
-}
-
-function patchState(id, formData) {
-    const options = {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    }
-    fetch(apiUser + '/' + id, options).then(function(response) {
-        return response.json();
-    }).then(
-        logout.href = 'index.html'
-
-    )
-}
-
-function handleLogin(users) {
-    let lengthUsers = users.length
-
-
-    for (let i = 0; i < lengthUsers; i++) {
-
-        var stateApi = users[i].state
-        console.log(stateApi)
-    }
-    if (stateApi == "active") {
-        profile.style.display = "flex"
-        usersignup.style.display = "none";
-        userlogin.style.display = "none";
-    } else {
-
-        profile.style.display = "none"
-
+        })
     }
 
-}
-
-function handleLogOut(users) {
-    logout.onclick = function() {
-        let lengthUsers = users.length
-
-        for (var i = 0; i < lengthUsers; i++) {
-            var idApi = users[i].id
+    function patchState(id, formData) {
+        const options = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
         }
-        var formData = {
-            state: "noactive"
+        fetch(apiUser + '/' + id, options).then(function(response) {
+            return response.json();
+        }).then(
+            logout.href = 'index.html'
+
+        )
+    }
+
+    function checkLogin(users) {
+
+        let activeSatate = users.some(
+            function(check) {
+                return check.state === 'active'
+            }
+        )
+        if (activeSatate) {
+            profile.style.display = "flex"
+            usersignup.style.display = "none";
+            userlogin.style.display = "none";
+        } else {
+
+            profile.style.display = "none"
+
         }
-        patchState(idApi, formData)
+
+    }
+
+    function handleLogOut(users) {
+        logout.onclick = function() {
+            let lengthUsers = users.length
+
+            for (var i = 0; i < lengthUsers; i++) {
+                var idApi = users[i].id
+            }
+            var formData = {
+                state: "noactive"
+            }
+            patchState(idApi, formData)
+        }
     }
 }
-
-
-
 
 function sliderShow() {
     var clickPrev = $('.slider__turn--left')
     var clickNext = $('.slider__turn--right')
     var showImg = $('.slider__main-item-img')
     var btnChose = $$('.slider__nav-item')
-    console.log(btnChose)
     var imgsLength;
     var btnChoseLength = btnChose.length;
     const imageApi = "http://localhost:3000/sliderBanner"

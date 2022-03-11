@@ -1,27 +1,25 @@
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
-var userName = $('#username');
-var passWord = $('#password');
-var rePassWord = $('#repassword');
-var email = $('#email');
-var checkBoxSignUp = $('#checkbox-signup');
-var message = $(".content__form-message")
-var btnSubmitSignUp = $('#btn-submit-signup');
-
-var i = 1;
-
-
-
-const signInApi = "http://localhost:3000/user"
+var $ = document.querySelector.bind(document)
+var $$ = document.querySelectorAll.bind(document)
+const userName = $('#username');
+const passWord = $('#password');
+const rePassWord = $('#repassword');
+const email = $('#email');
+const checkBoxSignUp = $('#checkbox-signup');
+const message = $(".content__form-message")
+const btnSubmitSignUp = $('#btn-submit-signup');
+const alertBg = $('.confirm-background')
+const alertLogin = $('.confirm-alert')
+const createdAt = new Date().getTime();
+var userNameApi;
+const apiUser = "http://localhost:3000/user"
+var emailApi;
 
 function start() {
     handleSignUp()
 }
 start()
 
-var createdAt = new Date().getTime();
-
-function signIn(formDataUser) {
+function createUser(formDataUser) {
     const options = {
         method: 'POST',
         headers: {
@@ -29,58 +27,79 @@ function signIn(formDataUser) {
         },
         body: JSON.stringify(formDataUser)
     }
-    fetch(signInApi, options).then(function(response) {
+    fetch(apiUser, options).then(function(response) {
             return response.json();
         })
-        .then(function() {
-            console.log('đăng ký thành công');
-            console.log("id user tiếp theo : " + i);
+        .then(
+            alertBg.style.display = "block",
+            alertLogin.style.display = "flex")
+}
 
+function getUser() {
+    fetch(apiUser).then(function(response) {
+        return response.json();
+    }).then(function(users) {
+        checkValidate(users)
+    })
 
-        })
-        .catch(function(error) {
-            console.error("thất bại lỗi fetch:" + error);
-        })
+}
+
+function checkValidate(users) {
+    let lgUser = users.length
+    var formDataUser = {
+        id: lgUser,
+        createdAt: createdAt,
+        userName: userName.value.trim(),
+        passWord: passWord.value.trim(),
+        fullName: "text",
+        avatar: "src",
+        email: email.value.trim(),
+        address: "text",
+        phone: 0,
+        birthday: "time",
+        gender: "text",
+        state: "noactive",
+        money: 0,
+        point: 0,
+        salesman: "false"
+    }
+    checkDataUser(formDataUser, users)
+
+}
+
+function checkDataUser(formDataUser, users) {
+    // let lgUser = users.length;
+    // console.log(users)
+    let checkData = users.every(
+        function(check) {
+            return check.userName !== formDataUser.userName && check.email !== formDataUser.email;
+        }
+    )
+    console.log(checkData)
+
+    if (checkData) {
+        console.log("check data thành công")
+        createUser(formDataUser);
+
+    } else {
+        console.log("Trùng tên đăng nhập hoặc email")
+
+    }
+
 }
 
 function handleSignUp() {
     btnSubmitSignUp.onclick = function() {
         if (checkBoxSignUp.checked &&
-            passWord.value === rePassWord.value &&
-            userName.value, passWord.value, email.value != "" &&
-            userName.value.length >= 6 &&
+            passWord.value.trim() === rePassWord.value.trim() &&
+            userName.value != '', passWord.value != '', email.value != '' &&
+            userName.value.length >= 4 &&
             passWord.value.length >= 3 &&
             email.value.search("@") > 2) {
-            var formDataUser = {
-                id: i,
-                createdAt: createdAt,
-                userName: userName.value,
-                passWord: passWord.value,
-                fullName: "text",
-                avatar: "src",
-                email: email.value,
-                address: "text",
-                phone: 0,
-                birthday: "time",
-                gender: "text",
-                state: "noactive",
-                money: 0,
-                point: 0,
-                salesman: "false"
-            }
-
-            signIn(formDataUser)
-            i++
-            btnSubmitSignUp.href = 'http://127.0.0.1:5501/login.html'
-
-
+            getUser()
         } else {
-            console.log("đăng kí thất bại , kiểm tra form");
             message.style.display = "block";
             handleSignUp()
         }
-
-
     }
-
 }
