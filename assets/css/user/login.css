@@ -2,7 +2,7 @@
     background-color: rgb(238, 77, 45);
 }
 
-.header__wapper {
+.header__wrapper {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -48,7 +48,7 @@
     padding-bottom: 20px;
 }
 
-.content-wapper {
+.content-wrapper {
     display: flex;
     background: url('/assets/img/user/login.png') center / contain no-repeat;
     min-height: 550px;
@@ -65,7 +65,7 @@
     box-shadow: 0 3px 10px 0 rgb(0 0 0 / 14%);
 }
 
-.content__form-wapper {
+.content__form-wrapper {
     min-height: 350px;
     height: 100%;
     display: flex;
@@ -75,14 +75,12 @@
     padding: 15px;
 }
 
-.content__form-login {}
-
 .content__form-group {
     display: flex;
     flex-direction: column;
 }
 
-.content__form-title-wapper {
+.content__form-title-wrapper {
     padding: 0px 10px 15px 10px;
     margin-top: -8px;
 }

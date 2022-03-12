@@ -162,13 +162,13 @@
 
                         <!-- profile  -->
                         <li class="navbar__group  ">
-                            <img src="/assets/img/header/user-avatar.png" alt="" class="navbar__item-avatar-img">
+                            <img src="/assets/img/user/profile/avatar.png" alt="" name="avataruser" class="navbar__item-avatar-img">
                             <a href="" class="header__navbar-item">Durza
                                </a>
                             <div class="header__navbar-profile ">
-                                <a href="" class="header__navbar-profile--items">Tài Khoản của tôi</a>
+                                <a href="#" class="header__navbar-profile--items">Tài Khoản của tôi</a>
                                 <a href="" class="header__navbar-profile--items">Đơn mua</a>
-                                <a href="" class="header__navbar-profile--items">Đăng xuất</a>
+                                <a href="#" class="header__navbar-profile--items profile-logout">Đăng xuất</a>
                             </div>
                         </li>
 
@@ -271,13 +271,17 @@
 
     <div class="profile">
         <div class="container">
-            <div class="profile-wapper">
+            <div class="profile-wrapper">
                 <div class="profile__nav col-lg-2 ">
                     <div class="profile__nav-title">
                         <div class="profile__nav-title-avatar">
-                            <img src="/assets/img/user/useravatar.jpg" alt="" class="profile__nav-title-avatar-imgs">
+                            <img src="/assets/img/user/profile/avatar.png" alt="" name="avataruser" class="profile__nav-title-avatar-imgs ">
                         </div>
-                        <div class="profile__nav-title-userName">mCn</div>
+                        <div class="profile__nav-title-userName">
+                            <p class="profile__nav-title-name">mCn</p>
+                            <p class="profile__nav-title-money">0 </p>
+
+                        </div>
 
                     </div>
                     <div class="profile__nav-body">
@@ -287,12 +291,12 @@
                                 <a href="">Siêu Hội Tiêu Dùng</a></li>
                             <li class="profile__nav-body-items">
                                 <img class="profile__nav-body-items-span " src="/assets/img/user/profile/account.png"></img>
-                                <a href="">Tài Khoản Của Tôi</a>
+                                <a href="" class="">Tài Khoản Của Tôi</a>
                             </li>
-                            <li class="profile__nav-body-items"> <a href="" class="profile__user-infor-file profile__user-padding ">Hồ Sơ</a></li>
+                            <li class="profile__nav-body-items"> <a href="" class="profile__user-infor-profile profile__user-padding active-nav-info "> Hồ Sơ</a></li>
                             <li class="profile__nav-body-items"> <a href="" class="profile__user-infor-bank profile__user-padding">Ngân Hàng</a></li>
                             <li class="profile__nav-body-items"> <a href="" class="profile__user-infor-address profile__user-padding">Địa Chỉ</a></li>
-                            <li class="profile__nav-body-items"> <a href="" class="profile__user-infor-changePassword profile__user-padding">Đổi Mật Khẩu</a></li>
+                            <li class="profile__nav-body-items"> <a href="#" class="profile__user-infor-account profile__user-padding">Tài Khoản</a></li>
 
                             <li class="profile__nav-body-items">
                                 <img class="profile__nav-body-items-span " src="/assets/img/user/profile/tranfs.png"></img>
@@ -309,65 +313,77 @@
                         </div>
                     </div>
                 </div>
-                <div class="profile__main col-lg-10">
-                    <div class="profile__main-wapper">
+                <div class="profile__main  col-lg-10">
+                    <div class="profile__main-wrapper">
                         <div class="profile__main-header">
-                            <h3> Hồ Sơ Của Tôi</h3>
+                            <h4> Hồ Sơ Của Tôi</h4>
                             <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
                         </div>
-
                         <div class="profile__main-body">
                             <div class="profile__main-body-form col-lg-8">
-                                <form action="form-edit" class="form-edit-profile">
-                                    <div class="form-edit-profile-group">
-                                        <label for="" class="form-label-edit-profile">Tên Đăng Nhập</label>
-                                        <span class="form-label-edit-profile-space"></span>
-                                        <a type="text" name="username" class="form-input-edit-profile">Mako</a>
-                                    </div>
-                                    <div class="form-edit-profile-group">
-                                        <label for="" class="form-label-edit-profile">Tên </label>
-                                        <span class="form-label-edit-profile-space"></span>
+                                <div class="profile__main-noti">
+                                    <p> * Tặng ngay voucher 100K khi điền đầy đủ thông tin cá nhân</p>
+                                </div>
+                                <form action="#" class="form-edit-profile">
 
-                                        <input type="text" value="mCn164" name="lastname" placeholder="Vui lòng nhập tên của bạn" class="form-input-edit-profile">
-                                    </div>
-                                    <div class="form-edit-profile-group">
-                                        <label for="" class="form-label-edit-profile">Email</label>
-                                        <span class="form-label-edit-profile-space"></span>
-
-                                        <input type="email" name="useremail" value="simple@gmail.com" placeholder="your email" class="form-input-edit-profile">
-                                    </div>
-                                    <div class="form-edit-profile-group">
-                                        <label for="" class="form-label-edit-profile">Số Điện Thoại</label>
-                                        <span class="form-label-edit-profile-space"></span>
-
-                                        <input type="tel" name="userphone" value="012345678" placeholder="Số điện thoại của bạn" class="form-input-edit-profile">
-                                    </div>
 
                                     <div class="form-edit-profile-group">
-                                        <label for="" class="form-label-edit-profile">Ngày Sinh</label>
+                                        <label for="fullname" class="form-label-edit-profile">Họ và Tên </label>
                                         <span class="form-label-edit-profile-space"></span>
-                                        <input type="date" name="userbirthday" placeholder="Ngày sinh" class="form-input-edit-profile">
+                                        <div class="input-wrapper">
+                                            <input type="text" value="" name="fullname" placeholder=" Nhập Họ và Tên" class="form-input-edit-profile pointer-none">
+                                        </div>
                                     </div>
+                                    <div class="form-edit-profile-group">
+                                        <label for="address" class="form-label-edit-profile">Địa Chỉ</label>
+                                        <span class="form-label-edit-profile-space"></span>
+                                        <div class="input-wrapper">
+                                            <input type="text" value="" name="address" placeholder=" Nhập Địa Chỉ" class="form-input-edit-profile pointer-none">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-edit-profile-group">
+                                        <label for="phone" class="form-label-edit-profile">Số Điện Thoại</label>
+                                        <span class="form-label-edit-profile-space"></span>
+                                        <div class="input-wrapper ">
+                                            <input type="text" name="phone" value="" placeholder=" Nhập số điện thoại  " class="form-input-edit-profile pointer-none">
+                                        </div>
+                                    </div>
+
+
                                     <div class="form-edit-profile-group">
                                         <label for="" class="form-label-edit-profile">Giới Tính</label>
                                         <span class="form-label-edit-profile-space"></span>
-                                        <input type="radio" id="form-edit-profile-gender-male" name="usergender" value="Nam" class="form-input-edit-profile-gender">
-                                        <label for="form-edit-profile-gender-male">Nam</label>
-                                        <input type="radio" id="form-edit-profile-gender-female" name="usergender" value="Nam" class="form-input-edit-profile-gender">
-                                        <label for="form-edit-profile-gender-female">Nữ</label>
-                                        <input type="radio" id="form-edit-profile-gender-orther" name="usergender" value="Nam" class="form-input-edit-profile-gender">
-                                        <label for="form-edit-profile-gender-orther">Khác</label>
+                                        <div class="input-wrapper ">
+                                            <input type="text" name="shows-gender" class="form-input-edit-profile pointer-none">
+                                        </div>
+                                        <div class="profile-gender-group profile-hide">
+                                            <input type="radio" id="form-edit-profile-gender-male" name="gender" value="1" class="form-input-edit-profile-gender pointer-none">
+                                            <label for="">Nam</label>
+                                            <input type="radio" id="form-edit-profile-gender-female" name="gender" value="2" class="form-input-edit-profile-gender pointer-none">
+                                            <label for="">Nữ</label>
+                                            <input type="radio" id="form-edit-profile-gender-orther" name="gender" value="3" class="form-input-edit-profile-gender pointer-none">
+                                            <label for="">Khác</label>
+                                        </div>
+
                                     </div>
-                                    <button class="btn-edit-profile">Lưu</button>
+                                    <div class="form-edit-profile-group">
+                                        <label for="dateofbirth" class="form-label-edit-profile">Ngày Sinh</label>
+                                        <span class="form-label-edit-profile-space"></span>
+                                        <div class="input-wrapper">
+                                            <input type="date" name="dateofbirth" placeholder=" Nhập ngày sinh " class="form-input-edit-profile pointer-none">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-edit-profile">Chỉnh Sửa</a>
                                 </form>
                             </div>
                             <div class="profile__main-body-upavatar col-lg-4">
-                                <div class="profile__main-body-upavatar-wapper">
+                                <div class="profile__main-body-upavatar-wrapper">
                                     <div class="profile-body__upavatar">
-                                        <img src="/assets/img/user/useravatar.jpg" alt="" class="profile-body__upavatar-img">
+                                        <img src="/assets/img/user/profile/avatar.png" alt="" name="avataruser" class="profile-body__upavatar-img">
                                     </div>
-                                    <button class="profile-body-btn">Chọn Ảnh</button>
-                                    <p class="profile-body-description">Dụng lượng file tối đa 1 MB Định dạng:.JPEG, .PNG</p>
+                                    <button class="profile-body-btn">Chọn ảnh</button>
+                                    <p class="profile-body-description">Dung lượng file tối đa 1 MB Định dạng:.JPEG, .PNG</p>
 
                                 </div>
 
@@ -379,7 +395,10 @@
                     </div>
 
 
+
                 </div>
+
+
             </div>
 
         </div>
@@ -574,7 +593,7 @@
 
         </div>
     </footer>
-
+    <script src="assets/js/editprofile.js"></script>
 </body>
 
 </html>

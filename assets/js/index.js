@@ -1,11 +1,5 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
-var profile = $(".profile")
-var usersignup = $(".usersignup")
-var userlogin = $(".userlogin")
-var logout = $(".profile-logout")
-const apiUser = "http://localhost:3000/user"
-
 
 function start() {
     handlerUser()
@@ -13,69 +7,73 @@ function start() {
 }
 start()
 
+// Xử lý user , 1 : check state 
 function handlerUser() {
-    getUser(), handleLogOut()
+
+    let profile = $(".profile")
+    let usersignup = $(".usersignup")
+    let userlogin = $(".userlogin")
+    let logout = $(".profile-logout")
+    const apiUser = "http://localhost:3000/user"
+
+    getUser()
 
     function getUser() {
         fetch(apiUser).then(function(response) {
             return response.json();
         }).then(function(users) {
             checkLogin(users)
-            handleLogOut(users)
-
         })
     }
-
-    function patchState(id, formData) {
+    //  đăng xuất -> state  = noactive 
+    function patchState(id, data) {
         const options = {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(data)
         }
         fetch(apiUser + '/' + id, options).then(function(response) {
             return response.json();
         }).then(
-            logout.href = 'index.html'
+            console.log("đổi trạng thái thành công"),
+            location.assign("http://127.0.0.1:5501/index.html")
 
         )
     }
-
+    // check state người dùng , đang mở hay tạm nghỉ -> state :  active  > hiển thị , state : noactive ẩn 
     function checkLogin(users) {
-
+        let idApi;
         let activeSatate = users.some(
             function(check) {
+                idApi = check.id
                 return check.state === 'active'
             }
         )
         if (activeSatate) {
-            profile.style.display = "flex"
+            console.log("check active");
+            profile.style.display = "flex";
             usersignup.style.display = "none";
             userlogin.style.display = "none";
+            handleLogOut(idApi);
         } else {
-
-            profile.style.display = "none"
-
+            profile.style.display = "none";
         }
-
     }
-
-    function handleLogOut(users) {
+    // xử lý nút đăng xuất trong profile
+    function handleLogOut(idApi) {
+        console.log(idApi);
         logout.onclick = function() {
-            let lengthUsers = users.length
-
-            for (var i = 0; i < lengthUsers; i++) {
-                var idApi = users[i].id
-            }
-            var formData = {
+            var changeState = {
                 state: "noactive"
             }
-            patchState(idApi, formData)
+            patchState(idApi, changeState)
         }
     }
-}
 
+}
+// slider Show ()
 function sliderShow() {
     var clickPrev = $('.slider__turn--left')
     var clickNext = $('.slider__turn--right')
@@ -115,7 +113,6 @@ function sliderShow() {
             console.log(i)
         }
 
-
         //  nút Prev
         var j = imgsLength - 1
         clickPrev.onclick = function(e) {
@@ -147,7 +144,6 @@ function sliderShow() {
             }
         }
         setInterval(changeImgs, 4000);
-
         //  nút chọn ảnh
         for (let i = 0; i < btnChoseLength; i++) {
             btnChose[i].onclick = function() {
