@@ -56,7 +56,7 @@
       "phone": "0988888888",
       "birthOfDate": "",
       "gender": 3,
-      "state": "active",
+      "state": "noactive",
       "money": 100,
       "point": 0,
       "birthday": "2022-03-09"
