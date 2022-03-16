@@ -1,24 +1,37 @@
 /* lớp giả  */
 
 :root {
-    /* color :màu sắc */
     --white-color: #ffffff;
+    --white-color-f8: #f8f8f8;
+    --white-color-f5: #f5f5f5;
+    --white-color-cc: #cccccc;
     --black-color: #000000;
+    --black2-color: #333;
+    --red-color: red;
+    --red2-color: #fd6132;
     /* color text  */
     --text-color: #333;
     --text2-color: rgb(255 255 255 / 0.7);
     /* color border */
-    --border-color: hsla(0, 0%, 100%, .22);
+    --border-color-grey: hsla(0, 0%, 100%, .22);
+    --border-color-black: rgba(0, 0, 0, .09);
+    /* color box shadow  */
+    --box-shadow-color: rgb(0 0 0 / 20%);
+    /* color hover  */
+    --hover-color: hsla(0, 0%, 100%, .7);
     /* color background */
     --background-header: linear-gradient( -180deg, #f53d2d, #f63);
-    /* height :độ cao */
-    --height-header: 119px;
+    --background-noti-color: #fff2ee;
+    /* height */
+    --height-header: 120px;
     --height-header-navbar: 34px;
     --height-header-with-search: calc(var(--height-header) - var(--height-header-navbar));
 }
 
 * {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 html {

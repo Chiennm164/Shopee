@@ -54,6 +54,8 @@ function handlerUser() {
         if (activeSatate) {
             console.log("check active");
             profile.style.display = "flex";
+            profile.setAttribute("style", 'align-items:center')
+
             usersignup.style.display = "none";
             userlogin.style.display = "none";
             handleLogOut(idApi);

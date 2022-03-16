@@ -1,92 +1,88 @@
 {
-  "sliderBanner": [
-    {
-      "id": 1,
-      "src": "./assets/img/slider/banner/slider1.png"
-    },
-    {
-      "id": 2,
-      "src": "./assets/img/slider/banner/slider2.png"
-    },
-    {
-      "id": 3,
-      "src": "./assets/img/slider/banner/slider3.png"
-    },
-    {
-      "id": 4,
-      "src": "./assets/img/slider/banner/slider4.png"
-    },
-    {
-      "id": 5,
-      "src": "./assets/img/slider/banner/slider5.png"
-    },
-    {
-      "id": 6,
-      "src": "./assets/img/slider/banner/slider6.png"
-    }
-  ],
-  "user": [
-    {
-      "id": 0,
-      "createdAt": 1646905726773,
-      "userName": "username",
-      "passWord": "password",
-      "fullName": "Minh Chiến",
-      "avatar": "src",
-      "email": "mako@email",
-      "status": 2,
-      "address": "Nghệ An",
-      "phone": "0988888888",
-      "birthOfDate": "2022-03-07",
-      "gender": 1,
-      "state": "noactive",
-      "money": 0,
-      "point": 0
-    },
-    {
-      "id": 1,
-      "createdAt": 1647086402151,
-      "userName": "chienthien98na",
-      "passWord": "password",
-      "email": "chien@gmail.com",
-      "status": 2,
-      "fullName": "Minh Chiến",
-      "avatar": "/assets/img/user/useravatar.jpg",
-      "address": "Vinh",
-      "phone": "0988888888",
-      "birthOfDate": "",
-      "gender": 3,
-      "state": "noactive",
-      "money": 100,
-      "point": 0,
-      "birthday": "2022-03-09"
-    },
-    {
-      "id": 2,
-      "createdAt": 1647086750878,
-      "userName": "chienthien98na2",
-      "passWord": "password2",
-      "email": "mako@email2",
-      "status": 4,
-      "fullName": "",
-      "avatar": "",
-      "address": "",
-      "phone": 0,
-      "birthOfDate": "",
-      "gender": 1,
-      "state": "noactive",
-      "money": 0,
-      "point": 0
-    }
-  ],
-  "product": [
-    {
-      "id": 1,
-      "nameProduct": "text",
-      "nameUser": "text",
-      "price": 0,
-      "amount": 0,
-      "type": "text"
-    }
-  ]
+    "sliderBanner": [{
+            "id": 1,
+            "src": "./assets/img/slider/banner/slider1.png"
+        },
+        {
+            "id": 2,
+            "src": "./assets/img/slider/banner/slider2.png"
+        },
+        {
+            "id": 3,
+            "src": "./assets/img/slider/banner/slider3.png"
+        },
+        {
+            "id": 4,
+            "src": "./assets/img/slider/banner/slider4.png"
+        },
+        {
+            "id": 5,
+            "src": "./assets/img/slider/banner/slider5.png"
+        },
+        {
+            "id": 6,
+            "src": "./assets/img/slider/banner/slider6.png"
+        }
+    ],
+    "user": [{
+            "id": 0,
+            "createdAt": 1646905726773,
+            "userName": "username",
+            "passWord": "password",
+            "fullName": "Minh Chiến",
+            "avatar": "src",
+            "email": "mako@email",
+            "status": 2,
+            "address": "Nghệ An",
+            "phone": "0988888888",
+            "birthOfDate": "2022-03-07",
+            "gender": 1,
+            "state": "active",
+            "money": 0,
+            "point": 0
+        },
+        {
+            "id": 1,
+            "createdAt": 1647086402151,
+            "userName": "chienthien98na",
+            "passWord": "password",
+            "email": "chien@gmail.com",
+            "status": 2,
+            "fullName": "Minh Chiến",
+            "avatar": "/assets/img/user/useravatar.jpg",
+            "address": "Vinh",
+            "phone": "0988888888",
+            "birthOfDate": "",
+            "gender": 3,
+            "state": "noactive",
+            "money": 100,
+            "point": 0,
+            "birthday": "2022-03-09"
+        },
+        {
+            "id": 2,
+            "createdAt": 1647086750878,
+            "userName": "chienthien98na2",
+            "passWord": "password2",
+            "email": "mako@email2",
+            "status": 4,
+            "fullName": "",
+            "avatar": "",
+            "address": "",
+            "phone": 0,
+            "birthOfDate": "",
+            "gender": 1,
+            "state": "noactive",
+            "money": 0,
+            "point": 0
+        }
+    ],
+    "product": [{
+        "id": 1,
+        "nameProduct": "text",
+        "nameUser": "text",
+        "price": 0,
+        "amount": 0,
+        "type": "text"
+    }]
 }

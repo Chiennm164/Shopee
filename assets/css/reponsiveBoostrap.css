@@ -52,14 +52,20 @@
   /*768px x < 991.98px  */
   
   @media (min-width: 768px) and (max-width: 991.98px) {
+      /* header */
       .header__navbar,
       .header-with-search {
           min-width: 720px;
           padding: 0;
       }
-      .hiden-on-tablet {
-          display: none;
+      .header-navbar__items {
+          font-size: 12px;
       }
+      .search-suggest__items {
+          font-size: 11px;
+          padding-right: 8px;
+      }
+      /* banner  */
       .banner__content {
           min-height: 140px;
       }
@@ -69,13 +75,16 @@
       .slider__navbar-description {
           font-size: 12px;
       }
+      /* simple banner  */
       .first-simpleBanner__img2,
       .first-simpleBanner__img {
           min-height: 63px;
       }
+      /* category */
       .category__list-items {
           grid-template-columns: repeat(auto-fill, 174px);
       }
+      /* shopee mall  */
       .shopeeMail__header-title-logo,
       .shopeeMail__header-title,
       .shopeeMail__header-title-span,
@@ -85,6 +94,10 @@
           text-decoration: none;
           font-size: 12px;
       }
+      .shopeeMail__content-items-content {
+          font-size: 14px;
+      }
+      /* top search  */
       .topSearch__body-item {
           height: 290px;
           max-width: 100px;
@@ -95,27 +108,29 @@
       .topSearch__body-title {
           font-size: 14px;
       }
-      .shopeeMail__content-items-content {
-          font-size: 14px;
-      }
   }
   /* breakpoint 768px  (x <768 )*/
   
   @media (max-width: 768px) {
-      div[class*="slider__navbar-img"] {
-          min-height: 32px;
-      }
-      .slider__navbar-description {
-          font-size: 10px;
-      }
-      #header {
+      /* header  */
+      .header {
           margin-bottom: 5px;
-          height: 80px;
+          height: 90px;
       }
       .navbar__item-avatar-img {
           width: 17px;
           height: 17px;
           margin-right: 2px;
+      }
+      .search-suggest__items {
+          font-size: 11px;
+          padding-right: 5px;
+      }
+      div[class*="slider__navbar-img"] {
+          min-height: 32px;
+      }
+      .slider__navbar-description {
+          font-size: 10px;
       }
       .shopeeMail__header-title-logo,
       .shopeeMail__header-title,
@@ -136,32 +151,61 @@
       .hiden-on-mobile {
           display: none;
       }
-       :root {
+      /* :root {
           --height-header-with-search: 60px
-      }
+      } */
+      /* header  */
       .header-with-search {
           padding: 0;
       }
+      .header-navbar__items {
+          padding: 3px;
+          font-size: 11px;
+      }
+      .navbar-items__icon {
+          font-size: 11px;
+      }
+      .header-with-search {
+          height: 45px;
+      }
+      .searchbar-main__input {
+          padding: 0px 6px;
+      }
+      .searchbar__input {
+          font-size: 12px;
+          height: 28px;
+      }
+      .main__history-item-name {
+          font-size: 12px;
+      }
+      .searchbar-btn {
+          height: 28px;
+          min-width: 48px;
+      }
+      .navbar__item-avatar-img {
+          width: 16px;
+          height: 16px;
+      }
+      .cart-badge-span {
+          font-size: 25px;
+      }
+      .searchbar-main__history {
+          top: 37px;
+      }
+      /* banner */
       .banner__content {
           min-height: 155px;
       }
-      .header__navbar-item {
-          padding: 0;
-          font-size: 11px;
-      }
-      .navbar__item-icon {
-          font-size: 11px;
-      }
-      .header-with-search {
-          height: 35px;
-      }
+      /* simmple banner  */
       .first-simpleBanner__img2,
       .first-simpleBanner__img {
           min-height: 44px;
       }
+      /* category */
       .category__list-items {
           grid-template-columns: repeat(auto-fill, 128px);
       }
+      /* top serch */
       .topSearch__body-item {
           max-width: 150px;
       }
@@ -179,14 +223,17 @@
           --height-header: 60px;
           --height-header-with-search: 60px
       }
+      .header {
+          height: 60px;
+      }
       .header-with-search {
           padding: 0;
       }
       .banner__content {
           min-height: 135px;
       }
-      #header {
-          height: 60px;
+      .cart-badge-span {
+          font-size: 25px;
       }
       .first-simpleBanner__img2,
       .first-simpleBanner__img {
