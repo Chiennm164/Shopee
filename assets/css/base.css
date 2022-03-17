@@ -9,6 +9,7 @@
     --black2-color: #333;
     --red-color: red;
     --red2-color: #fd6132;
+    --yellow-color: rgba(255, 212, 36, .9);
     /* color text  */
     --text-color: #333;
     --text2-color: rgb(255 255 255 / 0.7);
@@ -26,6 +27,8 @@
     --height-header: 120px;
     --height-header-navbar: 34px;
     --height-header-with-search: calc(var(--height-header) - var(--height-header-navbar));
+    /* suggest */
+    --suggest-body__items-hight: 280px;
 }
 
 * {

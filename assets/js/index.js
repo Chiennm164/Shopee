@@ -4,16 +4,18 @@ const $$ = document.querySelectorAll.bind(document)
 function start() {
     handlerUser()
     sliderShow()
+    handlerNoti()
+        // handlerFlashSale()
 }
 start()
 
-// Xử lý user , 1 : check state 
+// Xử lý user 1 : check state  2: logout
 function handlerUser() {
 
-    let profile = $(".profile")
-    let usersignup = $(".usersignup")
-    let userlogin = $(".userlogin")
-    let logout = $(".profile-logout")
+    let profile = $$(".profile")
+    let usersignup = $$(".usersignup")
+    let userlogin = $$(".userlogin")
+    let logout = $$(".profile-logout")
     const apiUser = "http://localhost:3000/user"
 
     getUser()
@@ -53,34 +55,47 @@ function handlerUser() {
         )
         if (activeSatate) {
             console.log("check active");
-            profile.style.display = "flex";
-            profile.setAttribute("style", 'align-items:center')
+            profile.forEach(element => {
+                element.style.display = "flex";
+                element.setAttribute("style", 'align-items:center')
+            });
 
-            usersignup.style.display = "none";
-            userlogin.style.display = "none";
+            usersignup.forEach(element => {
+                element.style.display = "none";
+            });
+            userlogin.forEach(element => {
+                element.style.display = "none";
+            });
+
             handleLogOut(idApi);
         } else {
-            profile.style.display = "none";
+            profile.forEach(element => {
+                element.style.display = "none";
+            });
+            logout.forEach(element => {
+                element.style.display = "none";
+            });
         }
     }
     // xử lý nút đăng xuất trong profile
     function handleLogOut(idApi) {
-        console.log(idApi);
-        logout.onclick = function() {
-            var changeState = {
-                state: "noactive"
+        // console.log(idApi);
+        logout.forEach(element => {
+            element.onclick = function() {
+                var changeState = {
+                    state: "noactive"
+                }
+                patchState(idApi, changeState)
             }
-            patchState(idApi, changeState)
-        }
+        });
     }
-
 }
-// slider Show ()
+// sliler banner
 function sliderShow() {
-    var clickPrev = $('.slider__turn--left')
-    var clickNext = $('.slider__turn--right')
-    var showImg = $('.slider__main-item-img')
-    var btnChose = $$('.slider__nav-item')
+    var clickPrev = $('.slider-turn__left')
+    var clickNext = $('.slider-turn__right')
+    var showImg = $('.slider-main__items-img')
+    var btnChose = $$('.slider-nav__items')
     var imgsLength;
     var btnChoseLength = btnChose.length;
     const imageApi = "http://localhost:3000/sliderBanner"
@@ -104,8 +119,8 @@ function sliderShow() {
         clickNext.onclick = function() {
             showImg.src = imgs[i].src
             if (i + 1 == imgs[i].id) {
-                $('.slider__nav-item.slider__nav-item--active').classList.remove('slider__nav-item--active')
-                btnChose[i].className = "slider__nav-item slider__nav-item--active"
+                $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
+                btnChose[i].className = "slider-nav__items slider-nav__items--active"
             }
             i++;
 
@@ -121,8 +136,8 @@ function sliderShow() {
                 console.log(j)
                 showImg.src = imgs[j].src
                 if (j + 1 == imgs[j].id) {
-                    $('.slider__nav-item.slider__nav-item--active').classList.remove('slider__nav-item--active')
-                    btnChose[j].className = "slider__nav-item slider__nav-item--active"
+                    $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
+                    btnChose[j].className = "slider-nav__items slider-nav__items--active"
                 }
 
                 j--;
@@ -137,8 +152,8 @@ function sliderShow() {
         function changeImgs() {
             showImg.src = imgs[k].src
             if (k + 1 == imgs[k].id) {
-                $('.slider__nav-item.slider__nav-item--active').classList.remove('slider__nav-item--active')
-                btnChose[k].className = "slider__nav-item slider__nav-item--active"
+                $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
+                btnChose[k].className = "slider-nav__items slider-nav__items--active"
             }
             k++;
             if (k == imgsLength) {
@@ -151,11 +166,50 @@ function sliderShow() {
             btnChose[i].onclick = function() {
                 showImg.src = imgs[i].src
                 if (i + 1 == imgs[i].id) {
-                    $('.slider__nav-item.slider__nav-item--active').classList.remove('slider__nav-item--active')
-                    btnChose[i].className = "slider__nav-item slider__nav-item--active"
+                    $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
+                    btnChose[i].className = "slider-nav__items slider-nav__items--active"
                 }
                 console.log(i)
             }
         }
     }
 }
+// lấy thông báo
+function handlerNoti() {
+    const apiNoti = "http://localhost:3000/notifications"
+
+
+    imgnoti = $$('.notifications-contents__img')
+    titlenoti = $$('.notifications-contents__title')
+    desnoti = $$('.notifications-contents__descriptions')
+    getNoti()
+
+    function getNoti() {
+        fetch(apiNoti).then(function(response) {
+            return response.json();
+        }).then(function(notis) {
+            renderNoti(notis)
+        })
+    }
+
+    function renderNoti(notis) {
+        let notibody = $('.notifications-body')
+        let htmls = notis.map(function(notis) {
+            return ` <div class="notifications-body__items">
+             <a class="notifications-contents">
+               <div class="notifications-contents__left">
+                 <img src="${notis.imgNoti}" alt="Thông báo" class="notifications-contents__img">
+               </div>
+               <div class="notifications-contents__right">
+                 <h5 class="notifications-contents__title">${notis.titalNoti}</h5>
+                 <p class="notifications-contents__descriptions">${notis.desNoti}</p>
+               </div>
+             </a>
+          </div>`
+        })
+        notibody.innerHTML = htmls.join("")
+    }
+}
+// function handlerFlashSale(params) {
+
+// }

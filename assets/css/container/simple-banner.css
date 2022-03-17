@@ -1,10 +1,10 @@
-.first-simpleBanner {
+.fisrt-simpleBanner {
     padding: 10px 0;
-    background-color: #f5f5f5;
+    background-color: var(--white-color-f5);
     cursor: pointer;
 }
 
-.first-simpleBanner:hover {
+.first-simpleBanner__img:hover {
     opacity: 0.9;
 }
 

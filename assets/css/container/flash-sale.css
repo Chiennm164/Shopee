@@ -1,28 +1,29 @@
 .flashSale {
     min-height: 60px;
-    background-color: #f8f8f8;
+    background-color: var(--white-color-f8);
     padding: 20px;
 }
 
 .container__flashSale {
     display: flex;
     min-height: 350px;
-    background-color: #fff;
+    background-color: var(--white-color);
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.flashSale__header {
+.flashSale-header {
     display: flex;
     height: 61px;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
     font-size: 14px;
-    border-bottom: 2px solid #f9f9f9;
+    border-bottom: 2px solid var(--white-color-f8);
+    ;
 }
 
-.flashSale__header-left {
+.flashSale-header__left {
     padding: 15px;
     display: flex;
     height: 30px;
@@ -30,32 +31,32 @@
     align-items: center;
 }
 
-.flashSale__header-title {
+.flashSale-header__title {
     padding: 0 0 0 15px;
     width: 130px;
     height: 30px;
 }
 
-.flashSale__header-title-img {
+.flashSale-header__title-img {
     width: 100%;
     height: 100%;
     background: url('/assets/img/flashsale/flashsale.png') center / contain no-repeat;
 }
 
-.flashSale__header-time {
+.flashSale-header__time {
     padding: 0 20px;
 }
 
-.flashSale__header-time-list-items {
+.flashSale-header__time-list-items {
     display: flex;
     font-size: 14px;
-    color: #fff;
+    color: var(--white-color);
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.flashSale__header-time-items {
+.flashSale-header__time-items {
     width: 30px;
     line-height: 22px;
     height: 28px;
@@ -66,32 +67,40 @@
     background-color: var(--text-color);
 }
 
-.flashSale__header-right {
+.flashSale-header__right {
     padding-right: 25px;
     line-height: 25px;
     height: 30px;
 }
 
-.flashSale__header-show {
+.flashSale-header__show {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
-.flashSale__header-show-text {
-    color: rgb(254, 101, 50);
+.flashSale-header__show {
+    opacity: 0.9;
 }
 
-.flashSale__header-show-span {
+.flashSale-header__show-text {
+    color: var(--red2-color);
+}
+
+.flashSale-header__show-span {
     font-size: 12px;
+    padding-left: 10px;
+    color: var(--red2-color);
 }
 
-.flashSale__body {
+.flashSale-body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 20px;
 }
 
-.flashSale__body-list {
+.flashSale-body__list {
     display: flex;
     padding: 0;
     margin: 0;
@@ -99,9 +108,9 @@
     justify-content: space-around;
 }
 
-.flashSale__body-items {
+.flashSale-body__items {
     position: relative;
-    min-width: 196px;
+    min-width: 186px;
     min-height: 240px;
     display: flex;
     flex-direction: column;
@@ -111,17 +120,17 @@
     text-decoration: none;
 }
 
-.flashSale__body-items:hover {
+.flashSale-body__items:hover {
     transform: translateY(-2px);
 }
 
-.flashSale__cart-item1 {
+.flashSale-cart__items1 {
     width: 173px;
     height: 173px;
     position: relative;
 }
 
-.flashSale__cart-bground {
+.flashSale-cart__bground {
     top: 0;
     right: 0;
     z-index: 1;
@@ -132,8 +141,8 @@
     background: url('/assets/img/flashsale/bgsale.png') center / cover no-repeat;
 }
 
-.flashSale__cart-bground-item {
-    background-color: rgb(254, 101, 50);
+.flashSale-cart__bground-items {
+    background-color: var(--red2-color);
     top: 0;
     right: 0;
     z-index: 0;
@@ -143,7 +152,7 @@
     position: absolute;
 }
 
-.flashSale__cart-item1-img {
+.flashSale-cart__items1-img {
     position: absolute;
     width: 85%;
     height: 85%;
@@ -152,21 +161,21 @@
     left: 12px;
 }
 
-.flashSale__cart-price {
+.flashSale-cart__price {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.flashSale__cart-price-number {
-    color: rgb(254, 101, 50);
+.flashSale-cart__price-number {
+    color: var(--red2-color);
     font-size: 18px;
     letter-spacing: 1.1px;
     padding: 8px 0;
 }
 
-.flashSale__cart-price-percent {
+.flashSale-cart__price-percent {
     text-align: center;
     color: var(--white-color);
     font-size: 12px;
@@ -186,7 +195,7 @@
     width: 44px;
     height: 40px;
     /* padding: 22px 8px; */
-    background-color: rgba(255, 212, 36, .9);
+    background-color: var(--yellow-color);
 }
 
 .flashSale__ratiosale::after {
@@ -197,14 +206,14 @@
     right: 0;
     bottom: -4px;
     position: absolute;
-    border-color: transparent rgba(255, 212, 36, .9);
+    border-color: transparent var(--yellow-color);
     border-style: solid;
     border-width: 0px 22px 4px;
 }
 
 .flashSale__ratiosale-number {
     padding-top: 5px;
-    color: rgb(254, 101, 50);
+    color: var(--red2-color);
 }
 
 .flashSale__ratiosale-text {

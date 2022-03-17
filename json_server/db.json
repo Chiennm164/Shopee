@@ -30,14 +30,14 @@
             "userName": "username",
             "passWord": "password",
             "fullName": "Minh Chiến",
-            "avatar": "src",
+            "avatar": "/assets/img/user/useravatar.jpg",
             "email": "mako@email",
             "status": 2,
             "address": "Nghệ An",
             "phone": "0988888888",
             "birthOfDate": "2022-03-07",
             "gender": 1,
-            "state": "active",
+            "state": "noactive",
             "money": 0,
             "point": 0
         },
@@ -54,7 +54,7 @@
             "phone": "0988888888",
             "birthOfDate": "",
             "gender": 3,
-            "state": "noactive",
+            "state": "active",
             "money": 100,
             "point": 0,
             "birthday": "2022-03-09"
@@ -67,7 +67,7 @@
             "email": "mako@email2",
             "status": 4,
             "fullName": "",
-            "avatar": "",
+            "avatar": "/assets/img/user/useravatar.jpg",
             "address": "",
             "phone": 0,
             "birthOfDate": "",
@@ -77,12 +77,29 @@
             "point": 0
         }
     ],
-    "product": [{
-        "id": 1,
-        "nameProduct": "text",
-        "nameUser": "text",
-        "price": 0,
-        "amount": 0,
-        "type": "text"
-    }]
+    "notifications": [{
+            "id": 1,
+            "titalNoti": "Chào mừng thành viên mới",
+            "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
+            "imgNoti": "/assets/img/header/nav/notifications/noti1.png"
+        }, {
+            "id": 2,
+            "titalNoti": "Mùa hè sôi động ",
+            "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
+            "imgNoti": "/assets/img/header/nav/notifications/noti2.png"
+        }, {
+            "id": 3,
+            "titalNoti": "Lễ tình nhân trắng",
+            "desNoti": "Giảm giá với tất cả mặt hàng về hoa và socola",
+            "imgNoti": "/assets/img/header/nav/notifications/noti3.png"
+        }, {
+            "id": 4,
+            "titalNoti": "Hoàn thành thông tin , có ngay tiền mặt",
+            "desNoti": "Bắt đầu từ  01-01-2022 , người dùng hoàn thành đủ hồ sơ sẽ được tặng ngay 100k vào ví",
+            "imgNoti": "/assets/img/header/nav/notifications/noti4.png"
+        }
+
+
+
+    ]
 }

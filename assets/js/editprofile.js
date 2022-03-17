@@ -4,7 +4,7 @@ let profile = $(".profile")
 let logout = $(".profile-logout")
 let inputElement = $$(".form-input-edit-profile")
 
-let username = $(".profile__nav-title-name")
+let usernames = $$("a[name='username']")
 let address = $("input[name='address")
 let fullname = $("input[name='fullname']")
 let email = $("a[name='useremail']")
@@ -22,7 +22,6 @@ let avatars = $$("img[name='avataruser']")
 
 let profileNoti = $(".profile__main-noti")
 const apiUser = "http://localhost:3000/user"
-console.log(avatars)
 getUser()
 
 // call api
@@ -64,7 +63,11 @@ function checkLogin(users) {
 
     if (activeSatate) {
         // console.log("check active");
+        console.log("check active");
         profile.style.display = "flex";
+        profile.setAttribute("style", 'align-items:center')
+
+
         handleLogOut(idApi);
     }
     // check xem người dùng đã đủ info chưa
@@ -230,16 +233,19 @@ function patchProfileUser(id, data) {
 
 function handleAccount(idApi, users) {
 
-    username.innerText = users[idApi].userName
+    username = users[idApi].userName
     avatar = users[idApi].avatar
     password = users[idApi].passWord
     email = users[idApi].email
     money.innerText = users[idApi].money
     point = users[idApi].point
     createdAt = users[idApi].createdAt
-    console.log(avatar)
+
     avatars.forEach(element => {
         element.src = avatar
+    });
+    usernames.forEach(element => {
+        element.innerText = username
     });
     let account = $('.profile__user-infor-account')
     account.onclick = function() {
