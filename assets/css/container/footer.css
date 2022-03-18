@@ -50,24 +50,24 @@
     color: #908a85;
 }
 
-.footer__contact {
+.footer-contact {
     background-color: var(--white-color-f5);
     min-height: 300px;
 }
 
-.footer__contact-list-items {
+.footer-contact__list-items {
     display: flex;
     padding: 10px 0 0 0;
 }
 
-.footer__contact-item {
-    width: 20%;
+.footer-contact__item {
+    width: 25%;
     min-height: 350px;
     flex-direction: column;
     display: flex;
 }
 
-.footer__contact-item-title {
+.footer-contact__item-title {
     color: rgba(0, 0, 0, 0.54);
     text-decoration: none;
     font-size: 14px;
@@ -76,7 +76,7 @@
     text-transform: uppercase;
 }
 
-.footer__contact-item-name {
+.footer-contact__item-name {
     text-decoration: none;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.54);
@@ -84,21 +84,21 @@
     text-transform: capitalize;
 }
 
-.footer__contact-item-contact {
+.footer-contact__item-contact {
     display: flex;
     text-decoration: none;
     padding: 0 10px;
     flex-direction: column;
 }
 
-.footer__contact-item-payment,
-.footer__contact-item-transport {
+.footer-contact__item-payment,
+.footer-contact__item-transport {
     display: flex;
     text-decoration: none;
     flex-direction: column;
 }
 
-.footer__contact-span {
+.footer-contact__span {
     padding: 10px;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .contact__qRcode-left img {
-    width: 80%;
+    width: 60%;
 }
 
 .contact__qRcode-right {
@@ -227,7 +227,7 @@
     background-position: 13.452914798206278% 6.802721088435374%;
 }
 
-.footer__about {
+.footer-about {
     background-color: var(--white-color-f8);
 }
 
@@ -242,19 +242,19 @@
     justify-content: space-around;
 }
 
-.footer__about-right {
+.footer-about__right {
     display: flex;
     flex-wrap: wrap;
     width: 700px;
     justify-content: center;
 }
 
-.footer__about-right a {
+.footer-about__right a {
     text-decoration: none;
     color: rgb(0 0 0 / 0.54);
 }
 
-.footer__end {
+.footer-end {
     background-color: var(--white-color-f5);
     display: flex;
     padding: 15px;
@@ -262,13 +262,13 @@
     flex-direction: column;
 }
 
-.footer__end-list a {
+.footer-end__list a {
     text-decoration: none;
     font-size: 14px;
     color: rgba(0, 0, 0, .54);
 }
 
-.footer__end-text {
+.footer-end__text {
     font-size: 13px;
     color: var(--text-color);
     padding-top: 10px;

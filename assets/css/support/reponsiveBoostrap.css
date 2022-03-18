@@ -42,6 +42,9 @@
       .suggest__list-items-wrap {
           padding: 12px 5px;
       }
+      .suggest-body__items {
+          margin-left: 10px;
+      }
   }
   /* breakpoint 992px  x< 992px */
   
@@ -89,7 +92,7 @@
       }
       /* category */
       .category__list-items {
-          grid-template-columns: repeat(auto-fill, 174px);
+          grid-template-columns: repeat(auto-fill, 136px);
       }
       /* shopee mall  */
       .shopeeMall-header__title-logo,
@@ -244,10 +247,10 @@
       }
       .first-simpleBanner__img2,
       .first-simpleBanner__img {
-          min-height: 40px;
+          min-height: 42px;
       }
       .category__list-items {
-          grid-template-columns: repeat(auto-fill, 114px);
+          grid-template-columns: repeat(auto-fill, 90px);
       }
       .main-history-item-img {
           height: 20px;

@@ -22,9 +22,10 @@ let avatars = $$("img[name='avataruser']")
 
 let profileNoti = $(".profile__main-noti")
 const apiUser = "http://localhost:3000/user"
-getUser()
 
-// call api
+getUser()
+handlerBtnAccount()
+    // call api
 function getUser() {
     fetch(apiUser).then(function(response) {
         return response.json();
@@ -59,15 +60,13 @@ function checkLogin(users) {
             return check.state === 'active'
         }
     )
-    handleAccount(idApi, users)
+    showInfoAccount(idApi, users)
 
     if (activeSatate) {
         // console.log("check active");
         console.log("check active");
         profile.style.display = "flex";
         profile.setAttribute("style", 'align-items:center')
-
-
         handleLogOut(idApi);
     }
     // check xem người dùng đã đủ info chưa
@@ -163,7 +162,8 @@ function renderInfoUser(idApi, users) {
 // xử lý nút Edit khi người dùng ấn vào
 function handleBtnEdit(idApi) {
     btnEdit.onclick = function() {
-
+        genderGroup.classList.remove("profile-hide")
+        showsGender.parentElement.classList.add("profile-hide")
         fullname.classList.add("border-input")
         phone.classList.add("border-input")
         address.classList.add("border-input")
@@ -230,8 +230,8 @@ function patchProfileUser(id, data) {
 
     })
 }
-
-function handleAccount(idApi, users) {
+// hiển thị một số thông tin tài khoản
+function showInfoAccount(idApi, users) {
 
     username = users[idApi].userName
     avatar = users[idApi].avatar
@@ -247,8 +247,14 @@ function handleAccount(idApi, users) {
     usernames.forEach(element => {
         element.innerText = username
     });
-    let account = $('.profile__user-infor-account')
-    account.onclick = function() {
+}
+
+// xử lý sự kiện người dùng ấn vào xem thông tin tài khoản 
+function handlerBtnAccount() {
+
+    let btnAccount = $('.profile__user-infor-account')
+    console.log(btnAccount)
+    btnAccount.onclick = function() {
         console.log("oke")
     }
 

@@ -53,7 +53,7 @@
             "address": "Vinh",
             "phone": "0988888888",
             "birthOfDate": "",
-            "gender": 3,
+            "gender": 1,
             "state": "active",
             "money": 100,
             "point": 0,
@@ -82,24 +82,43 @@
             "titalNoti": "Chào mừng thành viên mới",
             "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
             "imgNoti": "/assets/img/header/nav/notifications/noti1.png"
-        }, {
+        },
+        {
             "id": 2,
             "titalNoti": "Mùa hè sôi động ",
             "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
             "imgNoti": "/assets/img/header/nav/notifications/noti2.png"
-        }, {
+        },
+        {
             "id": 3,
             "titalNoti": "Lễ tình nhân trắng",
             "desNoti": "Giảm giá với tất cả mặt hàng về hoa và socola",
             "imgNoti": "/assets/img/header/nav/notifications/noti3.png"
-        }, {
+        },
+        {
             "id": 4,
             "titalNoti": "Hoàn thành thông tin , có ngay tiền mặt",
             "desNoti": "Bắt đầu từ  01-01-2022 , người dùng hoàn thành đủ hồ sơ sẽ được tặng ngay 100k vào ví",
             "imgNoti": "/assets/img/header/nav/notifications/noti4.png"
         }
-
-
-
-    ]
+    ],
+    "voucher": [{
+        "id": 1,
+        "voucherName": "10%"
+    }, {
+        "id": 1,
+        "voucherName": "20%"
+    }, {
+        "id": 1,
+        "voucherName": "30%"
+    }, {
+        "id": 1,
+        "voucherName": "40%"
+    }, {
+        "id": 1,
+        "voucherName": "50%"
+    }, {
+        "id": 1,
+        "voucherName": "60%"
+    }]
 }
