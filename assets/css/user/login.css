@@ -11,6 +11,7 @@
 
 .header__left {
     display: flex;
+    align-items: center;
 }
 
 .header__left-logo {
@@ -23,9 +24,10 @@
 }
 
 .header__left-text {
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
     opacity: 0.9;
+    padding-top: 12px;
     font-weight: 400;
 }
 
@@ -88,6 +90,7 @@
 .content__form-title {
     text-align: center;
     color: #222;
+    padding: 15px 0;
     font-weight: 400;
     font-size: 22px;
     border-bottom: 1px solid #ccc;

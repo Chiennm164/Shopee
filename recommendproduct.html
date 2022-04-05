@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recommend-product</title>
+    <!-- link reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- link fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- link icons -->
+    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.js">
+    <!-- base css  -->
+    <link rel="stylesheet" href="assets/css/support/base.css">
+    <!--  link Header css -->
+    <link rel="stylesheet" href="assets/css/container/header.css">
+    <!--  link recommend-product css -->
+    <link rel="stylesheet" href="assets/css/product/recommendproduct.css">
+
+    <!-- footer css -->
+    <link rel="stylesheet" href="assets/css/container/footer.css">
+
+    <!-- link reponsive css -->
+    <link rel="stylesheet" href="/assets/css/support/reponsiveBoostrap.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="col">
+                <div class="container">
+                    <!-- Nav bar -->
+                    <nav class="header__navbar  hiden-on-mobile-s">
+                        <!-- nav bar left -->
+                        <div class="header-navbar__left">
+                            <!-- seller  -->
+                            <a href="" class="header-navbar__items navbar__separate">Kênh Người Bán </a>
+                            <!-- down app  -->
+                            <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
+                            <div class="navbar-drawer">
+                                <div class="navbar-drawer__contents">
+                                    <img src="/assets/img/header/nav/qrcode.png" alt="qrcode" class="navbar-drawer__img-qrcode">
+                                    <div class="navbar-drawer__store">
+                                        <div class="navbar-drawer__store-items">
+                                            <img src="/assets/img/header/nav/appstore.png" alt="appstore" class="navbar-drawer__store-img">
+                                        </div>
+                                        <div class="navbar-drawer__store-items">
+                                            <img src="/assets/img/header/nav/ggplay.png" alt="chplay" class="navbar-drawer__store-img">
+                                        </div>
+                                        <div class="navbar-drawer__store-items">
+                                            <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery" class="navbar-drawer__store-img">
+                                        </div>          
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                            <!--  link fackbook , instagram -->
+                            <div class="header-navbar__items navbar-item__nopointer">Kết nối</div>
+                            <a class="header-navbar__items navbar__item-link">
+                                <span class="ti ti-facebook navbar__items-icon navbar__item-link"></span>
+                                <span class="ti ti-instagram navbar__items-icon navbar__item-link"></span>
+                            </a>
+                        </div>
+                        <!-- navbar-space -->
+                        <div class="navbar-space"></div>
+                        <!-- nav bar right -->
+                        <ul class="header-navbar__right">
+                            <li class="navbar-group">
+                                <!-- icon noti -->
+                                <a href="" class="header-navbar__items">
+                                    <span class="ti ti-bell navbar__items-icon"></span>
+                                    <span class="navbar__items-title">
+                              Thông báo
+                               </span>
+                                </a>
+                                <!-- content noti -->
+                                <div class="navbar-notifications">
+                                    <div class="notifications-header">
+                                        Thông báo mới nhận
+                                    </div>
+                                    <div class="notifications-body">
+
+                                    </div>
+                                    <a class="notifications-footer">
+                                  Xem thêm
+                                   </a>
+                                </div>
+                            </li>
+                            <!-- help -->
+
+                            <li class="navbar-group">
+                                <a href="" class="header-navbar__items">
+                                    <span class="ti ti-help-alt navbar__items-icon"></span>
+                                    <span class="navbar__items-title">Hỗ trợ</span>
+                                </a>
+                            </li>
+                            <!-- change language -->
+                            <li class="navbar-group">
+                                <a href="" class="header-navbar__items">
+                                    <span class="ti ti-world navbar__items-icon"></span>
+                                    <span class="navbar__items-title"> Tiếng việt</span>
+                                    <span class="ti ti-angle-down navbar__items-icon"></span>
+                                </a>
+                                <div class="navbar__change-language">
+                                    <a class="language-vietnam">Tiếng việt</a>
+                                    <a class="language-english">English</a>
+                                </div>
+                            </li>
+                            <!-- login , signup  -->
+                            <a href="/signup.html" class="header-navbar__items usersignup">Đăng Ký </a>
+                            <a href="/login.html" class="header-navbar__items userlogin">Đăng Nhập </a>
+
+                            <!-- profile  -->
+                            <li class="navbar-group profile">
+                                <img src="/assets/img/user/profile/avatar.png" alt="avataruser" class="navbar__item-avatar-img">
+                                <a href="" class="header-navbar__items">Durza
+                               </a>
+                                <div class="header-navbar__profile">
+                                    <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
+                                    <a href="" class="header-navbar__profile--items">Đơn mua</a>
+                                    <a href="#" class="header-navbar__profile--items profile-logout">Đăng xuất</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--  header with search  -->
+                    <div class="header-with-search">
+                        <!-- logo -->
+                        <div class="header-with-search__logo-wrapper  hiden-on-mobile hiden-on-mobile-s">
+                            <a href="index.html" class="header-with-search__logo">
+                                <img src="/assets/img/header/logo-full-white.png" alt="logo" class="header-with-search__logo-img">
+                            </a>
+                        </div>
+                        <!-- menu mobile -->
+                        <div class="header-with-search__mbmenu hiden-on-tablet  hiden-on-mobile">
+                            <span class="header-with-search__mbmenu-span ti-menu"></span>
+                            <div class="mbmenu-content">
+                                <div class="mbmenu-content-wrapper">
+                                    <div class="mbmenu-list-items">
+                                        <a href="" class="mbmenu-items">
+                                            <div class="mbmenu-items__group">
+                                                <span class="ti-home"></span>
+                                                <p>Trang chủ</p>
+                                            </div>
+                                        </a>
+                                        <a href="" class="mbmenu-items">
+                                            <div class="mbmenu-items__group">
+                                                <span class="ti-truck"></span>
+                                                <p>Kênh người bán</p>
+                                            </div>
+                                        </a>
+                                        <a href="" class="mbmenu-items">
+                                            <div class="mbmenu-items__group">
+                                                <span class="ti-world"></span>
+                                                <p>Kết nối</p>
+
+                                            </div>
+                                        </a>
+                                        <a href="" class="mbmenu-items">
+                                            <div class="mbmenu-items__group">
+
+                                                <span class="ti-bell"></span>
+                                                <p>Thông báo</p>
+                                            </div>
+                                        </a>
+                                        <a href="" class="mbmenu-items">
+                                            <div class="mbmenu-items__group">
+
+                                                <span class="ti-help-alt"></span>
+                                                <p>Hỗ trợ</p>
+                                            </div>
+                                        </a>
+                                        <a href="/signup.html" class="mbmenu-items usersignup">
+                                            <div class="mbmenu-items__group">
+                                                <span class="ti-user"></span>
+                                                <p>Đăng ký</p>
+
+                                            </div>
+                                        </a>
+                                        <a href="/login.html" class="mbmenu-items userlogin">
+                                            <div class="mbmenu-items__group">
+                                                <span class="ti-user"></span>
+                                                <p>Đăng nhập</p>
+
+                                            </div>
+                                        </a>
+                                        <a href="/profile.html" class="mbmenu-items profile">
+                                            <div class="mbmenu-items__group">
+                                                <span class="ti-user"></span>
+                                                <p>Tài Khoản</p>
+                                            </div>
+                                        </a>
+                                        <a href="" class="mbmenu-items">
+                                            <div class="mbmenu-items__group profile-logout">
+                                                <span class="ti-close"></span>
+                                                <p>Đăng xuất</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- search -->
+                        <div class="header-with-search__search-section">
+                            <div class="search-section__searchbar">
+                                <div class="searchbar-main">
+                                    <div class="searchbar-main__input">
+                                        <!-- input text search-->
+                                        <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi" class="searchbar__input">
+                                        <!-- history -->
+                                        <div class="searchbar-main__history">
+                                            <div class="searchbar-main__list-box">
+                                                <a href="" class="searchbar-main__history-item">
+                                                    <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                                    <img src="/assets/img/header/search-history.png" alt="tìm kiếm" class="main__history-item-img">
+                                                </a>
+                                            </div>
+                                            <div class="searchbar-main__list-box">
+                                                <a href="" class="searchbar-main__history-item">
+                                                    <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                                    <img src="/assets/img/header/search-history.png" alt="tìm kiếm" class="main__history-item-img">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- button search -->
+                                <button class="searchbar-btn">
+                                     <span class="ti ti-search searchbar-btn__icon"></span>
+                           </button>
+                            </div>
+                            <!-- suggest search -->
+                            <div class="search-section__search-suggest  hiden-on-mobile-s">
+                                <div class="search-suggest__list-items">
+                                    <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
+                                    <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
+                                    <a href="#" class="search-suggest__items">Bó Hoa</a>
+                                    <a href="#" class="search-suggest__items">Ga Giường</a>
+                                    <a href="#" class="search-suggest__items">Váy Nữ</a>
+                                    <a href="#" class="search-suggest__items">Balo</a>
+                                    <a href="#" class="search-suggest__items">Quần dài</a>
+                                    <a href="#" class="search-suggest__items">Áo sơ mi</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cart -->
+                        <div class="header-with-search__cart">
+                            <div class="cart__contents">
+                                <!-- number cart -->
+                                <a href="#" class="cart-badge-wrapper">
+                                    <span class="ti-shopping-cart cart-badge-span"></span>
+                                    <span class="cart-number-badge">1</span>
+                                </a>
+                                <!-- cart- content -->
+                                <div class="cart__drawer">
+                                    <div class="cart__drawer-wrapper">
+                                        <p class="cart__drawer-header">
+                                            Sản phẩm mới thêm
+                                        </p>
+                                        <div class="cart__drawer-body">
+                                            <div class="cart__drawer-list-items">
+                                                <a href="" class="cart__drawer-items">
+                                                    <img src="/assets/img/header/nav/cart.png" class="cart__drawer-items-img" alt="vật phẩm"></img>
+                                                    <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
+                                                    <div class="cart__drawer-items-price">175000đ</div>
+                                                </a>
+                                                <a href="" class="cart__drawer-items">
+                                                    <img src="/assets/img/header/nav/cart.png" class="cart__drawer-items-img" alt="vật phẩm"></img>
+                                                    <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
+                                                    <div class="cart__drawer-items-price">175000đ</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cart__drawer-footer">
+                                            <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="recommend-product">
+            <div class="container">
+                <div class="row">
+                    <div class="recommend-product-options col-lg-2">
+                        <div class="recommend-product-options__title">
+                            <i class="ti-filter"></i>
+                            <p>Bộ lọc tìm kiếm</p>
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Theo danh mục</p>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Áo thun</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Áo Sơ mi</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Áo Khoác</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Áo ngắn tay</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <div class="recommend-product-options__items-name">Thêm</div>
+                                <i class="ti-angle-down"></i>
+                            </div>
+
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Loại shop</p>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Shop Mall</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Shop Yêu Thích</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Shop yêu Thích ++</div>
+                            </div>
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Nơi bán </p>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Hà Nội</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">TP HCM</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">TP Vinh</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <div class="recommend-product-options__items-name">Thêm</div>
+                                <i class="ti-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Đơn vị vận chuyển</p>
+
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Hoả Tốc</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Nhanh</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Tiết Kiệm</div>
+                            </div>
+
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Thương hiệu</p>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">MANDO</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">CHANEL</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">LS</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">CAVIN</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <div class="recommend-product-options__items-name">Thêm</div>
+                                <i class="ti-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Tình trạng</p>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Đã qua sử dụng</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Mới</div>
+                            </div>
+
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <p class="recommend-product-options__items-title">Dịch vụ & Khuyễn Mãi</p>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Freeship Xtra</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Hoàn xu</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Đang giảm giá</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <input type="checkbox">
+                                <div class="recommend-product-options__items-name">Miễn phí vận chuyển</div>
+                            </div>
+                            <div class="recommend-product-options__items-wrap">
+                                <div class="recommend-product-options__items-name">Thêm</div>
+                                <i class="ti-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="recommend-product-options__items">
+                            <button class="recommend-product-options__btndelete">Xoá tất cả</button>
+                        </div>
+
+                    </div>
+
+                    <div class="recommend-product-content col-lg-10">
+                        <div class="recommend-product-content__nav">
+                            <div class="recommend-product-content__nav-left">
+                                <p>Sắp xếp theo</p>
+                                <a href="">Liên Quan</a>
+                                <a href="">Mới Nhất</a>
+                                <a href="">Giá</a>
+                            </div>
+                            <div class="recommend-product-content__nav-right">
+                                <p>1/100</p>
+                                <i class="ti-angle-left"></i> <i class="ti-angle-right"></i>
+                            </div>
+
+                        </div>
+                        <div class="recommend-product-content__list-items">
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+                            <div class="recommend-product-content__items">
+                                <div class="recommend-product-content__items-img">
+                                    <div class="recommend-product-content__items-img-wrapper">
+                                        <img src="/assets/img/flashsale/mypham1.png" alt="suggest-img">
+                                        <img src="/assets/img/suggest/freeship.png" alt="suggest-service">
+                                        <div class="recommend-product-content__items-promotion">
+                                            <div class="recommend-product-content__items-promotion-number">46%</div>
+                                            <div class="recommend-product-content__items-promotion-text">Giảm</div>
+                                        </div>
+                                        <div class="recommend-product-content__items-sponsor">Tài trợ</div>
+                                        <div class="recommend-product-content__items-Tick">Yêu thích</div>
+                                        <div class="recommend-product-content__items-service">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-content">
+                                    <div class="recommend-product-content__items-content-wrapper">
+                                        <div class="recommend-product-content__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="recommend-product-content__items-content-voucher">giảm 10%</div>
+                                        <div class="recommend-product-content__items-content-end">
+                                            <div class="recommend-product-content__items-content-price">100đ</div>
+                                            <div class="recommend-product-content__items-content-sold">đã bán 12.4k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommend-product-content__items-show">
+                                    <p>Tìm sản phẩm tương tự</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="recommend-product-content__paging">
+                            <span class="ti-angle-left"></span>
+                            <span class="paging-active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>...</span>
+                            <span class="ti-angle-right"></span>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <!-- footer contact , about  -->
+            <div class="footer-contact hiden-on-mobile hiden-on-mobile-s">
+                <div class="container">
+                    <div class="footer-contact__list-items">
+                        <!-- support  -->
+                        <div class="footer-contact__item">
+                            <a href="" class="footer-contact__item-title">  CHĂM SÓC KHÁCH HÀNG</a>
+                            <div href="" class="footer-contact__item-contact">
+                                <a href="" class="footer-contact__item-name">      Trung Tâm Trợ Giúp       </a>
+                                <a href="" class="footer-contact__item-name">      Shopee Blog              </a>
+                                <a href="" class="footer-contact__item-name">      Shopee Mall              </a>
+                                <a href="" class="footer-contact__item-name">      Hướng Dẫn Mua Hàng             </a>
+                                <a href="" class="footer-contact__item-name">      Hướng Dẫn Bán Hàng      </a>
+                                <a href="" class="footer-contact__item-name">      Thanh Toán                       </a>
+                                <a href="" class="footer-contact__item-name">      Shopee Xu                  </a>
+                                <a href="" class="footer-contact__item-name">      Vận Chuyển                     </a>
+                                <a href="" class="footer-contact__item-name">      Trả Hàng & Hoàn Tiền             </a>
+                                <a href="" class="footer-contact__item-name">      Chăm Sóc Khách Hàng           </a>
+                                <a href="" class="footer-contact__item-name">      Chính Sách Bảo Hành            </a>
+                            </div>
+
+                        </div>
+                        <!-- about -->
+                        <div class="footer-contact__item">
+                            <a href="" class="footer-contact__item-title">VỀ SHOPEE</a>
+                            <div href="" class="footer-contact__item-contact">
+                                <a href="" class="footer-contact__item-name">    Giới Thiệu Về Shopee Việt Nam   </a>
+                                <a href="" class="footer-contact__item-name">    Tuyển Dụng  </a>
+                                <a href="" class="footer-contact__item-name">    Điều Khoản Shopee  </a>
+                                <a href="" class="footer-contact__item-name">    Chính Sách Bảo Mật </a>
+                                <a href="" class="footer-contact__item-name">    Chính Hãng   </a>
+                                <a href="" class="footer-contact__item-name">    Kênh Người Bán </a>
+                                <a href="" class="footer-contact__item-name">    Flash Sales  </a>
+                                <a href="" class="footer-contact__item-name">    Chương Trình Tiếp Thị Liên Kết Shopee     </a>
+                                <a href="" class="footer-contact__item-name">    Liên Hệ Với Truyền Thông </a>
+                            </div>
+                        </div>
+                        <!-- payment -->
+                        <div class="footer-contact__item">
+                            <div href="" class="footer-contact__item-payment">
+                                <a href="" class="footer-contact__item-title">THANH TOÁN </a>
+                                <ul class="payment">
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-visa contact__bg"></div>
+                                    </li>
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-master contact__bg"></div>
+                                    </li>
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-jcb contact__bg"></div>
+                                    </li>
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-amex contact__bg"></div>
+                                    </li>
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-cod contact__bg"></div>
+                                    </li>
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-intallment contact__bg"></div>
+                                    </li>
+                                    <li class="payment-bg">
+                                        <div class="contact__bg-payment-shopeepay contact__bg"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- transport -->
+                            <div href="" class="footer-contact__item-transport">
+                                <a href="" class="footer-contact__item-title">Đơn vị vận chuyển </a>
+
+                                <ul class="transport">
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-xpress contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-ghtk contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-ghn contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-viettel contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-vietnampost contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-Jt contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-grap contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-inja contact__bg"></div>
+                                    </li>
+                                    <li class="transport-bg">
+                                        <div class="contact__bg-transport-bestxpress contact__bg"></div>
+                                    </li>
+                                </ul>
+                                <div class="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Social Network -->
+                        <div class="footer-contact__item">
+                            <a href="" class="footer-contact__item-title">THEO DÕI CHÚNG TÔI TRÊN</a>
+                            <div href="" class="footer-contact__item-contact">
+                                <a href="" class="footer-contact__item-name">
+                                    <i class=" ti ti-facebook footer-contact__span"></i> Facebook </a>
+                                <a href="" class="footer-contact__item-name">
+                                    <i class="ti ti-instagram footer-contact__span"></i> Instagram </a>
+                                <a href="" class="footer-contact__item-name">
+                                    <i class="ti ti-linkedin footer-contact__span"></i> LinkedIn </a>
+                            </div>
+                        </div>
+                        <!-- dowload -->
+                        <div class="footer-contact__item">
+                            <a href="" class="footer-contact__item-title"> TẢI ỨNG DỤNG SHOPEE NGAY THÔI
+                                </a>
+                            <div href="" class="contact__qRcode">
+                                <div class="contact__qRcode-left">
+                                    <img src="/assets/img/footer/qr-code/qr.png" alt="">
+                                </div>
+                                <div class="contact__qRcode-right">
+                                    <img src="/assets/img//footer//qr-code//item1.png" alt="" class="contact__qRcode-right-item">
+                                    <img src="/assets/img//footer//qr-code//item2.png" alt="" class="contact__qRcode-right-item">
+                                    <img src="/assets/img//footer//qr-code//item3.png" alt="" class="contact__qRcode-right-item">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-about hiden-on-mobile hiden-on-mobile-s">
+                <div class="container">
+                    <div class="about">
+                        <div class="footer-about__left">© 2021 Shopee. Tất cả các quyền được bảo lưu.
+                        </div>
+                        <div class="sp">
+                        </div>
+                        <div class="footer-about__right">
+                            Quốc gia & Khu vực :
+                            <a href=""> Singapore <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Indonesia <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Đài Loan <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Thái Lan <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Malaysia <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Việt Nam <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Philippines <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Brazil <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> México <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Colombia <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Chile <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Poland <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> Spain <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> France <span>&nbsp;|&nbsp;</span></a>
+                            <a href=""> India </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--  footer end -->
+            <div class="footer-end">
+                <div class="footer-end__list">
+                    <a href=""> CHÍNH SÁCH BẢO MẬT <span>&nbsp;|&nbsp;</span></a>
+                    <a href=""> QUY CHẾ HOẠT ĐỘNG <span>&nbsp;|&nbsp;</span></a>
+                    <a href="">  CHÍNH SÁCH VẬN CHUYỂN <span>&nbsp;|&nbsp;</span></a>
+                    <a href="">  CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN </a>
+                </div>
+
+                <div class="footer-end__text">Công ty TNHH Shopee
+                </div>
+                <div class="footer-end__text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+                </div>
+                <div class="footer-end__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)
+                </div>
+                <div class="footer-end__text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
+                </div>
+                <div class="footer-end__text">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
