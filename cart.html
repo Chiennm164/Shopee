@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <!-- link reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- link fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- link icons -->
+    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.js">
+    <!-- base css  -->
+    <link rel="stylesheet" href="assets/css/support/base.css">
+    <!--  link Header css -->
+    <link rel="stylesheet" href="assets/css/container/header.css">
+    <!--  link cart css -->
+    <link rel="stylesheet" href="assets/css/product/cart.css">
+
+    <!-- footer css -->
+    <link rel="stylesheet" href="assets/css/container/footer.css">
+
+    <!-- link reponsive css -->
+    <link rel="stylesheet" href="/assets/css/support/reponsiveBoostrap.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="col">
+            <div class="container">
+                <!-- Nav bar -->
+                <nav class="header__navbar  hiden-on-mobile-s">
+                    <!-- nav bar left -->
+                    <div class="header-navbar__left">
+                        <!-- seller  -->
+                        <a href="" class="header-navbar__items navbar__separate">Kênh Người Bán </a>
+                        <!-- down app  -->
+                        <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
+                        <div class="navbar-drawer">
+                            <div class="navbar-drawer__contents">
+                                <img src="/assets/img/header/nav/qrcode.png" alt="qrcode" class="navbar-drawer__img-qrcode">
+                                <div class="navbar-drawer__store">
+                                    <div class="navbar-drawer__store-items">
+                                        <img src="/assets/img/header/nav/appstore.png" alt="appstore" class="navbar-drawer__store-img">
+                                    </div>
+                                    <div class="navbar-drawer__store-items">
+                                        <img src="/assets/img/header/nav/ggplay.png" alt="chplay" class="navbar-drawer__store-img">
+                                    </div>
+                                    <div class="navbar-drawer__store-items">
+                                        <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery" class="navbar-drawer__store-img">
+                                    </div>          
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                        <!--  link fackbook , instagram -->
+                        <div class="header-navbar__items navbar-item__nopointer">Kết nối</div>
+                        <a class="header-navbar__items navbar__item-link">
+                            <span class="ti ti-facebook navbar__items-icon navbar__item-link"></span>
+                            <span class="ti ti-instagram navbar__items-icon navbar__item-link"></span>
+                        </a>
+                    </div>
+                    <!-- navbar-space -->
+                    <div class="navbar-space"></div>
+                    <!-- nav bar right -->
+                    <ul class="header-navbar__right">
+                        <li class="navbar-group">
+                            <!-- icon noti -->
+                            <a href="" class="header-navbar__items">
+                                <span class="ti ti-bell navbar__items-icon"></span>
+                                <span class="navbar__items-title">
+                          Thông báo
+                           </span>
+                            </a>
+                            <!-- content noti -->
+                            <div class="navbar-notifications">
+                                <div class="notifications-header">
+                                    Thông báo mới nhận
+                                </div>
+                                <div class="notifications-body">
+
+                                </div>
+                                <a class="notifications-footer">
+                              Xem thêm
+                               </a>
+                            </div>
+                        </li>
+                        <!-- help -->
+
+                        <li class="navbar-group">
+                            <a href="" class="header-navbar__items">
+                                <span class="ti ti-help-alt navbar__items-icon"></span>
+                                <span class="navbar__items-title">Hỗ trợ</span>
+                            </a>
+                        </li>
+                        <!-- change language -->
+                        <li class="navbar-group">
+                            <a href="" class="header-navbar__items">
+                                <span class="ti ti-world navbar__items-icon"></span>
+                                <span class="navbar__items-title"> Tiếng việt</span>
+                                <span class="ti ti-angle-down navbar__items-icon"></span>
+                            </a>
+                            <div class="navbar__change-language">
+                                <a class="language-vietnam">Tiếng việt</a>
+                                <a class="language-english">English</a>
+                            </div>
+                        </li>
+                        <!-- login , signup  -->
+                        <a href="/signup.html" class="header-navbar__items usersignup">Đăng Ký </a>
+                        <a href="/login.html" class="header-navbar__items userlogin">Đăng Nhập </a>
+
+                        <!-- profile  -->
+                        <li class="navbar-group profile">
+                            <img src="/assets/img/user/profile/avatar.png" alt="avataruser" class="navbar__item-avatar-img">
+                            <a href="" class="header-navbar__items">Durza
+                           </a>
+                            <div class="header-navbar__profile">
+                                <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
+                                <a href="" class="header-navbar__profile--items">Đơn mua</a>
+                                <a href="#" class="header-navbar__profile--items profile-logout">Đăng xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--  header with search  -->
+                <div class="header-with-search">
+                    <!-- logo -->
+                    <div class="header-with-search__logo-wrapper  hiden-on-mobile hiden-on-mobile-s">
+                        <a href="index.html" class="header-with-search__logo">
+                            <img src="/assets/img/header/logo-full-white.png" alt="logo" class="header-with-search__logo-img">
+                        </a>
+                    </div>
+                    <!-- menu mobile -->
+                    <div class="header-with-search__mbmenu hiden-on-tablet  hiden-on-mobile">
+                        <span class="header-with-search__mbmenu-span ti-menu"></span>
+                        <div class="mbmenu-content">
+                            <div class="mbmenu-content-wrapper">
+                                <div class="mbmenu-list-items">
+                                    <a href="" class="mbmenu-items">
+                                        <div class="mbmenu-items__group">
+                                            <span class="ti-home"></span>
+                                            <p>Trang chủ</p>
+                                        </div>
+                                    </a>
+                                    <a href="" class="mbmenu-items">
+                                        <div class="mbmenu-items__group">
+                                            <span class="ti-truck"></span>
+                                            <p>Kênh người bán</p>
+                                        </div>
+                                    </a>
+                                    <a href="" class="mbmenu-items">
+                                        <div class="mbmenu-items__group">
+                                            <span class="ti-world"></span>
+                                            <p>Kết nối</p>
+
+                                        </div>
+                                    </a>
+                                    <a href="" class="mbmenu-items">
+                                        <div class="mbmenu-items__group">
+
+                                            <span class="ti-bell"></span>
+                                            <p>Thông báo</p>
+                                        </div>
+                                    </a>
+                                    <a href="" class="mbmenu-items">
+                                        <div class="mbmenu-items__group">
+
+                                            <span class="ti-help-alt"></span>
+                                            <p>Hỗ trợ</p>
+                                        </div>
+                                    </a>
+                                    <a href="/signup.html" class="mbmenu-items usersignup">
+                                        <div class="mbmenu-items__group">
+                                            <span class="ti-user"></span>
+                                            <p>Đăng ký</p>
+
+                                        </div>
+                                    </a>
+                                    <a href="/login.html" class="mbmenu-items userlogin">
+                                        <div class="mbmenu-items__group">
+                                            <span class="ti-user"></span>
+                                            <p>Đăng nhập</p>
+
+                                        </div>
+                                    </a>
+                                    <a href="/profile.html" class="mbmenu-items profile">
+                                        <div class="mbmenu-items__group">
+                                            <span class="ti-user"></span>
+                                            <p>Tài Khoản</p>
+                                        </div>
+                                    </a>
+                                    <a href="" class="mbmenu-items">
+                                        <div class="mbmenu-items__group profile-logout">
+                                            <span class="ti-close"></span>
+                                            <p>Đăng xuất</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- search -->
+                    <div class="header-with-search__search-section">
+                        <div class="search-section__searchbar">
+                            <div class="searchbar-main">
+                                <div class="searchbar-main__input">
+                                    <!-- input text search-->
+                                    <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi" class="searchbar__input">
+                                    <!-- history -->
+                                    <div class="searchbar-main__history">
+                                        <div class="searchbar-main__list-box">
+                                            <a href="" class="searchbar-main__history-item">
+                                                <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm" class="main__history-item-img">
+                                            </a>
+                                        </div>
+                                        <div class="searchbar-main__list-box">
+                                            <a href="" class="searchbar-main__history-item">
+                                                <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm" class="main__history-item-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- button search -->
+                            <button class="searchbar-btn">
+                                 <span class="ti ti-search searchbar-btn__icon"></span>
+                       </button>
+                        </div>
+                        <!-- suggest search -->
+                        <div class="search-section__search-suggest  hiden-on-mobile-s">
+                            <div class="search-suggest__list-items">
+                                <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
+                                <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
+                                <a href="#" class="search-suggest__items">Bó Hoa</a>
+                                <a href="#" class="search-suggest__items">Ga Giường</a>
+                                <a href="#" class="search-suggest__items">Váy Nữ</a>
+                                <a href="#" class="search-suggest__items">Balo</a>
+                                <a href="#" class="search-suggest__items">Quần dài</a>
+                                <a href="#" class="search-suggest__items">Áo sơ mi</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="cart">
+        <div class="container">
+            <div class="cart-noti">
+                <i class="ti-truck"></i>
+                <p>Nhấn vào mục Mã giảm giá ở cuối trang để hưởng miễn phí vận chuyển bạn nhé!</p>
+            </div>
+            <div class="cart-main">
+                <div class="cart-head">
+                    <div class="cart-head__items">
+                        <input type="checkbox">
+                    </div>
+                    <div class="cart-head__items">
+                        Sản Phẩm
+                    </div>
+                    <div class="cart-head__items">
+                        Phân Loại
+                    </div>
+                    <div class="cart-head__items">
+                        Đơn giá
+                    </div>
+                    <div class="cart-head__items">
+                        Số Lượng
+                    </div>
+                    <div class="cart-head__items">
+                        Số Tiền
+                    </div>
+                    <div class="cart-head__items">
+                        Thao tác
+                    </div>
+
+
+                </div>
+                <div class="cart-body">
+                    <div class="cart-body__items">
+                        <div class="cart-body__items-head cart-border-bottom ">
+                            <div class="cart-body__items-icon">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="cart-body__items-head-nameshop">
+                                <i class="ti-home"></i>
+                                <p>Hoasapdep
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cart-body__items-body cart-border-bottom ">
+                            <div class="cart-body__items-icon">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="cart-body__items-body-content">
+                                <p> HOA SÁP NHŨ 30 BÔNG CAO CẤP</p>
+                                <img src="" alt="">
+
+                            </div>
+                            <div class="cart-body__items-body-content">Hàng có sẵn </div>
+                            <div class="cart-body__items-body-content">100k giảm 99%</div>
+                            <div class="cart-body__items-body-content">5 chiếc</div>
+                            <div class="cart-body__items-body-content">100đ</div>
+                            <div class="cart-body__items-body-content">Xoá</div>
+                        </div>
+                        <div class="cart-body__items-voucher cart-border-bottom ">
+                            <div class="cart-body__items-icon">
+                                <i class="ti-ticket"></i>
+                            </div>
+                            <p>Shop Voucher giảm đến 5% Mới Xem thêm voucher</p>
+                        </div>
+                        <div class="cart-body__items-note">
+                            <div class="cart-body__items-icon">
+                                <i class="ti-truck"></i>
+                            </div>
+                            <p>Giảm ₫25.000 phí vận chuyển đơn tối thiểu ₫250.000 Tìm hiểu thêm</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="cart-end">
+                    <div class="cart-end-items"><input type="checkbox" name="" id=""></div>
+                    <div class="cart-end-items">Chọn Tất Cả</div>
+                    <div class="cart-end-items">Xoá</div>
+                    <div class="cart-end-items"><a href="">Lưu vào mục yêu thích</a></div>
+                    <div class="cart-end-items">
+                        <p>Tổng thanh toán : 0đ</p>
+                    </div>
+                    <div class="cart-end-items"><button class="cart-end-items-btn">Mua hàng</button></div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <footer class="footer">
+        <!-- footer contact , about  -->
+        <div class="footer-contact hiden-on-mobile hiden-on-mobile-s">
+            <div class="container">
+                <div class="footer-contact__list-items">
+                    <!-- support  -->
+                    <div class="footer-contact__item">
+                        <a href="" class="footer-contact__item-title">  CHĂM SÓC KHÁCH HÀNG</a>
+                        <div href="" class="footer-contact__item-contact">
+                            <a href="" class="footer-contact__item-name">      Trung Tâm Trợ Giúp       </a>
+                            <a href="" class="footer-contact__item-name">      Shopee Blog              </a>
+                            <a href="" class="footer-contact__item-name">      Shopee Mall              </a>
+                            <a href="" class="footer-contact__item-name">      Hướng Dẫn Mua Hàng             </a>
+                            <a href="" class="footer-contact__item-name">      Hướng Dẫn Bán Hàng      </a>
+                            <a href="" class="footer-contact__item-name">      Thanh Toán                       </a>
+                            <a href="" class="footer-contact__item-name">      Shopee Xu                  </a>
+                            <a href="" class="footer-contact__item-name">      Vận Chuyển                     </a>
+                            <a href="" class="footer-contact__item-name">      Trả Hàng & Hoàn Tiền             </a>
+                            <a href="" class="footer-contact__item-name">      Chăm Sóc Khách Hàng           </a>
+                            <a href="" class="footer-contact__item-name">      Chính Sách Bảo Hành            </a>
+                        </div>
+
+                    </div>
+                    <!-- about -->
+                    <div class="footer-contact__item">
+                        <a href="" class="footer-contact__item-title">VỀ SHOPEE</a>
+                        <div href="" class="footer-contact__item-contact">
+                            <a href="" class="footer-contact__item-name">    Giới Thiệu Về Shopee Việt Nam   </a>
+                            <a href="" class="footer-contact__item-name">    Tuyển Dụng  </a>
+                            <a href="" class="footer-contact__item-name">    Điều Khoản Shopee  </a>
+                            <a href="" class="footer-contact__item-name">    Chính Sách Bảo Mật </a>
+                            <a href="" class="footer-contact__item-name">    Chính Hãng   </a>
+                            <a href="" class="footer-contact__item-name">    Kênh Người Bán </a>
+                            <a href="" class="footer-contact__item-name">    Flash Sales  </a>
+                            <a href="" class="footer-contact__item-name">    Chương Trình Tiếp Thị Liên Kết Shopee     </a>
+                            <a href="" class="footer-contact__item-name">    Liên Hệ Với Truyền Thông </a>
+                        </div>
+                    </div>
+                    <!-- payment -->
+                    <div class="footer-contact__item">
+                        <div href="" class="footer-contact__item-payment">
+                            <a href="" class="footer-contact__item-title">THANH TOÁN </a>
+                            <ul class="payment">
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-visa contact__bg"></div>
+                                </li>
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-master contact__bg"></div>
+                                </li>
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-jcb contact__bg"></div>
+                                </li>
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-amex contact__bg"></div>
+                                </li>
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-cod contact__bg"></div>
+                                </li>
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-intallment contact__bg"></div>
+                                </li>
+                                <li class="payment-bg">
+                                    <div class="contact__bg-payment-shopeepay contact__bg"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- transport -->
+                        <div href="" class="footer-contact__item-transport">
+                            <a href="" class="footer-contact__item-title">Đơn vị vận chuyển </a>
+
+                            <ul class="transport">
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-xpress contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-ghtk contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-ghn contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-viettel contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-vietnampost contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-Jt contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-grap contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-inja contact__bg"></div>
+                                </li>
+                                <li class="transport-bg">
+                                    <div class="contact__bg-transport-bestxpress contact__bg"></div>
+                                </li>
+                            </ul>
+                            <div class="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Network -->
+                    <div class="footer-contact__item">
+                        <a href="" class="footer-contact__item-title">THEO DÕI CHÚNG TÔI TRÊN</a>
+                        <div href="" class="footer-contact__item-contact">
+                            <a href="" class="footer-contact__item-name">
+                                <i class=" ti ti-facebook footer-contact__span"></i> Facebook </a>
+                            <a href="" class="footer-contact__item-name">
+                                <i class="ti ti-instagram footer-contact__span"></i> Instagram </a>
+                            <a href="" class="footer-contact__item-name">
+                                <i class="ti ti-linkedin footer-contact__span"></i> LinkedIn </a>
+                        </div>
+                    </div>
+                    <!-- dowload -->
+                    <div class="footer-contact__item">
+                        <a href="" class="footer-contact__item-title"> TẢI ỨNG DỤNG SHOPEE NGAY THÔI
+                            </a>
+                        <div href="" class="contact__qRcode">
+                            <div class="contact__qRcode-left">
+                                <img src="/assets/img/footer/qr-code/qr.png" alt="">
+                            </div>
+                            <div class="contact__qRcode-right">
+                                <img src="/assets/img//footer//qr-code//item1.png" alt="" class="contact__qRcode-right-item">
+                                <img src="/assets/img//footer//qr-code//item2.png" alt="" class="contact__qRcode-right-item">
+                                <img src="/assets/img//footer//qr-code//item3.png" alt="" class="contact__qRcode-right-item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-about hiden-on-mobile hiden-on-mobile-s">
+            <div class="container">
+                <div class="about">
+                    <div class="footer-about__left">© 2021 Shopee. Tất cả các quyền được bảo lưu.
+                    </div>
+                    <div class="sp">
+                    </div>
+                    <div class="footer-about__right">
+                        Quốc gia & Khu vực :
+                        <a href=""> Singapore <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Indonesia <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Đài Loan <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Thái Lan <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Malaysia <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Việt Nam <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Philippines <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Brazil <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> México <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Colombia <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Chile <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Poland <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> Spain <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> France <span>&nbsp;|&nbsp;</span></a>
+                        <a href=""> India </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--  footer end -->
+        <div class="footer-end">
+            <div class="footer-end__list">
+                <a href=""> CHÍNH SÁCH BẢO MẬT <span>&nbsp;|&nbsp;</span></a>
+                <a href=""> QUY CHẾ HOẠT ĐỘNG <span>&nbsp;|&nbsp;</span></a>
+                <a href="">  CHÍNH SÁCH VẬN CHUYỂN <span>&nbsp;|&nbsp;</span></a>
+                <a href="">  CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN </a>
+            </div>
+
+            <div class="footer-end__text">Công ty TNHH Shopee
+            </div>
+            <div class="footer-end__text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+            </div>
+            <div class="footer-end__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)
+            </div>
+            <div class="footer-end__text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
+            </div>
+            <div class="footer-end__text">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
