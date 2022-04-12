@@ -1,6 +1,6 @@
 .product {
     margin-top: -20px;
-    padding-top: 15 px;
+    padding-top: 15px;
     min-height: 600px;
     background-color: #f5f5f5;
 }
@@ -473,9 +473,10 @@
 
 .rating__tag-items {
     margin-right: 10px;
-    padding: 5px 5px;
+    padding: 3px 6px;
     border: 1px solid #ccc;
     border-radius: 15px;
+    font-size: 12px;
 }
 
 .rating__image-list-wrap {

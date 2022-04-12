@@ -3,14 +3,17 @@ const $$ = document.querySelectorAll.bind(document)
 const userName = $("input[name = 'username']")
 const passWord = $("input[name = 'password']")
 const btnSubmit = $(".form-login__btn-submit")
-const apiUser = "http://localhost:3000/user"
 
+let message = $('.form-message');
+let userIdApi;
+
+
+const apiUser = "http://localhost:3000/user"
 
 function start() {
     handleLogin()
 }
 start()
-
 
 function getUser() {
     fetch(apiUser).then(function(response) {
@@ -41,36 +44,57 @@ function patchState(id, data) {
 // người dùng không đăng nhập được
 // 4: người dùng chưa kích hoạt tài khoản |5: người dùng bị cấm
 function checkDataUser(users) {
-    var formData = {
+    let formData = {
         userName: userName.value.trim(),
         passWord: passWord.value.trim()
     }
-    console.log(formData)
-        //  check username , password
-    let userIdApi;
-    let checkUserLogin = users.some(function(check) {
+    console.log(formData);
+    //  check username 
+    let checkUserName = users.some(function(check) {
         userIdApi = check.id
-        userStatusApi = check.status
-
-        return check.userName === formData.userName && check.passWord === formData.passWord;
+        return check.userName === formData.userName;
     })
-
-    console.log("check tk , mk :" + " " + checkUserLogin)
-    console.log("check đến id :" + " " + userIdApi)
-    console.log("trạng thái người đăng nhập :" + " " + userStatusApi)
-        // check status
-    if (userStatusApi > 4) {
-        console.log("Tk của bạn đã bị khoá ,thắc mắc vui lòng liên hệ qtv ")
-    } else if (userStatusApi == 4) {
-        console.log("Tk của bạn chưa được xác thực ")
-    } else if (checkUserLogin && 4 > userStatusApi) {
-        var stateData = {
-            state: 'active'
+    console.log("check tk :" + " " + checkUserName);
+    statusUser = users[userIdApi].status;
+    console.log(statusUser);
+    if (checkUserName) {
+        console.log('tài khoản tồn tại');
+        message.style.display = "none";
+        let checkPassword = users.some(function(check) {
+            return check.passWord === formData.passWord;
+        });
+        // check password
+        if (checkPassword) {
+            message.style.display = "none";
+            switch (statusUser) {
+                case 5:
+                    message.style.display = "block";
+                    message.innerText = "Tài khoản của bạn đã bị khoá";
+                    break;
+                case 4:
+                    message.style.display = "block";
+                    message.innerText = "Tài khoản của bạn chưa được xác thực";
+                    break;
+                case 3:
+                case 2:
+                case 1:
+                case 0:
+                    var stateData = {
+                        state: "active"
+                    }
+                    console.log("a" + userIdApi)
+                    patchState(userIdApi, stateData)
+                    break;
+            }
+        } else {
+            console.log("mật khẩu không chính xác");
+            message.style.display = "block";
+            message.innerText = "Mật khẩu không chính xác";
         }
-        patchState(userIdApi, stateData)
-        console.log("đăng nhập thành công")
     } else {
-        console.log("đăng nhập thất bại , kiểm tra tên đăng nhập hoặc mật khẩu")
+        console.log("tài khoản không tồn tại")
+        message.style.display = "block";
+        message.innerText = "Tài khoản không tồn tại";
     }
 }
 //xử lý nút đăng nhập khi người dùng ấn vào -> validate form
@@ -80,9 +104,12 @@ function handleLogin() {
         if (userName.value.trim() != '' && userName.value.trim().length >= 4,
             passWord.value.trim() != '' && passWord.value.trim().length >= 4
         ) {
+            message.style.display = "none";
             getUser()
         } else {
-            console.log("vui lòng nhập đúng Tên đăng nhập và mật khẩu")
+            console.log("vui lòng nhập đúng Tên đăng nhập và mật khẩu");
+            message.style.display = "block"
+            message.innerText = "Vui lòng nhập tên đăng nhập và mật khẩu"
         }
 
     }

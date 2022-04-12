@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup</title>
+    <title>Sign Up</title>
     <!-- link reset css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- link fonts -->
@@ -55,32 +55,35 @@
                                     <p>Đăng ký Thành Viên</p>
                                 </div>
                             </div>
-                            <div class="content__form-message">
-                                <p>Bạn đăng ký không thành công. Vui lòng đăng ký lại <br> hoặc thử đăng ký bằng cách khác</p>
-                                <span class="content__form-message-span ti-close"></span>
-                            </div>
                             <form action="" class="content__form-signup">
                                 <div class="content__form-group">
                                     <label for="username" class="form-signup__label">Tên Tài Khoản</label>
                                     <input type="text" id="username" name="username" class="form-signup-input" placeholder="">
+                                    <span class="message-username">Tên tài khoản không hợp lệ</span>
                                 </div>
                                 <div class="content__form-group">
                                     <label for="password" class="form-signup__label">Mật Khẩu</label>
                                     <input type="text" id="password" name="password" placeholder="" class="form-signup-input">
+                                    <span class="message-password">Mật khẩu quá ngắn</span>
+
                                 </div>
                                 <div class="content__form-group">
                                     <label for="repassword" class="form-signup__label">Nhập Lại Mật Khẩu </label>
                                     <input type="text" id="repassword" name="repassword" class="form-signup-input" placeholder="">
+                                    <span class="message-repassword">Mật khẩu không chính xác</span>
                                 </div>
                                 <div class="content__form-group">
                                     <label for="email" class="form-signup__label">Email</label>
                                     <input type="email" id="email" name="email" placeholder="" class="form-signup-input">
+                                    <span class="message-email">Email đã được sử dụng</span>
                                 </div>
                                 <div class="content__form-group">
                                     <div class="content__form-group-checkbox">
                                         <input type="checkbox" name="" id="checkbox-signup" class="content__form-checkbox">
                                         <p>Đồng ý với Shopee về các Điều khoản dịch vụ <br>& Chính sách bảo mật</p>
                                     </div>
+                                    <span class="message-checkbox">Vui lòng chọn đồng ý</span>
+
                                 </div>
                                 <a href="#" type="button" name="btn-sigup" class="form-signup__btn-submit" id="btn-submit-signup">Đăng ký</a>
                             </form>

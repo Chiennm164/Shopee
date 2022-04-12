@@ -1,21 +1,27 @@
-var $ = document.querySelector.bind(document)
-var $$ = document.querySelectorAll.bind(document)
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
+// input 
 const userName = $('#username');
 const passWord = $('#password');
 const rePassWord = $('#repassword');
 const email = $('#email');
 const checkBoxSignUp = $('#checkbox-signup');
-const message = $(".content__form-message")
+// message
+const messageUsername = $(".message-username");
+const messagePassword = $(".message-password");
+const messageRePassword = $(".message-repassword");
+const messageEmail = $(".message-email");
+const messageCheckbox = $(".message-checkbox");
+// btn
 const btnSubmitSignUp = $('#btn-submit-signup');
-const alertBg = $('.confirm-background')
-const alertLogin = $('.confirm-alert')
+// create Time
 const createdAt = new Date().getTime();
-var userNameApi;
+// api 
 const apiUser = "http://localhost:3000/user"
-var emailApi;
 
 function start() {
-    handleSignUp()
+    handleBlurInput()
+
 }
 start()
 
@@ -32,8 +38,6 @@ function createUser(formDataUser) {
             return response.json();
         })
         .then(function() {
-            alertBg.style.display = "block"
-            alertLogin.style.display = "flex"
             console.log("đăng kí thành công")
         })
 }
@@ -41,12 +45,67 @@ function createUser(formDataUser) {
 function getUser() {
     fetch(apiUser).then(function(response) {
         return response.json();
-    }).then(function(users) {
-        formUser(users)
+    }).then(function(dataUsers) {
+        formUser(dataUsers)
     })
-
 }
-//  mẫu của  người dùng
+
+// Xử lý thao tác người dùng blur input
+
+
+function handleBlurInput() {
+    function validateInput(message, messageContent, condition) {
+        if (condition) {
+            message.style.display = "none";
+            return true;
+        } else {
+            message.style.display = "block";
+            message.innerText = messageContent;
+            return false;
+        }
+    }
+
+    let checkUserName = userName.onblur = function() {
+        return validateInput(messageUsername, "Tên tài khoản quá ngắn !", userName.value.trim() != "" && userName.value.length >= 4);
+    }
+    let checkPassword = passWord.onblur = function() {
+        return validateInput(messagePassword, "Vui lòng nhập mật khẩu !", passWord.value.trim() != "" && passWord.value.length > 4);
+    }
+    let checkRePassword = rePassWord.onblur = function() {
+        return validateInput(messageRePassword, "Mật khẩu không trùng khớp !", rePassWord.value.trim() != "" && passWord.value.trim() === rePassWord.value.trim());
+    }
+    let checkEmail = email.onblur = function() {
+        return validateInput(messageEmail, "Vui lòng nhập email !", email.value.trim() != "" && email.value.search("@") > 3);
+    }
+    let checkCheckbox = function() {
+        if (checkBoxSignUp.checked) {
+            messageCheckbox.style.display = "none";
+            console.log(`value check box :${checkBoxSignUp.checked}`);
+            return true;
+        } else {
+            messageCheckbox.style.display = "block";
+            messageCheckbox.innerText = "Bạn cần đồng ý các điều khoản trên !";
+            return false;
+        };
+    }
+
+    // xử lý nút đăng ký
+    btnSubmitSignUp.onclick = function() {
+        checkUserName()
+        checkEmail()
+        checkPassword()
+        checkRePassword()
+        checkCheckbox()
+        if (checkUserName() && checkEmail() && checkPassword() && checkRePassword() && checkCheckbox()) {
+            console.log('check thành công')
+            getUser();
+        } else {
+            console.log('check thất bại')
+
+        }
+    }
+}
+//  mẫu của người dùng
 function formUser(users) {
     let lgUser = users.length
     var formDataUser = {
@@ -80,40 +139,48 @@ function formUser(users) {
         // 3 : Khác
     checkDataUser(formDataUser, users)
 }
+
 //  kiểm tra username hay email có sẵn chưa
-function checkDataUser(formDataUser, users) {
-    let checkData = users.every(
-        function(check) {
-            return check.userName !== formDataUser.userName && check.email !== formDataUser.email;
+function checkDataUser(formDataUser, dataUsers) {
+    let checkUserName = function() {
+        let userName = dataUsers.every(
+            function(check) {
+                return check.userName !== formDataUser.userName;
+            }
+        )
+        if (userName) {
+            console.log("check dữ liệu : tên người dùng không trùng lặp");
+            messageUsername.style.display = "none"
+            return true;
+
+        } else {
+            console.log("check dữ liệu : tên người đã có");
+            messageUsername.style.display = "block"
+            messageUsername.innerText = "Tên tài khoản đã tồn tại!"
         }
-    )
-    console.log(checkData)
-    if (checkData) {
-        console.log("check dữ liệu thành công , không trùng lặp")
+    }
+    let checkEmail = function() {
+        let email = dataUsers.every(
+            function(check) {
+                return check.email !== formDataUser.email;
+            }
+        )
+        if (email) {
+            messageEmail.style.display = "none"
+            console.log("check dữ liệu thành công , email không trùng lặp");
+            return true;
+        } else {
+            console.log("check dữ liệu : email đã có");
+            messageEmail.style.display = "block"
+            messageEmail.innerText = "Email này đã được sử dụng !"
+        }
+    }
+    checkUserName()
+    checkEmail()
+    if (checkUserName() && checkEmail()) {
         createUser(formDataUser);
     } else {
-        console.log("Trùng tên đăng nhập hoặc email")
+        console.log('đăng ký thất bại')
 
-    }
-
-}
-// xử lý nút đăng kí
-function handleSignUp() {
-    btnSubmitSignUp.onclick = function() {
-        // kiểm tra sơ bộ , validate form
-        console.log(checkBoxSignUp.checked)
-
-        if (checkBoxSignUp.checked &&
-            passWord.value.trim() === rePassWord.value.trim() &&
-            userName.value != '' && passWord.value != '' && email.value != '' &&
-            userName.value.length >= 4 &&
-            passWord.value.length >= 3 &&
-            email.value.search("@") > 2) {
-            getUser()
-        } else {
-            message.style.display = "block";
-            console.log("Vui lòng điền đầy đủ thông tin")
-
-        }
     }
 }
