@@ -1,9 +1,5 @@
 .category {
-    background-color: var(--white-color-f5);
-    padding: 10px 0;
-}
-
-.container__category {
+    padding-top: 10px;
     display: flex;
     min-height: 320px;
     background-color: var(--white-color);
@@ -21,10 +17,11 @@
 
 .category__list-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 116px);
+    grid-template-columns: repeat(auto-fill, 120px);
     grid-template-rows: 150px 150px;
     cursor: pointer;
     justify-content: center;
+    position: relative;
 }
 
 .category__list-group-items {
@@ -65,4 +62,66 @@
     padding: 5px;
     text-align: center;
     word-wrap: break-word;
+}
+
+.category__btn-control-right,
+.category__btn-control-left {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    box-shadow: 0 0 0.8125rem 0 var(--box-shadow-color);
+    color: var(--black-color);
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.category__btn-control-right:hover,
+.category__list-items:hover .category__btn-control-right {
+    animation: hover-button-right 0.1s ease-out;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.category__btn-control-left:hover,
+.category__list-items:hover .category__btn-control-left {
+    animation: hover-button-left 0.1s ease-out;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.category__btn-control-left {
+    left: -12px;
+    z-index: 2;
+}
+
+.category__btn-control-right {
+    right: -12px;
+    z-index: 2;
+}
+
+@keyframes hover-button-left {
+    form {}
+    to {
+        width: 50px;
+        height: 50px;
+        left: -25px;
+        font-size: 20px;
+    }
+}
+
+@keyframes hover-button-right {
+    form {}
+    to {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        right: -25px;
+    }
 }

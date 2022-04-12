@@ -1,7 +1,9 @@
-.fisrt-simpleBanner {
-    padding: 10px 0;
+.fisrt-simpleBanner,
+.second-simpleBanner {
+    padding: 20px 0;
     background-color: var(--white-color-f5);
     cursor: pointer;
+    border-radius: 2px;
 }
 
 .first-simpleBanner__img:hover {
@@ -13,7 +15,7 @@
     background: url('/assets/img/simplebanner/simplebanner1.png') center / cover no-repeat;
 }
 
-.first-simpleBanner__img2 {
+.second-simpleBanner__img {
     min-height: 105px;
     background: url('/assets/img/simplebanner/simplebanner2.png') center / cover no-repeat;
 }

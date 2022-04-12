@@ -148,12 +148,15 @@
 }
 
 .slider-navbar__items {
+    display: flex;
     text-decoration: none;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slider-navbar__items:hover {
-    transform: translateY(-0.0625rem);
+    transform: translateY(-1px);
     opacity: 0.9;
 }
 
@@ -199,7 +202,7 @@ div[class*="slider-navbar__img"] {
 
 .slider-navbar__description {
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     padding-top: 10px;
     color: var(--text-color);
     max-width: 138px;

@@ -4,54 +4,8 @@
     border-top: 4px solid var(--red2-color)
 }
 
-.footer__body {
-    border-top: 2px solid var(--white-color-cc);
-    min-height: 270px;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer__body-title {
-    font-size: 18px;
-    font-weight: 500;
-    padding: 20px 0 0 0;
-    color: var(--text-color);
-}
-
-.footer__body-content-list-items {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-}
-
-.footer__body-content-item {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.4;
-}
-
-.footer__body-content-item-name {
-    padding: 0px 0 10px 0;
-    font-size: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    color: rgb(0 0 0 / 0.54);
-}
-
-.footer__body-content-item-contact {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer__body-content-item-contact a {
-    text-decoration: none;
-    font-size: 12px;
-    color: #908a85;
-}
-
 .footer-contact {
-    background-color: var(--white-color-f5);
+    background-color: var(--white-color-fb);
     min-height: 300px;
 }
 
@@ -68,7 +22,7 @@
 }
 
 .footer-contact__item-title {
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text3-color);
     text-decoration: none;
     font-size: 14px;
     padding: 20px 5px;
@@ -79,7 +33,7 @@
 .footer-contact__item-name {
     text-decoration: none;
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text3-color);
     margin-bottom: 10px;
     text-transform: capitalize;
 }
@@ -104,16 +58,18 @@
 
 .contact__qRcode {
     display: flex;
+    width: 85%;
+    align-items: center;
 }
 
 .contact__qRcode-left img {
     width: 60%;
+    border: 1px solid var(--white-color-cc)
 }
 
 .contact__qRcode-right {
     display: flex;
     flex-direction: column;
-    padding: 5px 5px;
 }
 
 .contact__qRcode-right-item {
@@ -123,22 +79,22 @@
 
 .payment,
 .transport {
+    width: 190px;
+    height: 111px;
     display: flex;
     padding: 0px 2px;
-    margin: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
 .payment-bg {
     list-style: none;
-    padding: 7px;
     margin: 2px;
 }
 
 .transport-bg {
     list-style: none;
-    padding: 7px;
+    padding: 3px;
 }
 
 .contact__bg {
@@ -233,12 +189,12 @@
 
 .about {
     border-top: 1px solid var(--white-color-cc);
-    min-height: 120px;
+    min-height: 100px;
     background-color: var(--white-color-f8);
     display: flex;
     font-size: 14px;
     align-items: center;
-    color: rgb(0 0 0 / 0.54);
+    color: var(--text3-color);
     justify-content: space-around;
 }
 
@@ -251,7 +207,7 @@
 
 .footer-about__right a {
     text-decoration: none;
-    color: rgb(0 0 0 / 0.54);
+    color: var(--text3-color);
 }
 
 .footer-end {
@@ -265,7 +221,7 @@
 .footer-end__list a {
     text-decoration: none;
     font-size: 14px;
-    color: rgba(0, 0, 0, .54);
+    color: var(--text3-color);
 }
 
 .footer-end__text {

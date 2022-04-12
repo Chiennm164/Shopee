@@ -52,9 +52,6 @@
       .hiden-on-tablet {
           display: none;
       }
-      .topSearch-body__item {
-          height: 290px;
-      }
   }
   /*768px x < 991.98px  */
   

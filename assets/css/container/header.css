@@ -115,6 +115,7 @@
     font-size: 14px;
     color: var(--white-color);
     text-decoration: none;
+    position: relative;
 }
 
 .navbar-group:hover .navbar-items__icon,
@@ -144,6 +145,26 @@
     font-size: 14px;
     box-shadow: 0 1px 3.125rem 0 var(--box-shadow-color);
     border-radius: 2px;
+}
+
+.noti-number {
+    position: absolute;
+    top: -4px;
+    left: 16px;
+    color: var(--red2-color);
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    line-height: 15px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    font-size: 10px;
+    font-weight: 600;
+    z-index: 10;
+    align-items: center;
+    opacity: 0.9;
+    justify-content: center;
+    border: 1px solid var(--red2-color);
 }
 
 .navbar-notifications::after {
@@ -182,6 +203,7 @@
 
 .notifications-body__items {
     padding: 10px;
+    border-bottom: 1px dashed var(--white-color-cc);
     color: var(--black2-color)
 }
 
@@ -614,9 +636,9 @@
 
 .cart__drawer-header {
     padding: 14px;
-    font-size: 16px;
+    font-size: 15px;
     border-bottom: 1px solid var(--white-color-cc);
-    color: var(--black2-color);
+    color: var(--text-color);
 }
 
 .cart__drawer-body {
@@ -658,7 +680,7 @@
 }
 
 .cart__drawer-btn {
-    color: var(---white-color);
+    color: var(--white-color);
     font-size: 13px;
     padding: 10px 20px;
     background-color: var(--red-color);
@@ -667,7 +689,7 @@
 }
 
 .cart__drawer-btn:hover {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .header-with-search__mbmenu {
