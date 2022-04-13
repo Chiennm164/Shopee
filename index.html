@@ -99,19 +99,27 @@
                             </a>
                             <!-- content noti -->
                             <div class="navbar-notifications">
-                                <div class="notifications-header">
-                                    Thông báo mới nhận
-                                </div>
-                                <div class="notifications-body">
+                                <div class="navbar-notifications-wrap">
 
+                                    <div class="notifications-header">
+                                        Thông báo mới nhận
+                                    </div>
+                                    <div class="notifications-body">
+
+                                    </div>
+                                    <a class="notifications-footer">
+                                      Xem thêm
+                                       </a>
                                 </div>
-                                <a class="notifications-footer">
-                                  Xem thêm
-                                   </a>
+                                <div class="navbar-notifications-wrap-off">
+                                    <img src="/assets/img/header/noti.png" alt="">
+                                    <p>Đăng nhập để xem thông báo</p>
+                                </div>
                             </div>
+
+
                         </li>
                         <!-- help -->
-
                         <li class="navbar-group">
                             <a href="" class="header-navbar__items">
                                 <span class="ti ti-help-alt navbar__items-icon"></span>
@@ -137,7 +145,7 @@
                         <!-- profile  -->
                         <li class="navbar-group profile">
                             <img src="/assets/img/user/profile/avatar.png" alt="avataruser" class="navbar__item-avatar-img">
-                            <a href="" class="header-navbar__items">Durza
+                            <a href="" class="header-navbar__items header-username">Durza
                                </a>
                             <div class="header-navbar__profile">
                                 <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
@@ -300,6 +308,10 @@
                                         <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
                                     </div>
                                 </div>
+                                <div class="cart__drawer-wrapper-off">
+                                    <img src="/assets/img/header/cart.png" alt="">
+                                    <p>Bạn chưa có sản phẩm nào</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -396,6 +408,7 @@
                             <img src="/assets/img//category//ao.png" alt="" class="category__items-img">
                             <div class="category__items-description">Thời Trang Nam</div>
                         </a>
+
                         <a href="" class="category__items">
                             <img src="/assets/img//category/mobile.png" alt="" class="category__items-img">
                             <div class="category__items-description">Điện Thoại & Phụ Kiện</div>
@@ -474,12 +487,8 @@
                             <img src="/assets/img//category//sach.png" alt="" class="category__items-img">
                             <div class="category__items-description"> Nhà Sách Online </div>
                         </a>
-                        <div class="category__btn-control-left">
-                            <i class="ti-angle-left"></i>
-                        </div>
-                        <div class="category__btn-control-right">
-                            <i class="ti-angle-right"></i>
-                        </div>
+
+
                     </div>
                 </section>
                 <!-- flash sale  -->
@@ -509,128 +518,244 @@
                         </div>
                     </div>
                     <div class="flashSale-body">
-                        <!-- flash sale content item  -->
-                        <a href="#" class="flashSale-body__items">
-                            <div class="flashSale-body__items-wrap">
-                                <div class="flashSale-cart__items">
-                                    <div class="flashSale-cart__bground-items"></div>
-                                    <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
-                                    <div class="flashSale-cart__bground">
+                        <div class="flashSale-body-wrap">
+                            <div class="flashSale-body__list-items">
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
+
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flashSale-cart__price">
-                                    <div class="flashSale-cart__price-number">9.000đ</div>
-                                    <div class="flashSale-cart__price-percent">Đã Bán 0</div>
-                                </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
 
-                                <div class="flashSale__ratiosale">
-                                    <div class="flashSale__ratiosale-number">64%</div>
-                                    <div class="flashSale__ratiosale-text">giảm</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="flashSale-body__items">
-                            <div class="flashSale-body__items-wrap">
-                                <div class="flashSale-cart__items">
-                                    <div class="flashSale-cart__bground-items"></div>
-                                    <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
-                                    <div class="flashSale-cart__bground">
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flashSale-cart__price">
-                                    <div class="flashSale-cart__price-number">9.000đ</div>
-                                    <div class="flashSale-cart__price-percent">Đã Bán 0</div>
-                                </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
 
-                                <div class="flashSale__ratiosale">
-                                    <div class="flashSale__ratiosale-number">64%</div>
-                                    <div class="flashSale__ratiosale-text">giảm</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="flashSale-body__items">
-                            <div class="flashSale-body__items-wrap">
-                                <div class="flashSale-cart__items">
-                                    <div class="flashSale-cart__bground-items"></div>
-                                    <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
-                                    <div class="flashSale-cart__bground">
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flashSale-cart__price">
-                                    <div class="flashSale-cart__price-number">9.000đ</div>
-                                    <div class="flashSale-cart__price-percent">Đã Bán 0</div>
-                                </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
 
-                                <div class="flashSale__ratiosale">
-                                    <div class="flashSale__ratiosale-number">64%</div>
-                                    <div class="flashSale__ratiosale-text">giảm</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="flashSale-body__items">
-                            <div class="flashSale-body__items-wrap">
-                                <div class="flashSale-cart__items">
-                                    <div class="flashSale-cart__bground-items"></div>
-                                    <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
-                                    <div class="flashSale-cart__bground">
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flashSale-cart__price">
-                                    <div class="flashSale-cart__price-number">9.000đ</div>
-                                    <div class="flashSale-cart__price-percent">Đã Bán 0</div>
-                                </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
 
-                                <div class="flashSale__ratiosale">
-                                    <div class="flashSale__ratiosale-number">64%</div>
-                                    <div class="flashSale__ratiosale-text">giảm</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="flashSale-body__items">
-                            <div class="flashSale-body__items-wrap">
-                                <div class="flashSale-cart__items">
-                                    <div class="flashSale-cart__bground-items"></div>
-                                    <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
-                                    <div class="flashSale-cart__bground">
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flashSale-cart__price">
-                                    <div class="flashSale-cart__price-number">9.000đ</div>
-                                    <div class="flashSale-cart__price-percent">Đã Bán 0</div>
-                                </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
 
-                                <div class="flashSale__ratiosale">
-                                    <div class="flashSale__ratiosale-number">64%</div>
-                                    <div class="flashSale__ratiosale-text">giảm</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="flashSale-body__items">
-                            <div class="flashSale-body__items-wrap">
-                                <div class="flashSale-cart__items">
-                                    <div class="flashSale-cart__bground-items"></div>
-                                    <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
-                                    <div class="flashSale-cart__bground">
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flashSale-cart__price">
-                                    <div class="flashSale-cart__price-number">9.000đ</div>
-                                    <div class="flashSale-cart__price-percent">Đã Bán 0</div>
-                                </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
 
-                                <div class="flashSale__ratiosale">
-                                    <div class="flashSale__ratiosale-number">64%</div>
-                                    <div class="flashSale__ratiosale-text">giảm</div>
-                                </div>
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
+
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
+
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
+
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
+
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flashSale-body__items">
+                                    <div class="flashSale-body__items-wrap">
+                                        <div class="flashSale-cart__items">
+                                            <div class="flashSale-cart__bground-items"></div>
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <div class="flashSale-cart__bground">
+                                            </div>
+                                        </div>
+                                        <div class="flashSale-cart__price">
+                                            <div class="flashSale-cart__price-number">9.000đ</div>
+                                            <div class="flashSale-cart__price-percent">Đã Bán 0</div>
+                                        </div>
+
+                                        <div class="flashSale__ratiosale">
+                                            <div class="flashSale__ratiosale-number">64%</div>
+                                            <div class="flashSale__ratiosale-text">giảm</div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-
-
-                        <div class="category__btn-control-left">
-                            <i class="ti-angle-left"></i>
-                        </div>
-                        <div class="category__btn-control-right">
-                            <i class="ti-angle-right"></i>
+                            <!-- flash sale content item  -->
+                            <div class="flashsale__btn-control-left ">
+                                <i class="ti-angle-left"></i>
+                            </div>
+                            <div class="flashsale__btn-control-right">
+                                <i class="ti-angle-right"></i>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -723,10 +848,10 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="category__btn-control-left">
+                            <div class="shopeeMall__btn-control-left">
                                 <i class="ti-angle-left"></i>
                             </div>
-                            <div class="category__btn-control-right">
+                            <div class="shopeeMall__btn-control-right">
                                 <i class="ti-angle-right"></i>
                             </div>
                         </div>
@@ -744,7 +869,7 @@
                         </div>
                     </div>
                     <div class=" container topSearch-body">
-                        <div class="category__btn-control-left">
+                        <div class="topSearch__btn-control-left">
                             <i class="ti-angle-left"></i>
                         </div>
                         <div class="category__btn-control-right">

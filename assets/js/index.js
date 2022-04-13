@@ -5,19 +5,28 @@ function start() {
     handlerUser()
     sliderShow()
     handlerNoti()
-        // handlerFlashSale()
+    handlerFlashSale()
 }
 start()
 
-// Xử lý user 1 : check state  2: logout
+// Xử lý user : 1.check state , 2.logout , 3. username, 4. noti ,5.cart
 function handlerUser() {
+    let profile = $$(".profile");
+    let usersignup = $$(".usersignup");
+    let userlogin = $$(".userlogin");
+    let logout = $$(".profile-logout");
 
-    let profile = $$(".profile")
-    let usersignup = $$(".usersignup")
-    let userlogin = $$(".userlogin")
-    let logout = $$(".profile-logout")
-    const apiUser = "http://localhost:3000/user"
+    let username = $('.header-username');
+    let avatar = $('.navbar__item-avatar-img');
+    let notiNumber = $('.noti-number');
+    let notiContentOn = $('.navbar-notifications-wrap');
+    let notiContentOff = $('.navbar-notifications-wrap-off');
 
+    let cartNumber = $('.cart-number-badge');
+    let cartContentOn = $('.cart__drawer-wrapper');
+    let cartContentOff = $('.cart__drawer-wrapper-off');
+
+    const apiUser = "http://localhost:3000/user";
     getUser()
 
     function getUser() {
@@ -55,26 +64,49 @@ function handlerUser() {
         )
         if (activeSatate) {
             console.log("check active");
+            checkUserOn();
+            handleLogOut(idApi);
+        } else {
+            checkUserOff();
+        }
+
+        function checkUserOn() {
             profile.forEach(element => {
                 element.style.display = "flex";
                 element.setAttribute("style", 'align-items:center')
             });
-
             usersignup.forEach(element => {
                 element.style.display = "none";
             });
             userlogin.forEach(element => {
                 element.style.display = "none";
             });
+            notiNumber.style.display = "block";
+            notiContentOn.style.display = "flex";
+            notiContentOff.style.display = "none";
 
-            handleLogOut(idApi);
-        } else {
+            cartNumber.style.display = "block";
+            cartContentOn.style.display = "flex";
+            cartContentOff.style.display = "none";
+
+            username.innerText = users[idApi].userName;
+            avatar.style.src = users[idApi].avatar;
+        }
+
+        function checkUserOff() {
             profile.forEach(element => {
                 element.style.display = "none";
             });
             logout.forEach(element => {
                 element.style.display = "none";
             });
+            notiNumber.style.display = "none";
+            notiContentOn.style.display = "none";
+            notiContentOff.style.display = "flex";
+
+            cartNumber.style.display = "none";
+            cartContentOn.style.display = "none";
+            cartContentOff.style.display = "flex";
         }
     }
     // xử lý nút đăng xuất trong profile
@@ -174,7 +206,7 @@ function sliderShow() {
         }
     }
 }
-// lấy thông báo
+// Xử lý thông báo
 function handlerNoti() {
     const apiNoti = "http://localhost:3000/notifications"
 
@@ -210,6 +242,20 @@ function handlerNoti() {
         notibody.innerHTML = htmls.join("")
     }
 }
-// function handlerFlashSale(params) {
 
-// }
+function handlerFlashSale() {
+    let btnLeft = $(".flashsale__btn-control-left");
+    let wrap = $(".flashSale-body__list-items");
+    btnLeft.onclick = function() {
+        wrap.style.transform = 'translateX(0)';
+        btnLeft.style.display = "none"
+    }
+    let btnRight = $(".flashsale__btn-control-right");
+
+    btnRight.onclick = function() {
+        wrap.style.transform = 'translateX(-25%)';
+        btnLeft.style.display = "flex";
+    }
+
+
+}
