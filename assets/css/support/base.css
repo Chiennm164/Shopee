@@ -24,7 +24,7 @@
     /* color hover  */
     --hover-color: hsla(0, 0%, 100%, .7);
     /* color background */
-    --background-header: linear-gradient( -180deg, #f53d2d, #f63);
+    --background-header: linear-gradient(-180deg, #f53d2d, #f63);
     --background-noti-color: #fff2ee;
     --background3-color-94: #949392;
     /* height */
@@ -60,7 +60,9 @@ html {
 
 @keyframes hover-button-left {
     form {}
+
     to {
+
         width: 50px;
         height: 50px;
         left: -25px;
@@ -70,7 +72,9 @@ html {
 
 @keyframes hover-button-right {
     form {}
+
     to {
+
         width: 50px;
         height: 50px;
         font-size: 20px;

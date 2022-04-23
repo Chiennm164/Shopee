@@ -1,11 +1,15 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
+let btnLeft = $(".flashsale__btn-control-left");
+let wrapFlashSale = $(".flashSale-body__list-items");
+let btnRight = $(".flashsale__btn-control-right");
+
 function start() {
     handlerUser()
     sliderShow()
     handlerNoti()
-    handlerFlashSale()
+    handlerCarousel()
 }
 start()
 
@@ -30,9 +34,9 @@ function handlerUser() {
     getUser()
 
     function getUser() {
-        fetch(apiUser).then(function(response) {
+        fetch(apiUser).then(function (response) {
             return response.json();
-        }).then(function(users) {
+        }).then(function (users) {
             checkLogin(users)
         })
     }
@@ -45,7 +49,7 @@ function handlerUser() {
             },
             body: JSON.stringify(data)
         }
-        fetch(apiUser + '/' + id, options).then(function(response) {
+        fetch(apiUser + '/' + id, options).then(function (response) {
             return response.json();
         }).then(
             console.log("đổi trạng thái thành công"),
@@ -57,7 +61,7 @@ function handlerUser() {
     function checkLogin(users) {
         let idApi;
         let activeSatate = users.some(
-            function(check) {
+            function (check) {
                 idApi = check.id
                 return check.state === 'active'
             }
@@ -113,7 +117,7 @@ function handlerUser() {
     function handleLogOut(idApi) {
         // console.log(idApi);
         logout.forEach(element => {
-            element.onclick = function() {
+            element.onclick = function () {
                 var changeState = {
                     state: "noactive"
                 }
@@ -133,10 +137,10 @@ function sliderShow() {
     const imageApi = "http://localhost:3000/sliderBanner"
 
     function getImage() {
-        fetch(imageApi).then(function(response) {
+        fetch(imageApi).then(function (response) {
             return response.json();
         }).then(
-            function(imgs) {
+            function (imgs) {
                 handlerSlider(imgs)
 
             })
@@ -148,7 +152,7 @@ function sliderShow() {
         imgsLength = imgs.length
         let i = 0
 
-        clickNext.onclick = function() {
+        clickNext.onclick = function () {
             showImg.src = imgs[i].src
             if (i + 1 == imgs[i].id) {
                 $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
@@ -164,21 +168,21 @@ function sliderShow() {
 
         //  nút Prev
         var j = imgsLength - 1
-        clickPrev.onclick = function(e) {
-                console.log(j)
-                showImg.src = imgs[j].src
-                if (j + 1 == imgs[j].id) {
-                    $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
-                    btnChose[j].className = "slider-nav__items slider-nav__items--active"
-                }
-
-                j--;
-                if (j == -1) {
-                    j = imgsLength - 1
-                }
-                console.log(j)
+        clickPrev.onclick = function (e) {
+            console.log(j)
+            showImg.src = imgs[j].src
+            if (j + 1 == imgs[j].id) {
+                $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
+                btnChose[j].className = "slider-nav__items slider-nav__items--active"
             }
-            //  tự động chạy
+
+            j--;
+            if (j == -1) {
+                j = imgsLength - 1
+            }
+            console.log(j)
+        }
+        //  tự động chạy
         var k = 1
 
         function changeImgs() {
@@ -195,7 +199,7 @@ function sliderShow() {
         setInterval(changeImgs, 4000);
         //  nút chọn ảnh
         for (let i = 0; i < btnChoseLength; i++) {
-            btnChose[i].onclick = function() {
+            btnChose[i].onclick = function () {
                 showImg.src = imgs[i].src
                 if (i + 1 == imgs[i].id) {
                     $('.slider-nav__items.slider-nav__items--active').classList.remove('slider-nav__items--active')
@@ -217,16 +221,16 @@ function handlerNoti() {
     getNoti()
 
     function getNoti() {
-        fetch(apiNoti).then(function(response) {
+        fetch(apiNoti).then(function (response) {
             return response.json();
-        }).then(function(notis) {
+        }).then(function (notis) {
             renderNoti(notis)
         })
     }
 
     function renderNoti(notis) {
         let notibody = $('.notifications-body')
-        let htmls = notis.map(function(notis) {
+        let htmls = notis.map(function (notis) {
             return ` <div class="notifications-body__items">
              <a class="notifications-contents">
                <div class="notifications-contents__left">
@@ -243,19 +247,41 @@ function handlerNoti() {
     }
 }
 
-function handlerFlashSale() {
-    let btnLeft = $(".flashsale__btn-control-left");
-    let wrap = $(".flashSale-body__list-items");
-    btnLeft.onclick = function() {
-        wrap.style.transform = 'translateX(0)';
-        btnLeft.style.display = "none"
-    }
-    let btnRight = $(".flashsale__btn-control-right");
-
-    btnRight.onclick = function() {
-        wrap.style.transform = 'translateX(-25%)';
-        btnLeft.style.display = "flex";
-    }
-
+function handlerCarousel() {
+    let transform = 0;
+    console.log(transform)
+    btnLeft.addEventListener('click', function () {
+        switch (transform) {
+            case 1:
+                wrapFlashSale.style.transform = 'translateX(0%)';
+                btnLeft.style.display = "none";
+                transform = 0;
+                console.log(transform)
+                break;
+            case 2:
+                wrapFlashSale.style.transform = 'translateX(-25%)';
+                transform = 1;
+                console.log(transform)
+                btnRight.style.display = "flex";
+                break;
+        }
+    })
+    btnRight.addEventListener('click', function () {
+        switch (transform) {
+            case 0:
+                btnLeft.style.display = "flex";
+                wrapFlashSale.style.transform = 'translateX(-25%)';
+                transform = 1;
+                console.log(transform)
+                break;
+            case 1:
+                wrapFlashSale.style.transform = 'translateX(-50%)';
+                btnRight.style.display = "none";
+                transform = 2;
+                console.log(transform)
+                break;
+        }
+    })
 
 }
+

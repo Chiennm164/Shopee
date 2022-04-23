@@ -102,7 +102,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    transition: 0.8s ease-in-out;
+    transition: 0.9s ease-in-out;
 }
 
 .flashSale-body__list {
@@ -253,14 +253,14 @@
 
 .flashsale__btn-control-right:hover,
 .flashsale__list-items:hover .flashsale__btn-control-right {
-    animation: hover-button-right 0.1s ease-out;
+    animation: hover-button-right 0.5s ease-out;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
 
 .flashsale__btn-control-left:hover,
 .flashsale__list-items:hover .flashsale__btn-control-left {
-    animation: hover-button-left 0.1s ease-out;
+    animation: hover-button-left 0.5s ease-out;
     animation-fill-mode: forwards;
     cursor: pointer;
 }
