@@ -12,6 +12,7 @@
 .banner-content__left {
     cursor: pointer;
     padding-right: 5px;
+    width: 65%;
 }
 
 .banner-content__left:hover {
@@ -19,6 +20,7 @@
 }
 
 .banner-content__right {
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

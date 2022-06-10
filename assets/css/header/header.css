@@ -19,7 +19,7 @@
 }
 
 
-/* QR code */
+/************************************** QR code *******************************/
 
 .navbar-drawer {
     width: 184px;
@@ -118,23 +118,20 @@
     position: relative;
 }
 
-.navbar-group:hover .navbar-items__icon,
-.navbar-group:hover .header-navbar__items,
-.header-navbar__items:hover {
-    color: var(--hover-color);
-}
-
 .navbar-group:hover .navbar__change-language,
 .navbar-group:hover .navbar-notifications {
     display: flex;
 }
 
+.header-navbar__items:hover {
+    color: var(--hover-color);
+}
 
-/* notification */
+/************************************* notification ************************************ */
 
 .navbar-notifications {
     position: absolute;
-    top: 150%;
+    top: 130%;
     right: 12px;
     display: none;
     z-index: 3;
@@ -165,7 +162,7 @@
     padding-bottom: 20px;
 }
 
-.navbar-notifications-wrap-off p {}
+/* .navbar-notifications-wrap-off p {} */
 
 .noti-number {
     position: absolute;
@@ -189,7 +186,7 @@
 
 .navbar-notifications::after {
     position: absolute;
-    right: 10px;
+    right: 27px;
     top: -20px;
     content: "";
     border-width: 10px 15px;
@@ -287,7 +284,7 @@
 }
 
 
-/* language */
+/*************************************  language ************************************ */
 
 .navbar__change-language {
     position: absolute;
@@ -331,7 +328,7 @@
 }
 
 
-/* profile */
+/************************************* profile *************************************/
 
 .header-navbar__profile {
     right: 0;
@@ -392,16 +389,16 @@
 }
 
 
-/* header with search */
+/* ************************************header with search *************************************/
 
 .header-with-search {
-    height: var( --height-header-with-search);
+    height: var(--height-header-with-search);
     display: flex;
     padding: 15px 0 5px;
 }
 
 
-/* menu */
+/* ************************************menu *************************************/
 
 .header__menu {
     display: block;
@@ -409,7 +406,7 @@
 }
 
 
-/* logo */
+/************************************* logo *************************************/
 
 .header-with-search__logo-wrapper {
     display: flex;
@@ -428,7 +425,7 @@
 }
 
 
-/* search */
+/* ************************************search *************************************/
 
 .header-with-search__search-section {
     width: 840px;
@@ -523,7 +520,7 @@
 }
 
 
-/* search btn  */
+/************************************* search btn  *************************************/
 
 .searchbar-btn {
     height: 34px;
@@ -551,7 +548,7 @@
 }
 
 
-/* search suggest  */
+/* ************************************search suggest  *************************************/
 
 .search-suggest__list-items {
     display: flex;
@@ -572,7 +569,7 @@
 }
 
 
-/* cart */
+/* ************************************cart *************************************/
 
 .header-with-search__cart {
     flex: 1;
@@ -802,7 +799,7 @@
 
 .mbmenu-items:hover {
     color: var(--red-color);
-    background-color: var( --white-color-f5);
+    background-color: var(--white-color-f5);
 }
 
 .mbmenu-items span {

@@ -1,124 +1,178 @@
 {
-    "sliderBanner": [{
-            "id": 1,
-            "src": "./assets/img/slider/banner/slider1.png"
-        },
-        {
-            "id": 2,
-            "src": "./assets/img/slider/banner/slider2.png"
-        },
-        {
-            "id": 3,
-            "src": "./assets/img/slider/banner/slider3.png"
-        },
-        {
-            "id": 4,
-            "src": "./assets/img/slider/banner/slider4.png"
-        },
-        {
-            "id": 5,
-            "src": "./assets/img/slider/banner/slider5.png"
-        },
-        {
-            "id": 6,
-            "src": "./assets/img/slider/banner/slider6.png"
-        }
-    ],
-    "user": [{
-            "id": 0,
-            "createdAt": 1646905726773,
-            "userName": "username",
-            "passWord": "password",
-            "fullName": "Minh Chiến",
-            "avatar": "/assets/img/user/useravatar.jpg",
-            "email": "mako@email",
-            "status": 1,
-            "address": "Nghệ An",
-            "phone": "0988888888",
-            "birthOfDate": "2022-03-07",
-            "gender": 1,
-            "state": "noactive",
-            "money": 0,
-            "point": 0
-        },
-        {
-            "id": 1,
-            "createdAt": 1647086402151,
-            "userName": "chienthien98na",
-            "passWord": "password",
-            "email": "chien@gmail.com",
-            "status": 3,
-            "fullName": "Minh Chiến",
-            "avatar": "/assets/img/user/useravatar.jpg",
-            "address": "Vinh",
-            "phone": "0988888888",
-            "birthOfDate": "",
-            "gender": 1,
-            "state": "active",
-            "money": 100,
-            "point": 0,
-            "birthday": "2022-03-09"
-        },
-        {
-            "id": 2,
-            "createdAt": 1647086402151,
-            "userName": "chienthien98na2",
-            "passWord": "password",
-            "email": "chien@gmail.com",
-            "status": 4,
-            "fullName": "Minh Chiến",
-            "avatar": "/assets/img/user/useravatar.jpg",
-            "address": "Vinh",
-            "phone": "0988888888",
-            "birthOfDate": "",
-            "gender": 1,
-            "state": "noactive",
-            "money": 100,
-            "point": 0,
-            "birthday": "2022-03-09"
-        },
-        {
-            "id": 3,
-            "createdAt": 1647086402151,
-            "userName": "chienthien98na3",
-            "passWord": "password",
-            "email": "chien@gmail.com",
-            "status": 5,
-            "fullName": "Minh Chiến",
-            "avatar": "/assets/img/user/useravatar.jpg",
-            "address": "Vinh",
-            "phone": "0988888888",
-            "birthOfDate": "",
-            "gender": 1,
-            "state": "noactive",
-            "money": 100,
-            "point": 0,
-            "birthday": "2022-03-09"
-        }
-    ],
-    "notifications": [{
-            "id": 1,
-            "titalNoti": "Chào mừng thành viên mới",
-            "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
-            "imgNoti": "/assets/img/header/nav/notifications/noti1.png"
-        },
-        {
-            "id": 2,
-            "titalNoti": "Mùa hè sôi động ",
-            "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
-            "imgNoti": "/assets/img/header/nav/notifications/noti2.png"
-        },
-        {
-            "id": 3,
-            "titalNoti": "Lễ tình nhân trắng",
-            "desNoti": "Giảm giá với tất cả mặt hàng về hoa và socola",
-            "imgNoti": "/assets/img/header/nav/notifications/noti3.png"
-        },
-        {
-            "id": 4,
-            "titalNoti": "Hoàn thành thông tin , có ngay tiền mặt",
-            "desNoti": "Bắt đầu từ  01-01-2022 , người dùng hoàn thành đủ hồ sơ sẽ được tặng ngay 100k vào ví",
-            "imgNoti": "/assets/img/header/nav/notifications/noti4.png"
-        }
-    ]
+  "sliderBanner": [
+    {
+      "id": 1,
+      "src": "./assets/img/slider/banner/slider1.png"
+    },
+    {
+      "id": 2,
+      "src": "./assets/img/slider/banner/slider2.png"
+    },
+    {
+      "id": 3,
+      "src": "./assets/img/slider/banner/slider3.png"
+    },
+    {
+      "id": 4,
+      "src": "./assets/img/slider/banner/slider4.png"
+    },
+    {
+      "id": 5,
+      "src": "./assets/img/slider/banner/slider5.png"
+    },
+    {
+      "id": 6,
+      "src": "./assets/img/slider/banner/slider6.png"
+    }
+  ],
+  "user": [
+    {
+      "id": 0,
+      "createdAt": 1646905726773,
+      "userName": "username",
+      "passWord": "password",
+      "fullName": "Minh Chiến",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "email": "mako@email",
+      "status": 1,
+      "address": "Nghệ An",
+      "phone": "0988888888",
+      "birthOfDate": "2022-03-07",
+      "gender": 1,
+      "money": 0,
+      "point": 0,
+      "code": "8h5e5e2b5e5e"
+    },
+    {
+      "id": 1,
+      "createdAt": 1647086402151,
+      "userName": "chienthien98na",
+      "passWord": "password",
+      "email": "chien@gmail.com",
+      "status": 3,
+      "fullName": "Minh Chiến",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "address": "Vinh",
+      "phone": "0988888888",
+      "birthOfDate": "",
+      "gender": 1,
+      "money": 100,
+      "point": 0,
+      "birthday": "2022-03-09",
+      "code": "2b5e3c1a7g9i"
+    },
+    {
+      "id": 2,
+      "createdAt": 1647086402151,
+      "userName": "chienthien98na2",
+      "passWord": "password",
+      "email": "chien@gmail.com",
+      "status": 4,
+      "fullName": "Minh Chiến",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "address": "Vinh",
+      "phone": "0988888888",
+      "birthOfDate": "",
+      "gender": 1,
+      "money": 100,
+      "point": 0,
+      "birthday": "2022-03-09",
+      "code": "8h6f7g1a9i3c"
+    },
+    {
+      "id": 3,
+      "createdAt": 1647086402151,
+      "userName": "chienthien98na3",
+      "passWord": "password",
+      "email": "chien@gmail.com",
+      "status": 5,
+      "fullName": "Minh Chiến",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "address": "Vinh",
+      "phone": "0988888888",
+      "birthOfDate": "",
+      "gender": 1,
+      "money": 100,
+      "point": 0,
+      "birthday": "2022-03-09",
+      "code": "1a1a9i7g9i7g"
+    },
+    {
+      "id": 5,
+      "createdAt": 1654854724150,
+      "userName": "chienthien98na4",
+      "passWord": "chienthien98na",
+      "email": "chienthien98na@gmail.com",
+      "status": 4,
+      "fullName": "",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "address": "",
+      "phone": 0,
+      "birthOfDate": "",
+      "gender": 1,
+      "money": 0,
+      "point": 0,
+      "code": "7g3c9i8h9i6f"
+    },
+    {
+      "id": 6,
+      "createdAt": 1654854882585,
+      "userName": "chienthien98na5",
+      "passWord": "chienthien98na",
+      "email": "chienthien98na@gmail.com2",
+      "status": 4,
+      "fullName": "",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "address": "",
+      "phone": 0,
+      "birthOfDate": "",
+      "gender": 1,
+      "money": 0,
+      "point": 0,
+      "code": "4d2b2b1a8h6f"
+    },
+    {
+      "id": 7,
+      "createdAt": 1654868071948,
+      "userName": "chienthien98na7",
+      "passWord": "chienthien98na",
+      "email": "chienthien98na@gmail.com3",
+      "status": 4,
+      "fullName": "",
+      "avatar": "/assets/img/user/useravatar.jpg",
+      "address": "",
+      "phone": 0,
+      "birthOfDate": "",
+      "gender": 1,
+      "money": 0,
+      "point": 0,
+      "code": "1a3c1a7g2b6f"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "titalNoti": "Chào mừng thành viên mới",
+      "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
+      "imgNoti": "/assets/img/header/nav/notifications/noti1.png"
+    },
+    {
+      "id": 2,
+      "titalNoti": "Mùa hè sôi động ",
+      "desNoti": " Từ ngày 22-02-2022 khuyễn mãi phí vận chuyển với thành viên mới đăng kí",
+      "imgNoti": "/assets/img/header/nav/notifications/noti2.png"
+    },
+    {
+      "id": 3,
+      "titalNoti": "Lễ tình nhân trắng",
+      "desNoti": "Giảm giá với tất cả mặt hàng về hoa và socola",
+      "imgNoti": "/assets/img/header/nav/notifications/noti3.png"
+    },
+    {
+      "id": 4,
+      "titalNoti": "Hoàn thành thông tin , có ngay tiền mặt",
+      "desNoti": "Bắt đầu từ  01-01-2022 , người dùng hoàn thành đủ hồ sơ sẽ được tặng ngay 100k vào ví",
+      "imgNoti": "/assets/img/header/nav/notifications/noti4.png"
+    }
+  ]
 }

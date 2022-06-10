@@ -16,8 +16,7 @@ var products = [
     }
 ]
 
-let totalPrice = products.reduce(function(a, b) {
-
+let totalPrice = products.reduce(function (a, b) {
     return a + (b.price * b.quantity * b.valuevoucher);
 }, 1)
 console.log(totalPrice)

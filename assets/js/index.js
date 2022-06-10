@@ -5,127 +5,36 @@ let btnLeft = $(".flashsale__btn-control-left");
 let wrapFlashSale = $(".flashSale-body__list-items");
 let btnRight = $(".flashsale__btn-control-right");
 
+const apiUser = "http://localhost:3000/user";
+
 function start() {
     handlerUser()
-    sliderShow()
-    handlerNoti()
-    handlerCarousel()
+    // sliderShow()
+    // handlerNoti()
+    // handlerCarousel()
 }
 start()
 
-// Xử lý user : 1.check state , 2.logout , 3. username, 4. noti ,5.cart
+// Xử lý user
 function handlerUser() {
-    let profile = $$(".profile");
-    let usersignup = $$(".usersignup");
-    let userlogin = $$(".userlogin");
-    let logout = $$(".profile-logout");
+    // lay data
+    fetch(apiUser).then(function (response) {
+        return response.json();
+    }).then(function (users) {
+        handlerCheckLogin(users)
 
-    let username = $('.header-username');
-    let avatar = $('.navbar__item-avatar-img');
-    let notiNumber = $('.noti-number');
-    let notiContentOn = $('.navbar-notifications-wrap');
-    let notiContentOff = $('.navbar-notifications-wrap-off');
-
-    let cartNumber = $('.cart-number-badge');
-    let cartContentOn = $('.cart__drawer-wrapper');
-    let cartContentOff = $('.cart__drawer-wrapper-off');
-
-    const apiUser = "http://localhost:3000/user";
-    getUser()
-
-    function getUser() {
-        fetch(apiUser).then(function (response) {
-            return response.json();
-        }).then(function (users) {
-            checkLogin(users)
-        })
-    }
-    //  đăng xuất -> state  = noactive 
-    function patchState(id, data) {
-        const options = {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }
-        fetch(apiUser + '/' + id, options).then(function (response) {
-            return response.json();
-        }).then(
-            console.log("đổi trạng thái thành công"),
-            location.assign("http://127.0.0.1:5501/index.html")
-
-        )
-    }
-    // check state người dùng , đang mở hay tạm nghỉ -> state :  active  > hiển thị , state : noactive ẩn 
-    function checkLogin(users) {
-        let idApi;
-        let activeSatate = users.some(
-            function (check) {
-                idApi = check.id
-                return check.state === 'active'
-            }
-        )
-        if (activeSatate) {
-            console.log("check active");
-            checkUserOn();
-            handleLogOut(idApi);
+    })
+    function handlerCheckLogin(users) {
+        console.log(users);
+        let code = localStorage.getItem('codeUser');
+        if (code == '') {
+            console.log('chua dang nhap');
         } else {
-            checkUserOff();
+            console.log("da dang nhap");
         }
-
-        function checkUserOn() {
-            profile.forEach(element => {
-                element.style.display = "flex";
-                element.setAttribute("style", 'align-items:center')
-            });
-            usersignup.forEach(element => {
-                element.style.display = "none";
-            });
-            userlogin.forEach(element => {
-                element.style.display = "none";
-            });
-            notiNumber.style.display = "block";
-            notiContentOn.style.display = "flex";
-            notiContentOff.style.display = "none";
-
-            cartNumber.style.display = "block";
-            cartContentOn.style.display = "flex";
-            cartContentOff.style.display = "none";
-
-            username.innerText = users[idApi].userName;
-            avatar.style.src = users[idApi].avatar;
-        }
-
-        function checkUserOff() {
-            profile.forEach(element => {
-                element.style.display = "none";
-            });
-            logout.forEach(element => {
-                element.style.display = "none";
-            });
-            notiNumber.style.display = "none";
-            notiContentOn.style.display = "none";
-            notiContentOff.style.display = "flex";
-
-            cartNumber.style.display = "none";
-            cartContentOn.style.display = "none";
-            cartContentOff.style.display = "flex";
-        }
-    }
-    // xử lý nút đăng xuất trong profile
-    function handleLogOut(idApi) {
-        // console.log(idApi);
-        logout.forEach(element => {
-            element.onclick = function () {
-                var changeState = {
-                    state: "noactive"
-                }
-                patchState(idApi, changeState)
-            }
-        });
     }
 }
+
 // sliler banner
 function sliderShow() {
     var clickPrev = $('.slider-turn__left')
@@ -213,8 +122,6 @@ function sliderShow() {
 // Xử lý thông báo
 function handlerNoti() {
     const apiNoti = "http://localhost:3000/notifications"
-
-
     imgnoti = $$('.notifications-contents__img')
     titlenoti = $$('.notifications-contents__title')
     desnoti = $$('.notifications-contents__descriptions')
@@ -246,7 +153,6 @@ function handlerNoti() {
         notibody.innerHTML = htmls.join("")
     }
 }
-
 function handlerCarousel() {
     let transform = 0;
     console.log(transform)

@@ -1,3 +1,4 @@
+
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 // input 
@@ -6,25 +7,37 @@ const passWord = $('#password');
 const rePassWord = $('#repassword');
 const email = $('#email');
 const checkBoxSignUp = $('#checkbox-signup');
+const inputs = $$('.content__form-group input[type="text"]');
 // message
 const messageUsername = $(".message-username");
 const messagePassword = $(".message-password");
 const messageRePassword = $(".message-repassword");
 const messageEmail = $(".message-email");
-const messageCheckbox = $(".message-checkbox");
+const allMessage = $$(".content__form-group span");
 // btn
 const btnSubmitSignUp = $('#btn-submit-signup');
+let colorCheckBox = $('.content__form-group-checkbox p')
+let cbtnCheckBox = $('.content__form-group-checkbox input')
 // create Time
 const createdAt = new Date().getTime();
+
+const arrText = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'h']
+const arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const code = []
+for (let i = 0; i < 6; i++) {
+    let a = Math.floor(Math.random() * arrNum.length)
+    code.push(arrNum[a])
+    let b = Math.floor(Math.random() * arrText.length)
+    code.push(arrText[b])
+}
 // api 
 const apiUser = "http://localhost:3000/user"
 
 function start() {
-    handleBlurInput()
-
+    handleInput()
 }
 start()
-
 //
 function createUser(formDataUser) {
     const options = {
@@ -34,153 +47,160 @@ function createUser(formDataUser) {
         },
         body: JSON.stringify(formDataUser)
     }
-    fetch(apiUser, options).then(function(response) {
-            return response.json();
-        })
-        .then(function() {
-            console.log("đăng kí thành công")
-        })
-}
-
-function getUser() {
-    fetch(apiUser).then(function(response) {
+    fetch(apiUser, options).then(function (response) {
         return response.json();
-    }).then(function(dataUsers) {
-        formUser(dataUsers)
+    }).then(function () {
+        alert("đăng kí thành công")
     })
 }
+// Xử lý thao tác người với form input
+function handleInput() {
+    inputs.forEach((input) => {
+        input.addEventListener('blur', () => {
+            if (!(input.value.trim() === '')) {
+                if (input.id === 'username') {
+                    return validateInput(input, messageUsername, "Tên tài khoản quá ngắn !", input.value.trim().length >= 4);
+                }
+                if (input.id === 'password') {
+                    return validateInput(input, messagePassword, "Mật khẩu ngắn !", input.value.trim().length > 4);
+                }
+                if (input.id === 'repassword') {
+                    return validateInput(input, messageRePassword, "Mật khẩu không trùng khớp !", passWord.value.trim() === input.value.trim());
+                }
+                if (input.id === 'email') {
+                    return validateInput(input, messageEmail, "Vui lòng nhập đúng email!", input.value.trim().search("@") > 3);
+                }
+            }
+        })
+    });
 
-// Xử lý thao tác người dùng blur input
-
-
-function handleBlurInput() {
-    function validateInput(message, messageContent, condition) {
-        if (condition) {
-            message.style.display = "none";
-            return true;
-        } else {
-            message.style.display = "block";
-            message.innerText = messageContent;
-            return false;
+    // Nút checker
+    cbtnCheckBox.addEventListener('click', () => {
+        if (checkBoxSignUp.dataset.result = 'true') {
+            colorCheckBox.style.color = "black";
         }
-    }
-
-    let checkUserName = userName.onblur = function() {
-        return validateInput(messageUsername, "Tên tài khoản quá ngắn !", userName.value.trim() != "" && userName.value.length >= 4);
-    }
-    let checkPassword = passWord.onblur = function() {
-        return validateInput(messagePassword, "Vui lòng nhập mật khẩu !", passWord.value.trim() != "" && passWord.value.length > 4);
-    }
-    let checkRePassword = rePassWord.onblur = function() {
-        return validateInput(messageRePassword, "Mật khẩu không trùng khớp !", rePassWord.value.trim() != "" && passWord.value.trim() === rePassWord.value.trim());
-    }
-    let checkEmail = email.onblur = function() {
-        return validateInput(messageEmail, "Vui lòng nhập email !", email.value.trim() != "" && email.value.search("@") > 3);
-    }
-    let checkCheckbox = function() {
+    })
+    // validate cheker
+    let checkCheckbox = function () {
         if (checkBoxSignUp.checked) {
-            messageCheckbox.style.display = "none";
+            colorCheckBox.style.color = "black";
+            checkBoxSignUp.dataset.result = 'true'
             console.log(`value check box :${checkBoxSignUp.checked}`);
             return true;
         } else {
-            messageCheckbox.style.display = "block";
-            messageCheckbox.innerText = "Bạn cần đồng ý các điều khoản trên !";
+            colorCheckBox.style.color = "red";
             return false;
         };
+
     }
-
     // xử lý nút đăng ký
-    btnSubmitSignUp.onclick = function() {
-        checkUserName()
-        checkEmail()
-        checkPassword()
-        checkRePassword()
+    btnSubmitSignUp.onclick = function () {
         checkCheckbox()
-        if (checkUserName() && checkEmail() && checkPassword() && checkRePassword() && checkCheckbox()) {
-            console.log('check thành công')
-            getUser();
+        const allInput = $$('.content__form-group input');
+        let checkResult = [...allInput].filter((input) => {
+            return input.dataset.result === 'false'
+        });
+        // console.log(checkResult);
+        if (checkResult.length === 0) {
+            alert('validate thanh cong');
+            checkDataUser(userName.value.trim(), passWord.value.trim(), email.value.trim());
         } else {
-            console.log('check thất bại')
-
+            checkResult.forEach((c) => {
+                c.classList.add('border-error')
+            })
+            allMessage.forEach((m) => {
+                m.classList.remove('message-hide');
+                m.innerText = 'Không được để trống !';
+            })
+            alert('dang ky that bai')
         }
+        allInput.forEach((input) => {
+            if (input.dataset.result === 'true') {
+                input.classList.remove('border-error')
+                input.classList.add('border-success')
+            }
+        })
     }
 }
 //  mẫu của người dùng
-function formUser(users) {
-    let lgUser = users.length
+
+function formUser(idUser, userNameForm, passWordForm, emailForm) {
     var formDataUser = {
-            id: lgUser,
-            createdAt: createdAt,
-            userName: userName.value.trim(),
-            passWord: passWord.value.trim(),
-            email: email.value.trim(),
-            status: 4,
-            fullName: "",
-            avatar: "/assets/img/user/useravatar.jpg",
-            address: "",
-            phone: 0,
-            birthOfDate: "",
-            gender: 1,
-            state: "noactive",
-            money: 0,
-            point: 0,
-        }
-        //  status : 
-        //    0 : admin 
-        //    1 : seller 
-        //    2 : user update full info 
-        //    3 : user no info / 
-        //    4 : unverified account 
-        //    5 : account ban 
-        // state :  active / noactive
-        // gender : 
-        // 1 : Nam 
-        // 2 : Nữ
-        // 3 : Khác
-    checkDataUser(formDataUser, users)
+        id: idUser,
+        createdAt: createdAt,
+        userName: userNameForm,
+        passWord: passWordForm,
+        email: emailForm,
+        status: 4,
+        fullName: "",
+        avatar: "/assets/img/user/useravatar.jpg",
+        address: "",
+        phone: 0,
+        birthOfDate: "",
+        gender: 1,
+        money: 0,
+        point: 0,
+        code: code.join('')
+    }
+    //  status : 
+    //    0 : admin 
+    //    1 : seller 
+    //    2 : user update full info 
+    //    3 : user no info / 
+    //    4 : unverified account 
+    //    5 : account ban 
+    // state :  active / noactive
+    // gender : 
+    // 1 : Nam 
+    // 2 : Nữ
+    // 3 : Khác
+    createUser(formDataUser);
 }
-
-//  kiểm tra username hay email có sẵn chưa
-function checkDataUser(formDataUser, dataUsers) {
-    let checkUserName = function() {
-        let userName = dataUsers.every(
-            function(check) {
-                return check.userName !== formDataUser.userName;
-            }
-        )
-        if (userName) {
-            console.log("check dữ liệu : tên người dùng không trùng lặp");
-            messageUsername.style.display = "none"
-            return true;
-
+//  kiểm tra username hay email có bị trùng hay không
+function checkDataUser(userNameForm, passWordForm, emailForm) {
+    //get data
+    console.log(userNameForm, emailForm);
+    fetch(apiUser).then(function (response) {
+        return response.json();
+    }).then(function (dataUsers) {
+        check(dataUsers)
+    })
+    // check data
+    function check(dataUsers) {
+        let id = dataUsers.length + 1;
+        let checkUserName = dataUsers.every(data => {
+            return !(data.userName == userNameForm);
+        })
+        let checkEmail = dataUsers.every(data => {
+            return !(data.email == emailForm)
+        })
+        if (checkUserName && checkEmail) {
+            formUser(id, userNameForm, passWordForm, emailForm)
         } else {
-            console.log("check dữ liệu : tên người đã có");
-            messageUsername.style.display = "block"
-            messageUsername.innerText = "Tên tài khoản đã tồn tại!"
+            console.log('that bai ');
+            if (!checkUserName) {
+                validateInput(userName, messageUsername, "Tên tài khoản đã được sử dụng", false);
+            }
+            if (!checkEmail) {
+                validateInput(email, messageEmail, "Email đã được sử dụng", false);
+            }
         }
     }
-    let checkEmail = function() {
-        let email = dataUsers.every(
-            function(check) {
-                return check.email !== formDataUser.email;
-            }
-        )
-        if (email) {
-            messageEmail.style.display = "none"
-            console.log("check dữ liệu thành công , email không trùng lặp");
-            return true;
-        } else {
-            console.log("check dữ liệu : email đã có");
-            messageEmail.style.display = "block"
-            messageEmail.innerText = "Email này đã được sử dụng !"
-        }
-    }
-    checkUserName()
-    checkEmail()
-    if (checkUserName() && checkEmail()) {
-        createUser(formDataUser);
+}
+// Validate Input 
+function validateInput(currenInput, message, messageContent, condition) {
+    if (condition) {
+        // console.log(currenInput.value);
+        message.style.display = "none";
+        currenInput.dataset.result = "true";
+        currenInput.classList.remove('border-error');
+        currenInput.classList.add('border-success');
+        return true;
     } else {
-        console.log('đăng ký thất bại')
-
+        message.style.display = "block";
+        currenInput.classList.add('border-error')
+        currenInput.classList.remove('border-success');
+        message.innerText = messageContent;
+        return false;
     }
 }

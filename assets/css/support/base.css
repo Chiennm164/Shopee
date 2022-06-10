@@ -54,8 +54,23 @@ html {
     color: var(--text-color);
 }
 
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto
+}
+
 .content {
     background-color: var(--white-color-f5);
+}
+
+input {
+    font-size: 14px;
+}
+
+.hide-element {
+    display: none !important;
+
 }
 
 @keyframes hover-button-left {

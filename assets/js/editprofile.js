@@ -25,11 +25,11 @@ const apiUser = "http://localhost:3000/user"
 
 getUser()
 handlerBtnAccount()
-    // call api
+// call api
 function getUser() {
-    fetch(apiUser).then(function(response) {
+    fetch(apiUser).then(function (response) {
         return response.json();
-    }).then(function(users) {
+    }).then(function (users) {
         checkLogin(users)
     })
 }
@@ -42,9 +42,9 @@ function patchState(id, data) {
         },
         body: JSON.stringify(data)
     }
-    fetch(apiUser + '/' + id, options).then(function(response) {
+    fetch(apiUser + '/' + id, options).then(function (response) {
         return response.json();
-    }).then(function() {
+    }).then(function () {
         location.assign("http://127.0.0.1:5501/index.html"),
             console.log("đổi trạng thái thành công")
     })
@@ -54,7 +54,7 @@ function checkLogin(users) {
     let idApi;
     // check state người dùng 
     let activeSatate = users.some(
-        function(check) {
+        function (check) {
             idApi = check.id
             statusApi = check.status
             return check.state === 'active'
@@ -82,14 +82,13 @@ function checkLogin(users) {
 // xử lý đăng xuất  
 function handleLogOut(idApi) {
     console.log(idApi);
-    logout.onclick = function() {
+    logout.onclick = function () {
         var changeState = {
             state: "noactive"
         }
         patchState(idApi, changeState)
     }
 }
-
 // xử lý khi status = 3 ( người dùng chưa đủ thông tin cá nhân)
 function renderFormEditUser(idApi) {
     showsGender.parentElement.classList.add("profile-hide")
@@ -100,7 +99,7 @@ function renderFormEditUser(idApi) {
         element.classList.remove(("pointer-none"))
     });
     for (let i = 0; i < gender.length; i++) {
-        gender[i].onclick = function() {
+        gender[i].onclick = function () {
             if (gender[i].value == 1) {
                 gender.value = 1
                 console.log(gender.value)
@@ -115,9 +114,9 @@ function renderFormEditUser(idApi) {
             }
         }
     }
-    btnEdit.onclick = function(e) {
+    btnEdit.onclick = function (e) {
         e.preventDefault()
-            // kiểm tra dữ liệu người dùng nhập vào  xem trùng hay không ( phone ,full name ,)
+        // kiểm tra dữ liệu người dùng nhập vào  xem trùng hay không ( phone ,full name ,)
         if (fullname.value != '' && phone.value != '' && dateOfBirth.value != '' && address.value != '') {
             let formEdit = {
                 fullName: fullname.value,
@@ -145,9 +144,9 @@ function renderInfoUser(idApi, users) {
     money.innerText = users[idApi].money
     dateOfBirth.value = users[idApi].birthday
     address.value = users[idApi].address
-        // showsGender.value = users[idApi].gender
-        // console.log(gender.value)
-        //check xem giá trị của gender
+    // showsGender.value = users[idApi].gender
+    // console.log(gender.value)
+    //check xem giá trị của gender
     if (users[idApi].gender == 1) {
         showsGender.value = "Nam"
     }
@@ -161,20 +160,20 @@ function renderInfoUser(idApi, users) {
 }
 // xử lý nút Edit khi người dùng ấn vào
 function handleBtnEdit(idApi) {
-    btnEdit.onclick = function() {
+    btnEdit.onclick = function () {
         genderGroup.classList.remove("profile-hide")
         showsGender.parentElement.classList.add("profile-hide")
         fullname.classList.add("border-input")
         phone.classList.add("border-input")
         address.classList.add("border-input")
         dateOfBirth.classList.add("border-input")
-            // xoá giới hạn của trỏ chuột
+        // xoá giới hạn của trỏ chuột
         pointerNone.forEach(element => {
             element.classList.remove(("pointer-none"))
         });
         // lấy giá trị value của gender
         for (let i = 0; i < gender.length; i++) {
-            gender[i].onclick = function() {
+            gender[i].onclick = function () {
                 if (gender[i].value == 1) {
                     gender.value = 1
                 }
@@ -194,9 +193,9 @@ function handleBtnEdit(idApi) {
 function handleBtnSave(idApi) {
     let btnSave = $(".btn-edit-profile")
     btnSave.innerText = "Lưu"
-    btnSave.onclick = function(e) {
+    btnSave.onclick = function (e) {
         e.preventDefault()
-            // kiểm tra dữ liệu người dùng nhập vào  xem trùng hay không ( phone ,full name ,)
+        // kiểm tra dữ liệu người dùng nhập vào  xem trùng hay không ( phone ,full name ,)
         if (fullname.value != '' && phone.value != '' && dateOfBirth.value != '' && address.value != '') {
             let formEdit = {
                 fullName: fullname.value,
@@ -222,9 +221,9 @@ function patchProfileUser(id, data) {
         },
         body: JSON.stringify(data)
     }
-    fetch(apiUser + '/' + id, options).then(function(response) {
+    fetch(apiUser + '/' + id, options).then(function (response) {
         return response.json();
-    }).then(function() {
+    }).then(function () {
         console.log("cập nhật thành công")
         location.assign("http://127.0.0.1:5501/profile.html")
 
@@ -248,13 +247,12 @@ function showInfoAccount(idApi, users) {
         element.innerText = username
     });
 }
-
 // xử lý sự kiện người dùng ấn vào xem thông tin tài khoản 
 function handlerBtnAccount() {
 
     let btnAccount = $('.profile__user-infor-account')
     console.log(btnAccount)
-    btnAccount.onclick = function() {
+    btnAccount.onclick = function () {
         console.log("oke")
     }
 

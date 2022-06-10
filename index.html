@@ -12,14 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- link icons -->
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
-    <!-- link bootstrap -->
-    <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.js">
-
     <!-- link base css -->
     <link rel="stylesheet" href="assets/css/support/base.css">
-    <!--  link Header css -->
-    <link rel="stylesheet" href="assets/css/container/header.css">
+    <!-- link Header css -->
+    <link rel="stylesheet" href="assets/css/header/header.css">
     <!-- link Container Slider css -->
     <link rel="stylesheet" href="assets/css/container/banner.css">
     <!-- link Container Simple banner css -->
@@ -37,11 +33,7 @@
     <!-- link  Footer css -->
     <link rel="stylesheet" href="assets/css/container/footer.css">
 
-    <!-- link reponsive css -->
-    <link rel="stylesheet" href="/assets/css/support/reponsiveBoostrap.css">
-
     <title>Shopee</title>
-
 
 </head>
 
@@ -51,7 +43,7 @@
         <header class="header">
             <div class="container">
                 <!-- Nav bar -->
-                <nav class="header__navbar  hiden-on-mobile-s">
+                <nav class="header__navbar ">
                     <!-- nav bar left -->
                     <div class="header-navbar__left">
                         <!-- seller  -->
@@ -60,17 +52,21 @@
                         <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
                             <div class="navbar-drawer">
                                 <div class="navbar-drawer__contents">
-                                    <img src="/assets/img/header/nav/qrcode.png" alt="qrcode" class="navbar-drawer__img-qrcode">
+                                    <img src="/assets/img/header/nav/qrcode.png" alt="qrcode"
+                                        class="navbar-drawer__img-qrcode">
                                     <div class="navbar-drawer__store">
                                         <div class="navbar-drawer__store-items">
-                                            <img src="/assets/img/header/nav/appstore.png" alt="appstore" class="navbar-drawer__store-img">
+                                            <img src="/assets/img/header/nav/appstore.png" alt="appstore"
+                                                class="navbar-drawer__store-img">
                                         </div>
                                         <div class="navbar-drawer__store-items">
-                                            <img src="/assets/img/header/nav/ggplay.png" alt="chplay" class="navbar-drawer__store-img">
+                                            <img src="/assets/img/header/nav/ggplay.png" alt="chplay"
+                                                class="navbar-drawer__store-img">
                                         </div>
                                         <div class="navbar-drawer__store-items">
-                                            <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery" class="navbar-drawer__store-img">
-                                        </div>          
+                                            <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery"
+                                                class="navbar-drawer__store-img">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -91,11 +87,11 @@
                             <a href="" class="header-navbar__items">
                                 <span class="ti ti-bell navbar__items-icon">
                                 </span>
-                                <span class="noti-number">1</span>
+                                <span class="noti-number hide-element">1</span>
 
                                 <span class="navbar__items-title">
-                              Thông báo
-                               </span>
+                                    Thông báo
+                                </span>
                             </a>
                             <!-- content noti -->
                             <div class="navbar-notifications">
@@ -108,8 +104,8 @@
 
                                     </div>
                                     <a class="notifications-footer">
-                                      Xem thêm
-                                       </a>
+                                        Xem thêm
+                                    </a>
                                 </div>
                                 <div class="navbar-notifications-wrap-off">
                                     <img src="/assets/img/header/noti.png" alt="">
@@ -138,15 +134,19 @@
                                 <a class="language-english">English</a>
                             </div>
                         </li>
+                        <li class="navbar-group link-target hide-element">
+                            <a href="/signup.html" class="header-navbar__items usersignup ">Đăng ký </a>
+                            <a href="/login.html" class="header-navbar__items userlogin ">Đăng nhập </a>
+                        </li>
                         <!-- login , signup  -->
-                        <a href="/signup.html" class="header-navbar__items usersignup">Đăng Ký </a>
-                        <a href="/login.html" class="header-navbar__items userlogin">Đăng Nhập </a>
 
                         <!-- profile  -->
                         <li class="navbar-group profile">
-                            <img src="/assets/img/user/profile/avatar.png" alt="avataruser" class="navbar__item-avatar-img">
-                            <a href="" class="header-navbar__items header-username">Durza
-                               </a>
+                            <a href="#" class="header-navbar__items userlogot ">Đăng xuất</a>
+                            <img src="/assets/img/user/profile/avatar.png" alt="avataruser"
+                                class="navbar__item-avatar-img">
+                            <a href="" class="header-navbar__items header-username ">Durza
+                            </a>
                             <div class="header-navbar__profile">
                                 <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
                                 <a href="" class="header-navbar__profile--items">Đơn mua</a>
@@ -158,80 +158,11 @@
                 <!--  header with search  -->
                 <div class="header-with-search">
                     <!-- logo -->
-                    <div class="header-with-search__logo-wrapper  hiden-on-mobile hiden-on-mobile-s">
+                    <div class="header-with-search__logo-wrapper  ">
                         <a href="index.html" class="header-with-search__logo">
-                            <img src="/assets/img/header/logo-full-white.png" alt="logo" class="header-with-search__logo-img">
+                            <img src="/assets/img/header/logo-full-white.png" alt="logo"
+                                class="header-with-search__logo-img">
                         </a>
-                    </div>
-                    <!-- menu mobile -->
-                    <div class="header-with-search__mbmenu hiden-on-tablet  hiden-on-mobile">
-                        <span class="header-with-search__mbmenu-span ti-menu"></span>
-                        <div class="mbmenu-content">
-                            <div class="mbmenu-content-wrapper">
-                                <div class="mbmenu-list-items">
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-home"></span>
-                                            <p>Trang chủ</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-truck"></span>
-                                            <p>Kênh người bán</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-world"></span>
-                                            <p>Kết nối</p>
-
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-
-                                            <span class="ti-bell"></span>
-                                            <p>Thông báo</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-
-                                            <span class="ti-help-alt"></span>
-                                            <p>Hỗ trợ</p>
-                                        </div>
-                                    </a>
-                                    <a href="/signup.html" class="mbmenu-items usersignup">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-user"></span>
-                                            <p>Đăng ký</p>
-
-                                        </div>
-                                    </a>
-                                    <a href="/login.html" class="mbmenu-items userlogin">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-user"></span>
-                                            <p>Đăng nhập</p>
-
-                                        </div>
-                                    </a>
-                                    <a href="/profile.html" class="mbmenu-items profile">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-user"></span>
-                                            <p>Tài Khoản</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group profile-logout">
-                                            <span class="ti-close"></span>
-                                            <p>Đăng xuất</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <!-- search -->
                     <div class="header-with-search__search-section">
@@ -239,19 +170,22 @@
                             <div class="searchbar-main">
                                 <div class="searchbar-main__input">
                                     <!-- input text search-->
-                                    <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi" class="searchbar__input">
+                                    <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi"
+                                        class="searchbar__input">
                                     <!-- history -->
                                     <div class="searchbar-main__history">
                                         <div class="searchbar-main__list-box">
                                             <a href="" class="searchbar-main__history-item">
                                                 <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
-                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm" class="main__history-item-img">
+                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
+                                                    class="main__history-item-img">
                                             </a>
                                         </div>
                                         <div class="searchbar-main__list-box">
                                             <a href="" class="searchbar-main__history-item">
                                                 <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
-                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm" class="main__history-item-img">
+                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
+                                                    class="main__history-item-img">
                                             </a>
                                         </div>
                                     </div>
@@ -259,11 +193,11 @@
                             </div>
                             <!-- button search -->
                             <button class="searchbar-btn">
-                                     <span class="ti ti-search searchbar-btn__icon"></span>
-                           </button>
+                                <span class="ti ti-search searchbar-btn__icon"></span>
+                            </button>
                         </div>
                         <!-- suggest search -->
-                        <div class="search-section__search-suggest  hiden-on-mobile-s">
+                        <div class="search-section__search-suggest">
                             <div class="search-suggest__list-items">
                                 <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
                                 <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
@@ -293,12 +227,14 @@
                                     <div class="cart__drawer-body">
                                         <div class="cart__drawer-list-items">
                                             <a href="" class="cart__drawer-items">
-                                                <img src="/assets/img/header/nav/cart.png" class="cart__drawer-items-img" alt="vật phẩm"></img>
+                                                <img src="/assets/img/header/nav/cart.png"
+                                                    class="cart__drawer-items-img" alt="vật phẩm"></img>
                                                 <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
                                                 <div class="cart__drawer-items-price">175000đ</div>
                                             </a>
                                             <a href="" class="cart__drawer-items">
-                                                <img src="/assets/img/header/nav/cart.png" class="cart__drawer-items-img" alt="vật phẩm"></img>
+                                                <img src="/assets/img/header/nav/cart.png"
+                                                    class="cart__drawer-items-img" alt="vật phẩm"></img>
                                                 <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
                                                 <div class="cart__drawer-items-price">175000đ</div>
                                             </a>
@@ -322,10 +258,10 @@
         <!-- banner -->
         <div class="banner">
             <div class="container">
-                <div class="banner-content col">
+                <div class="banner-content">
                     <!-- slider  -->
                     <div class="banner-content__left">
-                        <div class="slider col-lg-8 col-md-8 col-sm-12 col-12">
+                        <div class="slider ">
                             <div class="slider-turn">
                                 <div class="slider-turn__left ti-angle-left"></div>
 
@@ -342,20 +278,21 @@
                             </div>
                             <div class="slider-main">
                                 <div class="slider-main__items">
-                                    <img src="/assets/img/slider/banner/slider1.png" alt="" class="slider-main__items-img">
+                                    <img src="/assets/img/slider/banner/slider1.png" alt=""
+                                        class="slider-main__items-img">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- sub slider -->
-                    <div class="banner-content__right col-lg- col-md-4 col-sm col">
+                    <div class="banner-content__right">
                         <div class="banner-content__right-up"> </div>
                         <div class="banner-content__right-down"></div>
                     </div>
 
                 </div>
                 <!-- list slider nav -->
-                <div class="slider-navbar col">
+                <div class="slider-navbar">
                     <a href="" class="slider-navbar__items">
                         <div class="slider-navbar__img1"></div>
                         <p class="slider-navbar__description">Nạp Thẻ, Hóa Đơn & E-voucher</p>
@@ -524,7 +461,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -543,7 +481,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -562,7 +501,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -581,7 +521,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -600,7 +541,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -619,7 +561,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -638,7 +581,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -657,7 +601,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -676,7 +621,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -695,7 +641,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -714,7 +661,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -733,7 +681,8 @@
                                     <div class="flashSale-body__items-wrap">
                                         <div class="flashSale-cart__items">
                                             <div class="flashSale-cart__bground-items"></div>
-                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale" class="flashSale-cart__items1-img">
+                                            <img src="/assets/img/flashsale//mypham1.png" alt="anh flash sale"
+                                                class="flashSale-cart__items1-img">
                                             <div class="flashSale-cart__bground">
                                             </div>
                                         </div>
@@ -776,18 +725,19 @@
                             <a href="" class="shopeeMall-header__items">Miễn Phí Vận Chuyển</a>
                         </div>
                         <div class="shopeeMall-header__right">
-                            <a href="" class="shopeeMall-header__items hiden-on-mobile hiden-on-mobile-s">Xem tất cả </a>
+                            <a href="" class="shopeeMall-header__items ">Xem tất cả
+                            </a>
                             <span class="ti-angle-right shopeeMall-header__items-span"></span>
                         </div>
                     </div>
                     <div class="shopeeMall-content">
                         <!-- shopee mall body slider -->
-                        <div class="shopeeMall-content__left col-lg-4 col-md-4 col-sm">
+                        <div class="shopeeMall-content__left">
                             <div class="shopeeMall-content__slider">
                             </div>
                         </div>
                         <!-- shopee mall body list items -->
-                        <div class="shopeeMall-content__right col-lg-8 col-md-8 col-sm-12">
+                        <div class="shopeeMall-content__right ">
                             <div class="shopeeMall-content__list-items">
                                 <div class="shopeeMall-content__items-box">
                                     <a href="" class="shopeeMall-content__items">
@@ -964,7 +914,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -995,7 +946,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1026,7 +978,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1057,7 +1010,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1088,7 +1042,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1119,7 +1074,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1150,7 +1106,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1181,7 +1138,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1212,7 +1170,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1243,7 +1202,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1274,7 +1234,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1305,7 +1266,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1336,7 +1298,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1367,7 +1330,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1398,7 +1362,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1429,7 +1394,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1460,7 +1426,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1491,7 +1458,8 @@
                                 </div>
                                 <div class="suggest-body__items-content">
                                     <div class="suggest-body__items-content-wrapper">
-                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm combo ...</div>
+                                        <div class="suggest-body__items-content-title">Mỹ phẩm cao cấp pháp tặng kèm
+                                            combo ...</div>
                                         <div class="suggest-body__items-content-voucher">Giảm 10%</div>
                                         <div class="suggest-body__items-content-end">
                                             <div class="suggest-body__items-content-price">100đ</div>
@@ -1512,24 +1480,24 @@
         <!-- footer -->
         <footer class="footer">
             <!-- footer contact , about  -->
-            <div class="footer-contact hiden-on-mobile hiden-on-mobile-s">
+            <div class="footer-contact">
                 <div class="container">
                     <div class="footer-contact__list-items">
                         <!-- support  -->
                         <div class="footer-contact__item">
-                            <a href="" class="footer-contact__item-title">  CHĂM SÓC KHÁCH HÀNG</a>
+                            <a href="" class="footer-contact__item-title"> CHĂM SÓC KHÁCH HÀNG</a>
                             <div href="" class="footer-contact__item-contact">
-                                <a href="" class="footer-contact__item-name">      Trung Tâm Trợ Giúp       </a>
-                                <a href="" class="footer-contact__item-name">      Shopee Blog              </a>
-                                <a href="" class="footer-contact__item-name">      Shopee Mall              </a>
-                                <a href="" class="footer-contact__item-name">      Hướng Dẫn Mua Hàng             </a>
-                                <a href="" class="footer-contact__item-name">      Hướng Dẫn Bán Hàng      </a>
-                                <a href="" class="footer-contact__item-name">      Thanh Toán                       </a>
-                                <a href="" class="footer-contact__item-name">      Shopee Xu                  </a>
-                                <a href="" class="footer-contact__item-name">      Vận Chuyển                     </a>
-                                <a href="" class="footer-contact__item-name">      Trả Hàng & Hoàn Tiền             </a>
-                                <a href="" class="footer-contact__item-name">      Chăm Sóc Khách Hàng           </a>
-                                <a href="" class="footer-contact__item-name">      Chính Sách Bảo Hành            </a>
+                                <a href="" class="footer-contact__item-name"> Trung Tâm Trợ Giúp </a>
+                                <a href="" class="footer-contact__item-name"> Shopee Blog </a>
+                                <a href="" class="footer-contact__item-name"> Shopee Mall </a>
+                                <a href="" class="footer-contact__item-name"> Hướng Dẫn Mua Hàng </a>
+                                <a href="" class="footer-contact__item-name"> Hướng Dẫn Bán Hàng </a>
+                                <a href="" class="footer-contact__item-name"> Thanh Toán </a>
+                                <a href="" class="footer-contact__item-name"> Shopee Xu </a>
+                                <a href="" class="footer-contact__item-name"> Vận Chuyển </a>
+                                <a href="" class="footer-contact__item-name"> Trả Hàng & Hoàn Tiền </a>
+                                <a href="" class="footer-contact__item-name"> Chăm Sóc Khách Hàng </a>
+                                <a href="" class="footer-contact__item-name"> Chính Sách Bảo Hành </a>
                             </div>
 
                         </div>
@@ -1537,15 +1505,15 @@
                         <div class="footer-contact__item">
                             <a href="" class="footer-contact__item-title">VỀ SHOPEE</a>
                             <div href="" class="footer-contact__item-contact">
-                                <a href="" class="footer-contact__item-name">    Giới Thiệu Về Shopee Việt Nam   </a>
-                                <a href="" class="footer-contact__item-name">    Tuyển Dụng  </a>
-                                <a href="" class="footer-contact__item-name">    Điều Khoản Shopee  </a>
-                                <a href="" class="footer-contact__item-name">    Chính Sách Bảo Mật </a>
-                                <a href="" class="footer-contact__item-name">    Chính Hãng   </a>
-                                <a href="" class="footer-contact__item-name">    Kênh Người Bán </a>
-                                <a href="" class="footer-contact__item-name">    Flash Sales  </a>
-                                <a href="" class="footer-contact__item-name">    Chương Trình Tiếp Thị Liên Kết Shopee     </a>
-                                <a href="" class="footer-contact__item-name">    Liên Hệ Với Truyền Thông </a>
+                                <a href="" class="footer-contact__item-name"> Giới Thiệu Về Shopee Việt Nam </a>
+                                <a href="" class="footer-contact__item-name"> Tuyển Dụng </a>
+                                <a href="" class="footer-contact__item-name"> Điều Khoản Shopee </a>
+                                <a href="" class="footer-contact__item-name"> Chính Sách Bảo Mật </a>
+                                <a href="" class="footer-contact__item-name"> Chính Hãng </a>
+                                <a href="" class="footer-contact__item-name"> Kênh Người Bán </a>
+                                <a href="" class="footer-contact__item-name"> Flash Sales </a>
+                                <a href="" class="footer-contact__item-name"> Chương Trình Tiếp Thị Liên Kết Shopee </a>
+                                <a href="" class="footer-contact__item-name"> Liên Hệ Với Truyền Thông </a>
                             </div>
                         </div>
                         <!-- payment -->
@@ -1616,15 +1584,18 @@
                         <!-- Social Network -->
                         <div class="footer-contact__item">
                             <a href="" class="footer-contact__item-title"> TẢI ỨNG DỤNG SHOPEE NGAY THÔI
-                        </a>
+                            </a>
                             <div href="" class="contact__qRcode">
                                 <div class="contact__qRcode-left">
                                     <img src="/assets/img/footer/qr-code/qr.png" alt="">
                                 </div>
                                 <div class="contact__qRcode-right">
-                                    <img src="/assets/img//footer//qr-code//item1.png" alt="" class="contact__qRcode-right-item">
-                                    <img src="/assets/img//footer//qr-code//item2.png" alt="" class="contact__qRcode-right-item">
-                                    <img src="/assets/img//footer//qr-code//item3.png" alt="" class="contact__qRcode-right-item">
+                                    <img src="/assets/img//footer//qr-code//item1.png" alt=""
+                                        class="contact__qRcode-right-item">
+                                    <img src="/assets/img//footer//qr-code//item2.png" alt=""
+                                        class="contact__qRcode-right-item">
+                                    <img src="/assets/img//footer//qr-code//item3.png" alt=""
+                                        class="contact__qRcode-right-item">
                                 </div>
                             </div>
                             <a href="" class="footer-contact__item-title">THEO DÕI CHÚNG TÔI TRÊN</a>
@@ -1644,7 +1615,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-about hiden-on-mobile hiden-on-mobile-s">
+            <div class="footer-about ">
                 <div class="container">
                     <div class="about">
                         <div class="footer-about__left">© 2021 Shopee. Tất cả các quyền được bảo lưu.
@@ -1680,17 +1651,21 @@
                 <div class="footer-end__list">
                     <a href=""> CHÍNH SÁCH BẢO MẬT <span>&nbsp;|&nbsp;</span></a>
                     <a href=""> QUY CHẾ HOẠT ĐỘNG <span>&nbsp;|&nbsp;</span></a>
-                    <a href="">  CHÍNH SÁCH VẬN CHUYỂN <span>&nbsp;|&nbsp;</span></a>
-                    <a href="">  CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN </a>
+                    <a href=""> CHÍNH SÁCH VẬN CHUYỂN <span>&nbsp;|&nbsp;</span></a>
+                    <a href=""> CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN </a>
                 </div>
 
                 <div class="footer-end__text">Công ty TNHH Shopee
                 </div>
-                <div class="footer-end__text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+                <div class="footer-end__text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường
+                    Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email:
+                    cskh@hotro.shopee.vn
                 </div>
-                <div class="footer-end__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)
+                <div class="footer-end__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ:
+                    024 73081221 (ext 4678)
                 </div>
-                <div class="footer-end__text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
+                <div class="footer-end__text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần
+                    đầu ngày 10/02/2015
                 </div>
                 <div class="footer-end__text">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee
                 </div>

@@ -1,11 +1,12 @@
 .header {
     background-color: rgb(238, 77, 45);
+    height: 12vh;
 }
 
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 120px;
     align-items: center;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .login-content {
-    min-height: 400px;
+    height: 88vh;
     background-color: rgb(238, 77, 45);
     flex-direction: column;
     align-items: center;
@@ -47,16 +48,19 @@
 
 .content-container {
     width: 1200px;
+    height: 100%;
     padding-bottom: 20px;
 }
 
 .content-wrapper {
     display: flex;
     background: url('/assets/img/user/login.png') center / contain no-repeat;
-    min-height: 550px;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    height: 100%;
+
+    margin: auto;
 }
 
 .content__form {
@@ -64,29 +68,30 @@
     margin-right: 130px;
     background-color: #fff;
     box-sizing: border-box;
-    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 14%);
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 60%);
 }
 
 .content__form-wrapper {
-    min-height: 350px;
-    height: 100%;
+    min-width: 420px;
     display: flex;
     flex-direction: column;
-    min-width: 360px;
     justify-content: space-evenly;
-    padding: 15px;
+    padding: 25px 30px;
 }
 
 .content__form-group {
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
+    position: relative;
 }
 
 .content__form-group span {
-    font-size: 14px;
+    font-size: 13px;
     color: red;
-    padding-top: 10px;
-    display: none;
+    position: absolute;
+    bottom: -24px;
+    padding-left: 4px;
 }
 
 .content__form-title-wrapper {
@@ -100,26 +105,20 @@
     padding: 15px 0;
     font-weight: 400;
     font-size: 22px;
-    border-bottom: 1px solid #ccc;
-}
-
-.form-login__label {
-    font-size: 15px;
-    padding: 12px 2px;
-    color: #222;
 }
 
 .form-login__input {
-    height: 35px;
+    height: 46px;
     padding-left: 5px;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid #e3e1de;
+    border-radius: 3px;
 }
 
 .form-login__btn-submit {
     width: 100%;
     height: 100%;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 10px 10px;
     border: 1px solid;
     text-align: center;
@@ -127,11 +126,12 @@
     cursor: pointer;
     background-color: rgb(238, 77, 45);
     color: #fff;
+    transition: all 0.3s linear;
     text-decoration: none;
 }
 
 .content__form-password-retrieval {
-    padding: 20px 0 5px 5px;
+    padding: 28px 0 0px 5px;
 }
 
 .password-retrieval__link {
@@ -144,6 +144,9 @@
     align-items: center;
     justify-content: space-around;
     padding: 5px 0;
+    font-size: 12px;
+    padding: 10px 0;
+
 }
 
 .content__form-login-more a {
@@ -154,13 +157,26 @@
     border-radius: 2px;
     color: #05a;
     cursor: pointer;
+    font-size: 14px;
 }
 
-.form-login__btn-submit:hover,
-.content__form-password-retrieval:hover,
-.content__form-link-register:hover,
+.form-login__btn-submit:hover {
+    background-color: #fff;
+    color: red;
+    transition: all 0.3s linear;
+}
+
+.password-retrieval__link:hover,
+.content__form-link-register:hover {
+    transition: all 0.3s linear;
+    color: rgb(238, 77, 45);
+}
+
 .content__form-login-more a:hover {
-    opacity: 0.7;
+    background-color: rgb(238, 77, 45);
+    border: none;
+    color: #fff;
+    transition: all 0.3s linear;
 }
 
 .content__form-link-register {
@@ -176,6 +192,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 15px;
+
 }
 
 .content__form-space {
@@ -187,4 +205,19 @@
 .content__form-span-text {
     color: #ccc;
     padding: 0 15px;
+}
+
+.border-error {
+    border: 1px solid red;
+    border-left: 2px solid red;
+
+}
+
+.border-success {
+    border: 1px solid #71be34;
+    border-left: 3px solid #71be34;
+}
+
+.hide-message {
+    visibility: hidden;
 }
