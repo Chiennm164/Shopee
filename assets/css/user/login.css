@@ -206,18 +206,3 @@
     color: #ccc;
     padding: 0 15px;
 }
-
-.border-error {
-    border: 1px solid red;
-    border-left: 2px solid red;
-
-}
-
-.border-success {
-    border: 1px solid #71be34;
-    border-left: 3px solid #71be34;
-}
-
-.hide-message {
-    visibility: hidden;
-}

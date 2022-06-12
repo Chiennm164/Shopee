@@ -11,22 +11,6 @@ const apiUser = "http://localhost:3000/user"
 const createdAt = new Date().getTime();
 
 handleBtnLogin()
-// // kích  hoạt state = active cho tk đăng nhập và chuyển sang trang index
-// function patchState(id, data) {
-//     const options = {
-//         method: 'PATCH',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(data)
-//     }
-//     fetch(apiUser + '/' + id, options).then(function (response) {
-//         return response.json();
-//     }).then(function () {
-//         location.assign("http://127.0.0.1:5501/index.html")
-//         console.log('Đăng nhập thành công')
-//     })
-// }
 function checkDataUser(valueInputName, valueInputPassword) {
     // console.log(valueInputName, valueInputPassword);
     fetch(apiUser).then(function (response) {
@@ -36,19 +20,31 @@ function checkDataUser(valueInputName, valueInputPassword) {
     })
 
     function comparison(users) {
-        let dataPassWord = '';
-        let code = '';
-        let checkUserName = users.some((data) => {
-            if (data.userName === valueInputName) {
-                code = data.code;
-                dataPassWord = data.passWord;
+        let data = {
+            id: '',
+            status: '',
+            passWord: '',
+            code: ''
+        }
+
+        let checkUserName = users.some((user) => {
+            if (user.userName === valueInputName) {
+                data.id = user.id;
+                data.code = user.code;
+                data.passWord = user.passWord;
+                data.status = user.status;
             }
-            return data.userName === valueInputName;
+            return user.userName === valueInputName;
         })
         if (checkUserName) {
-            if (dataPassWord == valueInputPassword) {
-                localStorage.setItem('codeUser', code);
-                alert("M khau chinh xac , dang nhap thanh cong");
+            if (data.passWord == valueInputPassword) {
+                // localStorage.setItem('codeUser', "8h6f7g1a9i3c");
+                localStorage.setItem('codeUser', data.code);
+                localStorage.setItem('statusUser', data.status);
+                localStorage.setItem('idUser', data.id);
+
+                alert("M khau chinh xac");
+                checkStatus(data.status)
             } else {
                 showMessage(passWord, "Mật khẩu không chính xác", true);
             }
@@ -79,4 +75,37 @@ function showMessage(index, contentMessage, condition) {
         index.nextElementSibling.innerText = contentMessage;
     }
 
+}
+// ****************************** Check Status ******************************
+// Thông qua code ở phần local storgae ,lấy được thông tin người dùng bao gồm:
+// Thông tin cá nhân : full name , address , phone ,email ,birthOfDay ,gender
+// Thông tin tài khoản : password , username, createdate , money,avatar , point, status
+// Status : từ 1 -5
+// 1: admin
+// 2: người dùng có đăng ký bán hàng
+// 3: người dùng cấp cao (đã đầy đủ thông tin )
+// 4: người dùng bình thường (đã kích hoạt tài khoản nhưng chưa điền thông tin cá nhân)
+// 5: người dùng đang chờ (chưa kích hoạt tài khoản)
+// 6: người dùng đang bị cấm
+
+function checkStatus(data) {
+    console.log(data);
+    const message = $('.status-error');
+    switch (data) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            message.classList.remove('hide-message')
+            message.innerText = "Đăng nhập thành công, đang chuyển trang !"
+            break;
+        case 5:
+            message.classList.remove('hide-message')
+            message.innerText = "Đăng nhập thất bại, Tài Khoản chưa được kích hoạt !"
+            break;
+        case 6:
+            message.classList.remove('hide-message')
+            message.innerText = "Đăng nhập thất bại, Tài Khoản đã bị khoá !"
+            break;
+    }
 }

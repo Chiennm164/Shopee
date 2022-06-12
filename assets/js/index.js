@@ -1,3 +1,4 @@
+
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
@@ -15,7 +16,8 @@ function start() {
 }
 start()
 
-// Xử lý user
+// ****************************** Check User ******************************
+
 function handlerUser() {
     // lay data
     fetch(apiUser).then(function (response) {
@@ -24,18 +26,74 @@ function handlerUser() {
         handlerCheckLogin(users)
 
     })
+    // check code xem đã tồn tại hay chưa và kiểm tra, lấy ra thông tin người dùng
     function handlerCheckLogin(users) {
-        console.log(users);
         let code = localStorage.getItem('codeUser');
-        if (code == '') {
+
+        // let code = "";
+        if (code === '') {
             console.log('chua dang nhap');
         } else {
-            console.log("da dang nhap");
+            let data = {
+                username: '',
+                avatar: ''
+            }
+            users.forEach(user => {
+                if (code === user.code) {
+                    data.username = user.userName;
+                    data.avatar = user.avatar;
+                }
+            });
+            console.log('check code thanh cong');
+            checkStatus(data);
         }
     }
 }
 
-// sliler banner
+// ****************************** Show Element Login ******************************
+
+function login() {
+    // xu ly giao dien
+    const eLogin = $$('.element-login');
+    // console.log(eLogin);
+    eLogin.forEach(e => {
+        e.classList.toggle('hide-element')
+    })
+    // xu ly nut logout
+    const btnLogout = $('.btn-logout')
+    btnLogout.addEventListener('click', () => {
+        localStorage.setItem('codeUser', "");
+        login()
+        console.log("dang xuat thanh cong");
+    })
+}
+// ****************************** Show Infor User ******************************
+
+function infoUser(data) {
+
+    const useravatar = $('.useravatar');
+    const username = $('.username');
+    username.innerText = data.username
+    useravatar.src = data.avatar
+}
+// ****************************** Check Status ******************************
+function checkStatus(data) {
+    let status = localStorage.getItem('statusUser');
+    console.log(typeof Number(status));
+    if (Number(status) === 1) {
+        console.log('status : ' + status);
+        console.log('hiển thị giao diện admin');
+        login();
+        infoUser(data);
+    }
+    if (Number(status) > 1 && !(status == '')) {
+        console.log('status : ' + status);
+        console.log('hiển thị giao diện người dùng bình thường');
+        login();
+        infoUser(data);
+    }
+}
+// slider banner
 function sliderShow() {
     var clickPrev = $('.slider-turn__left')
     var clickNext = $('.slider-turn__right')

@@ -40,7 +40,6 @@
       "birthOfDate": "2022-03-07",
       "gender": 1,
       "money": 0,
-      "point": 0,
       "code": "8h5e5e2b5e5e"
     },
     {
@@ -48,18 +47,20 @@
       "createdAt": 1647086402151,
       "userName": "chienthien98na",
       "passWord": "password",
-      "email": "chien@gmail.com",
+      "email": "chienthien98na@gmail.com",
       "status": 3,
-      "fullName": "Minh Chiến",
+      "fullName": "Minh Chien",
       "avatar": "/assets/img/user/useravatar.jpg",
-      "address": "Vinh",
+      "address": "Nghệ An",
       "phone": "0988888888",
-      "birthOfDate": "",
-      "gender": 1,
+      "birthOfDate": "12/12/1999",
+      "gender": "1",
       "money": 100,
-      "point": 0,
       "birthday": "2022-03-09",
-      "code": "2b5e3c1a7g9i"
+      "code": "2b5e3c1a7g9i",
+      "fullname": "Minh Chien",
+      "birthOfDay": "ndefined/12/12/12",
+      "_status": 3
     },
     {
       "id": 2,
@@ -75,7 +76,6 @@
       "birthOfDate": "",
       "gender": 1,
       "money": 100,
-      "point": 0,
       "birthday": "2022-03-09",
       "code": "8h6f7g1a9i3c"
     },
@@ -93,7 +93,6 @@
       "birthOfDate": "",
       "gender": 1,
       "money": 100,
-      "point": 0,
       "birthday": "2022-03-09",
       "code": "1a1a9i7g9i7g"
     },
@@ -111,7 +110,6 @@
       "birthOfDate": "",
       "gender": 1,
       "money": 0,
-      "point": 0,
       "code": "7g3c9i8h9i6f"
     },
     {
@@ -128,7 +126,6 @@
       "birthOfDate": "",
       "gender": 1,
       "money": 0,
-      "point": 0,
       "code": "4d2b2b1a8h6f"
     },
     {
@@ -145,7 +142,6 @@
       "birthOfDate": "",
       "gender": 1,
       "money": 0,
-      "point": 0,
       "code": "1a3c1a7g2b6f"
     }
   ],

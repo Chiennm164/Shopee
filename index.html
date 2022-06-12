@@ -87,7 +87,7 @@
                             <a href="" class="header-navbar__items">
                                 <span class="ti ti-bell navbar__items-icon">
                                 </span>
-                                <span class="noti-number hide-element">1</span>
+                                <span class="noti-number element-login hide-element">1</span>
 
                                 <span class="navbar__items-title">
                                     Thông báo
@@ -95,7 +95,7 @@
                             </a>
                             <!-- content noti -->
                             <div class="navbar-notifications">
-                                <div class="navbar-notifications-wrap">
+                                <div class="navbar-notifications-wrap element-login hide-element">
 
                                     <div class="notifications-header">
                                         Thông báo mới nhận
@@ -107,7 +107,7 @@
                                         Xem thêm
                                     </a>
                                 </div>
-                                <div class="navbar-notifications-wrap-off">
+                                <div class="navbar-notifications-wrap-off element-login">
                                     <img src="/assets/img/header/noti.png" alt="">
                                     <p>Đăng nhập để xem thông báo</p>
                                 </div>
@@ -134,23 +134,24 @@
                                 <a class="language-english">English</a>
                             </div>
                         </li>
-                        <li class="navbar-group link-target hide-element">
+                        <!-- login , signup  -->
+
+                        <li class="navbar-group link-target element-login">
                             <a href="/signup.html" class="header-navbar__items usersignup ">Đăng ký </a>
                             <a href="/login.html" class="header-navbar__items userlogin ">Đăng nhập </a>
                         </li>
-                        <!-- login , signup  -->
 
-                        <!-- profile  -->
-                        <li class="navbar-group profile">
-                            <a href="#" class="header-navbar__items userlogot ">Đăng xuất</a>
+                        <!-- profile-header  -->
+                        <li class="navbar-group profile-header element-login hide-element">
                             <img src="/assets/img/user/profile/avatar.png" alt="avataruser"
-                                class="navbar__item-avatar-img">
-                            <a href="" class="header-navbar__items header-username ">Durza
+                                class="navbar__item-avatar-img useravatar">
+                            <a href="" class="header-navbar__items username">Durza
                             </a>
-                            <div class="header-navbar__profile">
-                                <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
-                                <a href="" class="header-navbar__profile--items">Đơn mua</a>
-                                <a href="#" class="header-navbar__profile--items profile-logout">Đăng xuất</a>
+                            <div class="header-navbar__profile-header">
+                                <a href="header.html" class="header-navbar__profile-header--items">Tài Khoản của
+                                    tôi</a>
+                                <a href="" class="header-navbar__profile-header--items">Đơn mua</a>
+                                <a href="#" class="header-navbar__profile-header--items btn-logout">Đăng xuất</a>
                             </div>
                         </li>
                     </ul>
@@ -216,11 +217,11 @@
                             <!-- number cart -->
                             <a href="#" class="cart-badge-wrapper">
                                 <span class="ti-shopping-cart cart-badge-span"></span>
-                                <span class="cart-number-badge">1</span>
+                                <span class="cart-number-badge element-login hide-element">1</span>
                             </a>
                             <!-- cart- content -->
                             <div class="cart__drawer">
-                                <div class="cart__drawer-wrapper">
+                                <div class="cart__drawer-wrapper element-login  hide-element">
                                     <p class="cart__drawer-header">
                                         Sản phẩm mới thêm
                                     </p>
@@ -244,7 +245,7 @@
                                         <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
                                     </div>
                                 </div>
-                                <div class="cart__drawer-wrapper-off">
+                                <div class="cart__drawer-wrapper-off element-login ">
                                     <img src="/assets/img/header/cart.png" alt="">
                                     <p>Bạn chưa có sản phẩm nào</p>
                                 </div>

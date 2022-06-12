@@ -139,21 +139,8 @@ function formUser(idUser, userNameForm, passWordForm, emailForm) {
         birthOfDate: "",
         gender: 1,
         money: 0,
-        point: 0,
         code: code.join('')
     }
-    //  status : 
-    //    0 : admin 
-    //    1 : seller 
-    //    2 : user update full info 
-    //    3 : user no info / 
-    //    4 : unverified account 
-    //    5 : account ban 
-    // state :  active / noactive
-    // gender : 
-    // 1 : Nam 
-    // 2 : Nữ
-    // 3 : Khác
     createUser(formDataUser);
 }
 //  kiểm tra username hay email có bị trùng hay không

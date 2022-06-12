@@ -68,11 +68,76 @@ input {
     font-size: 14px;
 }
 
-.hide-element {
-    display: none !important;
+label {
+    color: rgba(85, 85, 85, .8) !important
+}
+
+/* ********************************* Các class hỗ trợ ********************************* */
+.status {
+    border: none;
+    pointer-events: none;
+}
+
+.pointer-event-none {
+    pointer-events: none !important;
 
 }
 
+/* ẩn element*/
+.hide-element {
+    display: none !important;
+}
+
+/*  Trạng thái của input */
+
+/* .input-nofocus {
+    border: none !important;
+    pointer-events: none;
+} */
+
+/* sử dụng tại trang edit profile -> check status*/
+.status4 {
+    display: flex !important;
+    pointer-events: all;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .14);
+
+}
+
+.status-color {
+    color: #ee4d2d;
+    accent-color: #ee4d2d;
+}
+
+.status3 {
+    pointer-events: none;
+    border: none !important;
+}
+
+/* trạng thái của border */
+.border-error {
+    border: 1px solid red !important;
+    border-left: 2px solid red !important;
+}
+
+.border-success {
+    border: 1px solid #71be34 !important;
+    border-left: 3px solid #71be34 !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.hide-message {
+    visibility: hidden;
+}
+
+.nav-item-active {
+    color: red !important;
+}
+
+/* animation coursual */
 @keyframes hover-button-left {
     form {}
 
