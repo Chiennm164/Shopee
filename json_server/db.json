@@ -51,7 +51,38 @@
       "status": 3,
       "fullName": "Minh Chien",
       "avatar": "/assets/img/user/useravatar.jpg",
-      "address": "Nghệ An",
+      "address": [
+        {
+          "idAddres": 0,
+          "check": 1,
+          "takeName": "Nguyễn Minh Chiến",
+          "takePhone": "09888888888",
+          "typeAddress": 0,
+          "address1": "Hà Nội , Việt Nam",
+          "address2": "Tầng 5 ,Nhà số 1 , Ngõ 11 , Đường Trường Chinh  ",
+          "setDefault": 1
+        },
+        {
+          "idAddres": 1,
+          "check": 1,
+          "takeName": "Nguyễn Minh Chiến",
+          "takePhone": "09888888888",
+          "typeAddress": 1,
+          "address1": "Thành Phố Vinh , Tỉnh Nghệ An",
+          "address2": "gần ngã tư quảng trường Hồ Chí Minh",
+          "setDefault": 0
+        },
+        {
+          "idAddres": 2,
+          "check": 1,
+          "takeName": "Nguyễn Minh Chiến",
+          "takePhone": "09888888888",
+          "typeAddress": "0",
+          "address1": "Hà Nội , Việt Nam",
+          "address2": "Tầng 5 ,Nhà số 1 , Ngõ 11 , Đường Trường Chinh  ",
+          "setDefault": 1
+        }
+      ],
       "phone": "0988888888",
       "birthOfDate": "12/12/1999",
       "gender": "1",
@@ -59,8 +90,9 @@
       "birthday": "2022-03-09",
       "code": "2b5e3c1a7g9i",
       "fullname": "Minh Chien",
-      "birthOfDay": "ndefined/12/12/12",
-      "_status": 3
+      "birthOfDay": "/12/12/12",
+      "_status": 3,
+      "setDefault": 1
     },
     {
       "id": 2,

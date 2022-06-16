@@ -10,6 +10,7 @@ const btnInforUser = $('.profile__user-infor-profile')
 const listBtn = $$('.profile__nav-body-items a')
 
 const apiUser = "http://localhost:3000/user";
+
 start()
 function start() {
     renderDefault()
@@ -23,7 +24,7 @@ function start() {
         })
     })
     btnAccount.addEventListener('click', () => {
-        handlerAccountInfo()
+        handlerChangePassword()
     })
     btnAddress.addEventListener('click', () => {
         handerUserAddress()
@@ -47,17 +48,23 @@ function handlerStatus() {
                 presentUser = user;
             }
         })
+        if (!(presentUser.address == "")) {
+            let listAddress = JSON.stringify(presentUser.address);
+            localStorage.setItem('listAddress', listAddress)
+        } else {
+            localStorage.setItem('listAddress', "")
+        }
         // check status
         let status = localStorage.getItem('statusUser');
         switch (Number(status)) {
             case 2:
             case 3:
                 handlerStatus3(presentUser)
-                console.log(' nguoi dung đã thong tin day du');
+                console.log('Người dùng có thông tin đầy đủ');
                 break;
             case 4:
                 handlerStatus4(presentUser)
-                console.log(' nguoi dung chua nhap thong tin day du');
+                console.log('Người dùng chưa có thông tin');
                 break;
         };
         showDefault(presentUser);
@@ -106,9 +113,6 @@ function handlerStatus3(presentUser) {
         valueInput.forEach(element => {
             if (element.name == "fullname") {
                 element.value = presentUser.fullName
-            }
-            if (element.name == "address") {
-                element.value = presentUser.address
             }
             if (element.name == "phone") {
                 element.value = presentUser.phone
@@ -251,13 +255,15 @@ function checkForm() {
         console.log(result);
         console.log('Chưa đủ thông tin');
     }
-    function validateForm(element, condition) {
-        if (condition) {
-            element.classList.remove('border-error');
-        } else {
-            element.classList.add('border-error');
-            element.classList.remove('border-success');
-        }
+
+}
+// ***************************************** Validata input Form     *****************************************
+function validateForm(element, condition) {
+    if (condition) {
+        element.classList.remove('border-error');
+    } else {
+        element.classList.add('border-error');
+        element.classList.remove('border-success');
     }
 }
 // ***************************************** Patch Data     *****************************************
@@ -277,17 +283,293 @@ function patchDataForm(valuesForm) {
     }).then(function () {
         alert('Cập nhật thành công');
     })
+}
+// ***************************************** Handler Change password  *****************************************
+function handlerChangePassword() {
+    renderFormChangePassWord();
+    const inputForm = $$('.input-change-password-item');
+    const newPassword = $('input[name="changepassword-newpassword"]');
+    const reNewPassword = $('input[name="changepassword-repassword"]');
+    const btnConfirm = $('.btnConfirm');
+    let result = true;
+
+    inputForm.forEach((input) => {
+        input.addEventListener("blur", () => {
+            if (input.value == "") {
+                validateForm(input, false)
+                result = false;
+            }
+            else {
+                result = true;
+                validateForm(input, true);
+            }
+        })
+    })
+    reNewPassword.addEventListener('blur', () => {
+        if (!(reNewPassword.value == newPassword.value)) {
+            validateForm(reNewPassword, false);
+            result = false;
+            console.log('mat khau chua dung');
+        }
+    })
+    btnConfirm.addEventListener('click', (e) => {
+        e.preventDefault()
+        inputForm.forEach((input) => {
+            if (input.value == "") {
+                validateForm(input, false);
+                result = false;
+            }
+        })
+        if (result == true) {
+            const valuesForm = {
+                passWord: newPassword.value,
+            }
+            alert('oke')
+            patchDataForm(valuesForm)
+        } else {
+            console.log("no");
+        }
+    })
+}
+// ***************************************** Render Form Change password   *****************************************
+function renderFormChangePassWord() {
+    profileMain.innerHTML = ` <div class="profile__main-wrap">
+                <div div class="profile__main-wrapper" >
+                <div class="profile__main-header">
+                    <h4> Thay Mật Khẩu</h4>
+                    <p>Để bảo mật tài khoản , vui lòng không chia sẻ mật khẩu cho ai khác.</p>
+                </div>
+                <div class="profile__main-body">
+                <form action="" class="form-change-password">
+                   <div class="form-change-password-group">
+                       <label for="">Mật Khẩu Mới</label>
+                       <div class="input-change-password-wrap">
+                           <input type="text" placeholder="" class="input-change-password-item"
+                               name="changepassword-newpassword">
+                       </div>
+                   </div>
+                   <div class="form-change-password-group">
+                       <label for="">Nhập Lại Mật Khẩu</label>
+                       <div class="input-change-password-wrap">
+                           <input type="text" placeholder="" class="input-change-password-item"
+                               name="changepassword-repassword">
+                       </div>
+                   </div>
+                   <div class="form-change-password-group">
+                       <label for=""> Mật Khẩu Hiện Tại</label>
+                       <div class="input-change-password-wrap">
+                           <input type="text" placeholder="" class="input-change-password-item"
+                               name="changepassword-nowpassword">
+                       </div>
+                   </div>
+                   <div class="change-password-btn">
+                       <button class="btnConfirm">Xác Nhận</button>
+                   </div>
+                </form>
+                </div>
+            </div >
+            </div > `
+}
+// ***************************************** Handler User Add Address  *****************************************
+function handerUserAddress() {
+    const listAddress = JSON.parse(localStorage.getItem('listAddress'))
+    if (!(listAddress == "")) {
+        console.log(listAddress);
+        renderInforAddress(true, listAddress);
+        const setDefault = $$('.setDefault');
+        setDefault.forEach((e) => {
+            // console.log(e.dataset.value);
+            if (e.dataset.value == 1) {
+                e.classList.remove('hide-element')
+            }
+        })
+    } else {
+        renderInforAddress(false, false);
+    }
+    const btnAdd = $(".btn-add-address")
+    const btnEdit = $$(".show-address-edit")
+    const btnDelete = $(".show-address-delete")
+    const formAddNewAddress = $(".add-address");
+
+
+    btnAdd.addEventListener('click', () => {
+        formAddNewAddress.classList.remove('hide-element');
+        showFormAddAddress(listAddress)
+    })
+    btnEdit.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            formAddNewAddress.classList.remove('hide-element');
+            editAddress(listAddress, listAddress[btn.dataset.index]);
+        })
+    })
+
+    btnDelete.addEventListener('click', (e) => {
+        e.preventDefault()
+        deleteAddress(listAddress);
+    })
 
 }
-// *******************************   Handler Account  *********************************
-function handlerAccountInfo() {
-    profileMain.innerHTML = ' oke acc'
+// ***************************************** Show Form Add Address  *****************************************
+function showFormAddAddress(listAddress) {
+    const btnBack = $(".formAddress-btnBack")
+    const btnSubmit = $(".formAddress-Submit")
+    const formAddNewAddress = $(".add-address")
+    let result = true;
+    console.log(listAddress);
+    // validate cho input
+    const listInput = $$('.form-address-body-item input[type="text"]')
+    listInput.forEach((input) => {
+        input.addEventListener('blur', () => {
+            if (input.value == "") {
+                validateForm(input, false)
+                result = false;
+            } else {
+                validateForm(input, true)
+                result = true;
+            }
+        })
+    })
+    // add sự kiện cho 2 nút 
+    const btnTypeAddress = $$('.type-address')
+    btnTypeAddress.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            btnTypeAddress.forEach((btn2) => {
+                btn2.classList.remove("btn-active")
+            })
+            btn.classList.add("btn-active")
+        })
+    })
+    btnBack.addEventListener('click', (e) => {
+        e.preventDefault()
+        formAddNewAddress.classList.add('hide-element');
+    })
+    btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault()
+        listInput.forEach((input) => {
+            if (input.value == "") {
+                validateForm(input, false)
+                result = false;
+            } else {
+                validateForm(input, true)
+                result = true;
+            }
+        })
+        if (result == true) {
+            let setDefaultValue = 0;
+            if ($('.adddress-checkbox').checked == true) {
+                setDefaultValue = 1;
+            }
+            let address2 = {
+                address: [...listAddress, {
+                    idAddres: listAddress.length,
+                    check: 1,
+                    takeName: $('.form-address-fullname').value,
+                    takePhone: $('.form-address-phone').value,
+                    typeAddress: $('.type-address.btn-active').value,
+                    address1: $('.form-address-now-address').value,
+                    address2: $('.form-address-sub-address').value,
+                    setDefault: setDefaultValue
+                }]
+            }
+
+            // console.log(address2);
+            patchDataForm(address2);
+        }
+    })
 }
-// *******************************   Render User Address  *********************************
-function handerUserAddress() {
-    profileMain.innerHTML = ' oke add'
+// ***************************************** Edit Form  Address  *****************************************
+function editAddress(listAddress, address) {
+    const btnTypeAddress = $$('.type-address')
+    const listInput = $$('.form-address-body-item input[type="text"]')
+    getData()
+    function getData() {
+
+        listInput.forEach((input) => {
+            if (input.name == "fullname") {
+                input.value = address.takeName
+            }
+            if (input.name == "phone") {
+                input.value = address.takePhone
+            }
+            if (input.name == "address") {
+                input.value = address.address1
+            }
+            if (input.name == "subaddress") {
+                input.value = address.address2
+            }
+        })
+        if (address.setDefault == 1) {
+            $('.adddress-checkbox').checked = true
+        } else {
+            $('.adddress-checkbox').checked = false
+        }
+        if (address.typeAddress == 1) {
+            btnTypeAddress.forEach((btn) => {
+                btn.classList.remove('btn-active')
+            })
+            $('.type-address.type2').classList.add('btn-active');
+        }
+    }
+    showFormAddAddress(listAddress)
 }
-// *******************************   Render Infor User  *********************************
+// ***************************************** Delete Address  *****************************************
+function deleteAddress(listAddress) {
+}
+// ***************************************** Render Form Add Address  *****************************************
+function renderInforAddress(condition, listAddress) {
+    let htmls = ""
+    if (condition && !(listAddress == false)) {
+        htmls = listAddress.map((address, index) => {
+            return ` <div class="show-address">
+            <div class="show-address-wrap">
+                <form action="" class="form-show-address">
+                    <div class="form-show-address-item">
+                        <label for="">Họ Và Tên</label>
+                            <p name="fullname">${address.takeName} <span data-value = ${address.setDefault} class='setDefault hide-element'>Mặc định</span> </p>
+                        </div>
+                    <div class="form-show-address-item">
+                            <label for="">Số Điện Thoại</label>
+                            <p name="phone">${address.takePhone} </p>
+                        </div>
+                        <div class="form-show-address-item">
+                            <label for="">Địa Chỉ</label>
+                                <p name="address1">${address.address1}</p>
+                        </div>
+                        <div class="form-show-address-item">
+                        <label for="">Mô Tả Địa Chỉ</label>
+                            <p name="address2">${address.address2} </p>
+                    </div>
+                    </form>
+                    <div class="show-address-option">
+                        <a href="" class="show-address-edit" data-index=${index}>Sửa</a>
+                        <a href="" class="show-address-delete">Xoá</a>
+                    </div>
+                </div>
+            </div>`
+        }).join('')
+
+    } else {
+        htmls = `<p class="noti-add-address"> Bạn chưa có địa chỉ </p>`
+    }
+    profileMain.innerHTML = ` <div class="profile__main-wrap">
+    <div div class="profile__main-wrapper">
+        <div class="profile-main-add-address__header ">
+            <p> Địa Chỉ Của Tôi</p>
+            <div class="btn-add-address">
+                <i class="ti-plus"></i>
+                <p>Thêm Địa Chỉ Mới</p>
+            </div>
+        </div>
+        <div class="profile-main-add-address__body">
+           ${htmls}
+        </div>
+    </div>
+</div>`
+
+}
+// ***************************************** Render Infor User  *****************************************
 function renderDefault() {
     profileMain.innerHTML = ` <div class="profile__main-wrapper">
     <div class="profile__main-header">
@@ -313,14 +595,7 @@ function renderDefault() {
                             class="form-input-edit-profile pointer-event-none border-none status">
                     </div>
                 </div>
-                <div class="form-edit-profile-group">
-                    <label for="address" class="form-label-edit-profile">Địa Chỉ</label>
-                    <span class="form-label-edit-profile-space"></span>
-                    <div class="input-wrapper">
-                        <input type="text" value="" name="address" 
-                            class="form-input-edit-profile pointer-event-none border-none status ">
-                    </div>
-                </div>
+               
                 <div class="form-edit-profile-group">
                     <label for="phone" class="form-label-edit-profile ">Số Điện Thoại</label>
                     <span class="form-label-edit-profile-space"></span>

@@ -273,7 +273,7 @@
                             <li class="profile__nav-body-items"> <a href="#"
                                     class="profile__user-infor-address profile__user-padding">Địa Chỉ</a></li>
                             <li class="profile__nav-body-items"> <a href="#"
-                                    class="profile__user-infor-account profile__user-padding">Tài Khoản</a></li>
+                                    class="profile__user-infor-account profile__user-padding">Đổi Mật Khẩu</a></li>
 
                             <li class="profile__nav-body-items">
                                 <img class="profile__nav-body-items-span "
@@ -299,46 +299,7 @@
                     </div>
                 </div>
                 <div class="profile__main">
-                    <div class="profile__main-wrap">
-                        <div class="profile__main-wrapper">
-                            <div class="profile__main-header">
-                                <h4> Thay Mật Khẩu</h4>
-                                <p>Để bảo mật tài khoản , vui lòng không chia sẻ mật khẩu cho ai khác</p>
-                            </div>
-                            <div class="profile__main-body">
-                                <form action="" class="form-change-password">
 
-                                    <div class="form-change-password-group">
-                                        <label for="">Mật Khẩu Mới</label>
-                                        <div class="input-change-password-wrap">
-                                            <input type="text" placeholder="" class="input-change-password-item"
-                                                name="repassword">
-                                            <span class="message-change-password">Mật Khẩu sai</span>
-                                        </div>
-                                    </div>
-                                    <div class="form-change-password-group">
-                                        <label for="">Nhập Lại Mật Khẩu</label>
-                                        <div class="input-change-password-wrap">
-                                            <input type="text" placeholder="" class="input-change-password-item"
-                                                name="repassword">
-                                            <span class="message-change-password">Mật Khẩu sai</span>
-                                        </div>
-                                    </div>
-                                    <div class="form-change-password-group">
-                                        <label for=""> Mật Khẩu Hiện Tại</label>
-                                        <div class="input-change-password-wrap">
-                                            <input type="text" placeholder="" class="input-change-password-item"
-                                                name="repassword">
-                                            <span class="message-change-password">Mật Khẩu sai</span>
-                                        </div>
-                                    </div>
-                                    <div class="change-password-btn">
-                                        <button class="btnConfirm">Xác Nhận</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -521,13 +482,17 @@
 
             <div class="footer-end__text">Công ty TNHH Shopee
             </div>
-            <div class="footer-end__text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc
-                Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+            <div class="footer-end__text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường
+                Ngọc
+                Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email:
+                cskh@hotro.shopee.vn
             </div>
-            <div class="footer-end__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024
+            <div class="footer-end__text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ:
+                024
                 73081221 (ext 4678)
             </div>
-            <div class="footer-end__text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu
+            <div class="footer-end__text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần
+                đầu
                 ngày 10/02/2015
             </div>
             <div class="footer-end__text">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee
@@ -535,7 +500,48 @@
 
         </div>
     </footer>
-    <!-- <script src="/assets/js/editprofile.js"></script> -->
+
+    <div class="add-address hide-element">
+        <div class="add-address-wrap">
+            <form action="" class="form-address">
+                <div class="form-address-header">
+                    <p>Địa Chỉ Mới</p>
+                </div>
+                <div class="form-address-body">
+                    <div class="form-address-body-item">
+                        <input type="text" name="fullname" class="form-address-fullname" placeholder="Họ Và Tên">
+                        <input type="text" name='phone' class="form-address-phone" placeholder="Số Điện Thoại">
+                    </div>
+                    <div class="form-address-body-item">
+                        <input type="text" name="address" class="form-address-now-address"
+                            placeholder="Địa Chỉ Của Bạn">
+                    </div>
+                    <div class="form-address-body-item">
+                        <input type="text" name="subaddress" class="form-address-sub-address"
+                            placeholder="Địa Chỉ Cụ Thể">
+                    </div>
+                    <div class="form-address-body-item">
+                        <p>Loại Địa Chỉ :</p>
+                    </div>
+                    <div class="form-address-body-item">
+                        <button class=" type-address btn-active type1" value=0>Nhà Riêng</button>
+                        <button class=" type-address type2" value=1>Văn Phòng</button>
+                    </div>
+                    <div class="form-address-body-item">
+                        <input type="checkbox" name="checkbox" class="adddress-checkbox">
+                        <label>Đặt làm địa chỉ mặc định</label>
+                    </div>
+
+                </div>
+                <div class="form-address-footer">
+                    <button class="formAddress-btnBack">Trở Lại</button>
+                    <button class="formAddress-Submit btn-active">Hoàn Thành</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/assets/js/editprofile.js"></script>
 </body>
 
 </html>

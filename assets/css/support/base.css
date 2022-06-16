@@ -64,8 +64,24 @@ html {
     background-color: var(--white-color-f5);
 }
 
+button {
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.btn-active {
+    background-color: #f05d40;
+    color: #fff;
+}
+
 input {
     font-size: 14px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 2px;
+    padding-left: 10px;
 }
 
 label {
@@ -87,6 +103,8 @@ label {
 .hide-element {
     display: none !important;
 }
+
+/*  */
 
 /*  Trạng thái của input */
 
