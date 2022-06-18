@@ -123,7 +123,6 @@ function handleInput() {
     }
 }
 //  mẫu của người dùng
-
 function formUser(idUser, userNameForm, passWordForm, emailForm) {
     var formDataUser = {
         id: idUser,

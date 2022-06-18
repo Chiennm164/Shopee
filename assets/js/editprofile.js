@@ -1,14 +1,12 @@
 
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
-
 let elementStatus = $$(".status")
 const profileMain = $('.profile__main ')
 const btnAccount = $('.profile__user-infor-account');
 const btnAddress = $('.profile__user-infor-address')
 const btnInforUser = $('.profile__user-infor-profile')
 const listBtn = $$('.profile__nav-body-items a')
-
 const apiUser = "http://localhost:3000/user";
 
 start()
@@ -27,7 +25,7 @@ function start() {
         handlerChangePassword()
     })
     btnAddress.addEventListener('click', () => {
-        handerUserAddress()
+        handlerUserAddress()
     })
     btnInforUser.addEventListener('click', () => {
         renderDefault()
@@ -292,7 +290,6 @@ function handlerChangePassword() {
     const reNewPassword = $('input[name="changepassword-repassword"]');
     const btnConfirm = $('.btnConfirm');
     let result = true;
-
     inputForm.forEach((input) => {
         input.addEventListener("blur", () => {
             if (input.value == "") {
@@ -359,7 +356,7 @@ function renderFormChangePassWord() {
                        <label for=""> Mật Khẩu Hiện Tại</label>
                        <div class="input-change-password-wrap">
                            <input type="text" placeholder="" class="input-change-password-item"
-                               name="changepassword-nowpassword">
+                               name="changepassword-oldpassword">
                        </div>
                    </div>
                    <div class="change-password-btn">
@@ -371,7 +368,7 @@ function renderFormChangePassWord() {
             </div > `
 }
 // ***************************************** Handler User Add Address  *****************************************
-function handerUserAddress() {
+function handlerUserAddress() {
     const listAddress = JSON.parse(localStorage.getItem('listAddress'))
     if (!(listAddress == "")) {
         console.log(listAddress);
@@ -388,37 +385,47 @@ function handerUserAddress() {
     }
     const btnAdd = $(".btn-add-address")
     const btnEdit = $$(".show-address-edit")
-    const btnDelete = $(".show-address-delete")
+    const btnDelete = $$(".show-address-delete")
     const formAddNewAddress = $(".add-address");
-
-
+    // btn add new address
     btnAdd.addEventListener('click', () => {
         formAddNewAddress.classList.remove('hide-element');
-        showFormAddAddress(listAddress)
+        validateFormAddress(listAddress)
     })
+    // btnedit address
     btnEdit.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault()
             formAddNewAddress.classList.remove('hide-element');
-            editAddress(listAddress, listAddress[btn.dataset.index]);
+            validateFormAddress(listAddress, btn.dataset.index);
+        })
+    })
+    //btn delete address
+    btnDelete.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            listAddress.splice(btn.dataset.index, 1)
+            let newAddress = {
+                address: [...listAddress]
+            }
+            patchDataForm(newAddress);
+
         })
     })
 
-    btnDelete.addEventListener('click', (e) => {
-        e.preventDefault()
-        deleteAddress(listAddress);
-    })
-
 }
-// ***************************************** Show Form Add Address  *****************************************
-function showFormAddAddress(listAddress) {
+// *****************************************Validate form address *****************************************
+function validateFormAddress(listAddress, index) {
+    console.log(index);
     const btnBack = $(".formAddress-btnBack")
     const btnSubmit = $(".formAddress-Submit")
     const formAddNewAddress = $(".add-address")
-    let result = true;
-    console.log(listAddress);
-    // validate cho input
     const listInput = $$('.form-address-body-item input[type="text"]')
+    const btnTypeAddress = $$('.type-address')
+
+    let result = true;
+    // console.log(listAddress);
+    // validate cho input
     listInput.forEach((input) => {
         input.addEventListener('blur', () => {
             if (input.value == "") {
@@ -430,8 +437,38 @@ function showFormAddAddress(listAddress) {
             }
         })
     })
+    if (!(index === undefined)) {
+        let address = listAddress[index]
+        getData()
+        function getData() {
+            listInput.forEach((input) => {
+                if (input.name == "fullname") {
+                    input.value = address.takeName
+                }
+                if (input.name == "phone") {
+                    input.value = address.takePhone
+                }
+                if (input.name == "address") {
+                    input.value = address.address1
+                }
+                if (input.name == "subaddress") {
+                    input.value = address.address2
+                }
+            })
+            if (address.setDefault == 1) {
+                $('.adddress-checkbox').checked = true
+            } else {
+                $('.adddress-checkbox').checked = false
+            }
+            if (address.typeAddress == 1) {
+                btnTypeAddress.forEach((btn) => {
+                    btn.classList.remove('btn-active')
+                })
+                $('.type-address.type2').classList.add('btn-active');
+            }
+        }
+    }
     // add sự kiện cho 2 nút 
-    const btnTypeAddress = $$('.type-address')
     btnTypeAddress.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault()
@@ -445,6 +482,7 @@ function showFormAddAddress(listAddress) {
         e.preventDefault()
         formAddNewAddress.classList.add('hide-element');
     })
+
     btnSubmit.addEventListener('click', (e) => {
         e.preventDefault()
         listInput.forEach((input) => {
@@ -457,65 +495,57 @@ function showFormAddAddress(listAddress) {
             }
         })
         if (result == true) {
-            let setDefaultValue = 0;
-            if ($('.adddress-checkbox').checked == true) {
-                setDefaultValue = 1;
+            if (index === undefined) {
+                console.log(listAddress, index);
+                handlerAddAddress(listAddress);
+            } else {
+                console.log(listAddress, index);
+                handlerEditAddress(listAddress, index);
             }
-            let address2 = {
-                address: [...listAddress, {
-                    idAddres: listAddress.length,
-                    check: 1,
-                    takeName: $('.form-address-fullname').value,
-                    takePhone: $('.form-address-phone').value,
-                    typeAddress: $('.type-address.btn-active').value,
-                    address1: $('.form-address-now-address').value,
-                    address2: $('.form-address-sub-address').value,
-                    setDefault: setDefaultValue
-                }]
-            }
-
-            // console.log(address2);
-            patchDataForm(address2);
         }
     })
 }
-// ***************************************** Edit Form  Address  *****************************************
-function editAddress(listAddress, address) {
-    const btnTypeAddress = $$('.type-address')
-    const listInput = $$('.form-address-body-item input[type="text"]')
-    getData()
-    function getData() {
-
-        listInput.forEach((input) => {
-            if (input.name == "fullname") {
-                input.value = address.takeName
-            }
-            if (input.name == "phone") {
-                input.value = address.takePhone
-            }
-            if (input.name == "address") {
-                input.value = address.address1
-            }
-            if (input.name == "subaddress") {
-                input.value = address.address2
-            }
-        })
-        if (address.setDefault == 1) {
-            $('.adddress-checkbox').checked = true
-        } else {
-            $('.adddress-checkbox').checked = false
-        }
-        if (address.typeAddress == 1) {
-            btnTypeAddress.forEach((btn) => {
-                btn.classList.remove('btn-active')
-            })
-            $('.type-address.type2').classList.add('btn-active');
-        }
+// ***************************************** Show Form Add Address  *****************************************
+function handlerAddAddress(listAddress) {
+    let setDefaultValue = 0;
+    if ($('.adddress-checkbox').checked == true) {
+        setDefaultValue = 1;
     }
-    showFormAddAddress(listAddress)
+    let newAddress = {
+        address: [...listAddress, {
+            idAddress: listAddress.length,
+            takeName: $('.form-address-fullname').value,
+            takePhone: $('.form-address-phone').value,
+            typeAddress: $('.type-address.btn-active').value,
+            address1: $('.form-address-now-address').value,
+            address2: $('.form-address-sub-address').value,
+            setDefault: setDefaultValue
+        }]
+    }
+    patchDataForm(newAddress);
 }
-// ***************************************** Delete Address  *****************************************
-function deleteAddress(listAddress) {
+// *****************************************show edit form *****************************************
+function handlerEditAddress(listAddress, index) {
+    let setDefaultValue = 0;
+    if ($('.adddress-checkbox').checked == true) {
+        setDefaultValue = 1;
+    }
+    let id = listAddress[index].idAddress
+    let editAddress = {
+        idAddress: id,
+        takeName: $('.form-address-fullname').value,
+        takePhone: $('.form-address-phone').value,
+        typeAddress: $('.type-address.btn-active').value,
+        address1: $('.form-address-now-address').value,
+        address2: $('.form-address-sub-address').value,
+        setDefault: setDefaultValue
+    }
+    listAddress[index] = editAddress
+    let newListAddress = {
+        address: [...listAddress]
+    }
+    patchDataForm(newListAddress);
+    // console.log(listAddress);
 }
 // ***************************************** Render Form Add Address  *****************************************
 function renderInforAddress(condition, listAddress) {
@@ -544,7 +574,7 @@ function renderInforAddress(condition, listAddress) {
                     </form>
                     <div class="show-address-option">
                         <a href="" class="show-address-edit" data-index=${index}>Sửa</a>
-                        <a href="" class="show-address-delete">Xoá</a>
+                        <a href="" class="show-address-delete" data-index=${index}>Xoá</a>
                     </div>
                 </div>
             </div>`

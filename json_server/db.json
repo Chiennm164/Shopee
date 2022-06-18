@@ -43,6 +43,26 @@
       "code": "8h5e5e2b5e5e"
     },
     {
+      "0": {
+        "idAddress": 2,
+        "check": 1,
+        "takeName": "Nguyễn Minh Chiến2",
+        "takePhone": "09888888888",
+        "typeAddress": "0",
+        "address1": "Hà Nội , Việt Nam",
+        "address2": "Tầng 5 ,Nhà số 1 , Ngõ 11 , Đường Trường Chinh  ",
+        "setDefault": 1
+      },
+      "1": {
+        "idAddress": 1,
+        "check": 1,
+        "takeName": "Nguyễn Minh Chiến",
+        "takePhone": "09888888888",
+        "typeAddress": 0,
+        "address1": "Thành Phố Vinh , Tỉnh Nghệ An",
+        "address2": "gần ngã tư quảng trường Hồ Chí Minh",
+        "setDefault": 0
+      },
       "id": 1,
       "createdAt": 1647086402151,
       "userName": "chienthien98na",
@@ -53,28 +73,7 @@
       "avatar": "/assets/img/user/useravatar.jpg",
       "address": [
         {
-          "idAddres": 0,
-          "check": 1,
-          "takeName": "Nguyễn Minh Chiến",
-          "takePhone": "09888888888",
-          "typeAddress": 0,
-          "address1": "Hà Nội , Việt Nam",
-          "address2": "Tầng 5 ,Nhà số 1 , Ngõ 11 , Đường Trường Chinh  ",
-          "setDefault": 1
-        },
-        {
-          "idAddres": 1,
-          "check": 1,
-          "takeName": "Nguyễn Minh Chiến",
-          "takePhone": "09888888888",
-          "typeAddress": 1,
-          "address1": "Thành Phố Vinh , Tỉnh Nghệ An",
-          "address2": "gần ngã tư quảng trường Hồ Chí Minh",
-          "setDefault": 0
-        },
-        {
-          "idAddres": 2,
-          "check": 1,
+          "idAddress": 1,
           "takeName": "Nguyễn Minh Chiến",
           "takePhone": "09888888888",
           "typeAddress": "0",
