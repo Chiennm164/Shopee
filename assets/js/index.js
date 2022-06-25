@@ -1,23 +1,21 @@
-
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-let btnLeft = $(".flashsale__btn-control-left");
-let wrapFlashSale = $(".flashSale-body__list-items");
-let btnRight = $(".flashsale__btn-control-right");
-
 const apiUser = "http://localhost:3000/user";
-
+const apiProduct = "http://localhost:3000/products";
+const apiTopSearch = "http://localhost:3000/topSearch";
 function start() {
     handlerUser()
-    // sliderShow()
-    // handlerNoti()
-    // handlerCarousel()
+    sliderShow()
+    handlerNoti()
+    handlerCarousel()
+    getProduct()
+    getTopSearch()
+    const listEProduct = $$('.select-product')
+    console.log(listEProduct);
 }
 start()
-
 // ****************************** Check User ******************************
-
 function handlerUser() {
     // lay data
     fetch(apiUser).then(function (response) {
@@ -49,9 +47,7 @@ function handlerUser() {
         }
     }
 }
-
 // ****************************** Show Element Login ******************************
-
 function login() {
     // xu ly giao dien
     const eLogin = $$('.element-login');
@@ -68,32 +64,31 @@ function login() {
     })
 }
 // ****************************** Show Infor User ******************************
-
-function infoUser(data) {
+function inforUser(data) {
 
     const useravatar = $('.useravatar');
     const username = $('.username');
     username.innerText = data.username
     useravatar.src = data.avatar
 }
-// ****************************** Check Status ******************************
+// ****************************** check status ******************************
 function checkStatus(data) {
     let status = localStorage.getItem('statusUser');
-    console.log(typeof Number(status));
+    // console.log(typeof Number(status));
     if (Number(status) === 1) {
         console.log('status : ' + status);
         console.log('hiển thị giao diện admin');
         login();
-        infoUser(data);
+        inforUser(data);
     }
     if (Number(status) > 1 && !(status == '')) {
-        console.log('status : ' + status);
+        // console.log('status : ' + status);
         console.log('hiển thị giao diện người dùng bình thường');
         login();
-        infoUser(data);
+        inforUser(data);
     }
 }
-// slider banner
+// ****************************** handler slider banner ******************************
 function sliderShow() {
     var clickPrev = $('.slider-turn__left')
     var clickNext = $('.slider-turn__right')
@@ -177,9 +172,11 @@ function sliderShow() {
         }
     }
 }
-// Xử lý thông báo
+//****************************** handler noti   ******************************
 function handlerNoti() {
     const apiNoti = "http://localhost:3000/notifications"
+    const amountNoti = $('.noti-number')
+    const eNotification = $('.notification')
     imgnoti = $$('.notifications-contents__img')
     titlenoti = $$('.notifications-contents__title')
     desnoti = $$('.notifications-contents__descriptions')
@@ -192,7 +189,6 @@ function handlerNoti() {
             renderNoti(notis)
         })
     }
-
     function renderNoti(notis) {
         let notibody = $('.notifications-body')
         let htmls = notis.map(function (notis) {
@@ -209,43 +205,214 @@ function handlerNoti() {
           </div>`
         })
         notibody.innerHTML = htmls.join("")
+        amountNoti.innerHTML = notis.length
+        eNotification.addEventListener('mouseover', () => {
+            amountNoti.classList.add('hide-element')
+        })
     }
 }
+//****************************** handler carousel  ******************************
 function handlerCarousel() {
     let transform = 0;
-    console.log(transform)
-    btnLeft.addEventListener('click', function () {
-        switch (transform) {
-            case 1:
-                wrapFlashSale.style.transform = 'translateX(0%)';
-                btnLeft.style.display = "none";
-                transform = 0;
-                console.log(transform)
-                break;
-            case 2:
-                wrapFlashSale.style.transform = 'translateX(-25%)';
-                transform = 1;
-                console.log(transform)
-                btnRight.style.display = "flex";
-                break;
-        }
-    })
-    btnRight.addEventListener('click', function () {
-        switch (transform) {
-            case 0:
-                btnLeft.style.display = "flex";
-                wrapFlashSale.style.transform = 'translateX(-25%)';
-                transform = 1;
-                console.log(transform)
-                break;
-            case 1:
-                wrapFlashSale.style.transform = 'translateX(-50%)';
-                btnRight.style.display = "none";
-                transform = 2;
-                console.log(transform)
-                break;
-        }
+
+    carouselControll(transform, $(".flashSale-body .btn-control-carousel-left"), $(".flashSale-body .btn-control-carousel-right"), $(".flashSale-body__list-items"))
+    carouselControll(transform, $(".topSearch-body .btn-control-carousel-left"), $(".topSearch-body .btn-control-carousel-right"), $(".topSearch-body__list-items"))
+    function carouselControll(transform, btnLeft, btnRight, wrap) {
+        // console.log(transform)
+        btnLeft.addEventListener('click', function () {
+            switch (transform) {
+                case 1:
+                    wrap.style.transform = 'translateX(0%)';
+                    btnLeft.style.display = "none";
+                    transform = 0;
+                    // console.log(transform)
+                    break;
+                case 2:
+                    wrap.style.transform = 'translateX(-25%)';
+                    transform = 1;
+                    // console.log(transform)
+                    btnRight.style.display = "flex";
+                    break;
+            }
+        })
+        btnRight.addEventListener('click', function () {
+            switch (transform) {
+                case 0:
+                    btnLeft.style.display = "flex";
+                    wrap.style.transform = 'translateX(-25%)';
+                    transform = 1;
+                    // console.log(transform)
+                    break;
+                case 1:
+                    wrap.style.transform = 'translateX(-50%)';
+                    btnRight.style.display = "none";
+                    transform = 2;
+                    // console.log(transform)
+                    break;
+            }
+        })
+
+    }
+}
+//****************************** handler container category  ******************************
+function handlerCategory(products) {
+    const listItemCategory = $('.category__list-items')
+    const itemCategory = $$('.category__items')
+    itemCategory.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault()
+            let listSearch = []
+            products.forEach(product => {
+                product.keySearch.forEach((search) => {
+                    if (search === item.dataset.name) {
+                        listSearch.push(product)
+                    }
+                })
+            });
+            console.log(listSearch);
+            // chuyen sang trang search
+        })
     })
 
 }
+//****************************** get list category  ******************************
+function getProduct() {
+    fetch(apiProduct).then(function (response) {
+        return response.json();
+    }).then((products) => {
+        handlerSuggest(products)
+        handlerFlashSale(products)
+        handlerCategory(products)
+        handlerClickProduct(products)
 
+    })
+}
+//****************************** handler container category  ******************************
+function handlerSuggest(products) {
+    // console.log(products);
+    const suggestbody = $('.suggest-body')
+    let htmls = products.map((product) => {
+        let sold = product.sold / 1000
+        let price = product.price / 1000
+        return `<div class="suggest-body__items select-product " data-id=${product.id}>
+                 <div class="suggest-body__items-wrap">
+                     <div class="suggest-body__items-img">
+                         <div class="suggest-body__items-img-wrapper">
+                             <img src="${product.image}" alt="suggest-img">
+                             <img src="${product.treatment}" alt="suggest-service">
+                             <div class="suggest-body__items-promotion">
+                                 <div class="suggest-body__items-promotion-number">${product.promotion}%</div>
+                                 <div class="suggest-body__items-promotion-text">Giảm</div>
+                             </div>
+                             <div class="suggest-body__items-sponsor">Tài trợ</div>
+                             <div class="suggest-body__items-Tick">Yêu thích</div>
+                             <div class="suggest-body__items-service">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="suggest-body__items-content">
+                         <div class="suggest-body__items-content-wrapper">
+                             <div class="suggest-body__items-content-title">${product.name}</div>
+                             <div class="suggest-body__items-content-voucher">giảm ${product.voucher}%</div>
+                             <div class="suggest-body__items-content-end">
+                                 <div class="suggest-body__items-content-price">${price.toFixed(3)}đ</div>
+                                 <div class="suggest-body__items-content-sold">đã bán ${sold.toFixed(1)}k</div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="suggest-body__items-show">
+                         <p>Tìm sản phẩm tương tự</p>
+                     </div>
+                 </div>
+                 </div>` }).join('')
+    suggestbody.innerHTML = htmls
+}
+//****************************** handler container flash sale ******************************
+function handlerFlashSale(products) {
+    const eListFlashSale = $('.flashSale-body__list-items')
+    let listFlashSale = []
+    products.forEach((product) => {
+
+        if (product.flashSale == 1) {
+            listFlashSale.push(product)
+        }
+    })
+    // console.log(listFlashSale);
+    let htmls = listFlashSale.map((item) => {
+        let sold = (item.sold / 1000).toFixed(1)
+        let price = (item.price / 1000).toFixed(3)
+        return `<a href="#" class="flashSale-body__items select-product" data-id=${item.id}>
+                    <div class="flashSale-body__items-wrap">
+                        <div class="flashSale-cart__items">
+                            <div class="flashSale-cart__bground-items"></div>
+                            <img src="${item.image}" alt="anh flash sale"
+                                class="flashSale-cart__items1-img">
+                            <div class="flashSale-cart__bground">
+                            </div>
+                        </div>
+                        <div class="flashSale-cart__price">
+                            <div class="flashSale-cart__price-number">${price}đ</div>
+                            <div class="flashSale-cart__price-percent">Đã Bán ${sold}k</div>
+                        </div>
+            
+                        <div class="flashSale__ratiosale">
+                            <div class="flashSale__ratiosale-number">${item.promotion}%</div>
+                            <div class="flashSale__ratiosale-text">giảm</div>
+                        </div>
+                    </div>
+                </a>`   }).join('')
+    eListFlashSale.innerHTML = htmls
+
+    handlerCountdown()
+    function handlerCountdown() {
+        const hour = $('.countdown-hour')
+        const minutes = $('.countdown-min')
+        const seconds = $('.countdown-sec')
+        const setTime = "june 21, 2023, 16:16:16";
+        const countDownDate = new Date(setTime).getTime()
+        setInterval(() => {
+            const date = new Date()
+            const now = date.getTime()
+            const distance = countDownDate - now;
+            hour.innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            minutes.innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            seconds.innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000)
+    }
+}
+//****************************** get list category  ******************************
+function getTopSearch() {
+    fetch(apiTopSearch).then(function (response) {
+        return response.json();
+    }).then(function (listTopSearch) {
+        handlerTopSearch(listTopSearch)
+    })
+}
+//****************************** handler container topSearch  ******************************
+function handlerTopSearch(listTopSearch) {
+    const topSearchWrap = $('.topSearch-body__list-items');
+
+    let htmls = listTopSearch.map((item) => {
+        return ` <a class="topSearch-body__items select-product" >
+        <div class="topSearch-body__items-wrap">
+            <div class="topSearch-body__content">
+                <div class="topSearch-body__top"></div>
+                <img src="${item.image}" class="topSearch-body__img"></img>
+                <div class="topSearch-body__img-content">${item.description}</div>
+            </div>
+            <div class="topSearch-body__title">${item.title}</div>
+        </div>
+    </a>`
+    }).join('')
+    topSearchWrap.innerHTML = htmls;
+
+}
+function handlerClickProduct(products) {
+    const listEProduct = $$('.select-product')
+    listEProduct.forEach((product) => {
+        product.addEventListener('click', (e) => {
+            e.preventDefault()
+            localStorage.setItem("productSelect", JSON.stringify(products[e.currentTarget.dataset.id]))
+        })
+    })
+}

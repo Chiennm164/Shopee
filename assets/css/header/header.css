@@ -182,6 +182,7 @@
     opacity: 0.9;
     justify-content: center;
     border: 1px solid var(--red2-color);
+    transition: all 0.3s linear;
 }
 
 .navbar-notifications::after {

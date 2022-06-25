@@ -93,16 +93,11 @@
     padding-top: 5px;
 }
 
-.flashSale-body-wrap {
-    overflow: hidden;
-}
-
 .flashSale-body__list-items {
     width: 200%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    transition: 0.9s ease-in-out;
 }
 
 .flashSale-body__list {
@@ -128,8 +123,8 @@
 
 .flashSale-body__items:hover {
     transform: translateY(-2px);
+    opacity: 0.8;
 }
-
 
 /* .flashSale-body__items-wrap {} */
 
@@ -179,7 +174,7 @@
 
 .flashSale-cart__price-number {
     color: var(--red2-color);
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 1.1px;
     padding: 8px 0;
 }
@@ -228,50 +223,4 @@
 .flashSale__ratiosale-text {
     text-transform: uppercase;
     color: var(--white-color);
-}
-
-
-/* control */
-
-.flashsale__btn-control-right,
-.flashsale__btn-control-left {
-    position: absolute;
-    top: 50%;
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    box-shadow: 0 0 0.8125rem 0 var(--box-shadow-color);
-    color: var(--black-color);
-    display: flex;
-    font-weight: 900;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-50%);
-}
-
-.flashsale__btn-control-right:hover,
-.flashsale__list-items:hover .flashsale__btn-control-right {
-    animation: hover-button-right 0.5s ease-out;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-}
-
-.flashsale__btn-control-left:hover,
-.flashsale__list-items:hover .flashsale__btn-control-left {
-    animation: hover-button-left 0.5s ease-out;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-}
-
-.flashsale__btn-control-left {
-    left: -12px;
-    display: none;
-    z-index: 2;
-}
-
-.flashsale__btn-control-right {
-    right: -12px;
-    z-index: 2;
 }

@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
     <!-- base css  -->
     <link rel="stylesheet" href="/assets/css/support/base.css">
-    <!--  link Header css -->
+    <!-- header css -->
     <link rel="stylesheet" href="/assets/css/header/header.css">
+
     <!--  link search product css -->
     <link rel="stylesheet" href="/assets/css/product/searchproduct.css">
     <!-- footer css -->
@@ -24,59 +25,64 @@
 
 <body>
     <div class="app">
+        <!-- header  -->
         <header class="header">
-            <div class="col">
-                <div class="container">
-                    <!-- Nav bar -->
-                    <nav class="header__navbar  hiden-on-mobile-s">
-                        <!-- nav bar left -->
-                        <div class="header-navbar__left">
-                            <!-- seller  -->
-                            <a href="" class="header-navbar__items navbar__separate">Kênh Người Bán </a>
-                            <!-- down app  -->
-                            <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
-                                <div class="navbar-drawer">
-                                    <div class="navbar-drawer__contents">
-                                        <img src="/assets/img/header/nav/qrcode.png" alt="qrcode"
-                                            class="navbar-drawer__img-qrcode">
-                                        <div class="navbar-drawer__store">
-                                            <div class="navbar-drawer__store-items">
-                                                <img src="/assets/img/header/nav/appstore.png" alt="appstore"
-                                                    class="navbar-drawer__store-img">
-                                            </div>
-                                            <div class="navbar-drawer__store-items">
-                                                <img src="/assets/img/header/nav/ggplay.png" alt="chplay"
-                                                    class="navbar-drawer__store-img">
-                                            </div>
-                                            <div class="navbar-drawer__store-items">
-                                                <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery"
-                                                    class="navbar-drawer__store-img">
-                                            </div>
+            <div class="container">
+                <!-- Nav bar -->
+                <nav class="header__navbar ">
+                    <!-- nav bar left -->
+                    <div class="header-navbar__left">
+                        <!-- seller  -->
+                        <a href="" class="header-navbar__items navbar__separate">Kênh Người Bán </a>
+                        <!-- down app  -->
+                        <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
+                            <div class="navbar-drawer">
+                                <div class="navbar-drawer__contents">
+                                    <img src="/assets/img/header/nav/qrcode.png" alt="qrcode"
+                                        class="navbar-drawer__img-qrcode">
+                                    <div class="navbar-drawer__store">
+                                        <div class="navbar-drawer__store-items">
+                                            <img src="/assets/img/header/nav/appstore.png" alt="appstore"
+                                                class="navbar-drawer__store-img">
+                                        </div>
+                                        <div class="navbar-drawer__store-items">
+                                            <img src="/assets/img/header/nav/ggplay.png" alt="chplay"
+                                                class="navbar-drawer__store-img">
+                                        </div>
+                                        <div class="navbar-drawer__store-items">
+                                            <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery"
+                                                class="navbar-drawer__store-img">
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </a>
+                        <!--  link fackbook , instagram -->
+                        <div class="header-navbar__items navbar-item__nopointer">Kết nối</div>
+                        <a class="header-navbar__items navbar__item-link">
+                            <span class="ti ti-facebook navbar__items-icon navbar__item-link"></span>
+                            <span class="ti ti-instagram navbar__items-icon navbar__item-link"></span>
+                        </a>
+                    </div>
+                    <!-- navbar-space -->
+                    <div class="navbar-space"></div>
+                    <!-- nav bar right -->
+                    <ul class="header-navbar__right">
+                        <li class="navbar-group">
+                            <!-- icon noti -->
+                            <a href="" class="header-navbar__items">
+                                <span class="ti ti-bell navbar__items-icon">
+                                </span>
+                                <span class="noti-number element-login hide-element">1</span>
+
+                                <span class="navbar__items-title">
+                                    Thông báo
+                                </span>
                             </a>
-                            <!--  link fackbook , instagram -->
-                            <div class="header-navbar__items navbar-item__nopointer">Kết nối</div>
-                            <a class="header-navbar__items navbar__item-link">
-                                <span class="ti ti-facebook navbar__items-icon navbar__item-link"></span>
-                                <span class="ti ti-instagram navbar__items-icon navbar__item-link"></span>
-                            </a>
-                        </div>
-                        <!-- navbar-space -->
-                        <div class="navbar-space"></div>
-                        <!-- nav bar right -->
-                        <ul class="header-navbar__right">
-                            <li class="navbar-group">
-                                <!-- icon noti -->
-                                <a href="" class="header-navbar__items">
-                                    <span class="ti ti-bell navbar__items-icon"></span>
-                                    <span class="navbar__items-title">
-                                        Thông báo
-                                    </span>
-                                </a>
-                                <!-- content noti -->
-                                <div class="navbar-notifications">
+                            <!-- content noti -->
+                            <div class="navbar-notifications">
+                                <div class="navbar-notifications-wrap element-login hide-element">
+
                                     <div class="notifications-header">
                                         Thông báo mới nhận
                                     </div>
@@ -87,212 +93,154 @@
                                         Xem thêm
                                     </a>
                                 </div>
-                            </li>
-                            <!-- help -->
-
-                            <li class="navbar-group">
-                                <a href="" class="header-navbar__items">
-                                    <span class="ti ti-help-alt navbar__items-icon"></span>
-                                    <span class="navbar__items-title">Hỗ trợ</span>
-                                </a>
-                            </li>
-                            <!-- change language -->
-                            <li class="navbar-group">
-                                <a href="" class="header-navbar__items">
-                                    <span class="ti ti-world navbar__items-icon"></span>
-                                    <span class="navbar__items-title"> Tiếng việt</span>
-                                    <span class="ti ti-angle-down navbar__items-icon"></span>
-                                </a>
-                                <div class="navbar__change-language">
-                                    <a class="language-vietnam">Tiếng việt</a>
-                                    <a class="language-english">English</a>
+                                <div class="navbar-notifications-wrap-off element-login">
+                                    <img src="/assets/img/header/noti.png" alt="">
+                                    <p>Đăng nhập để xem thông báo</p>
                                 </div>
-                            </li>
-                            <!-- login , signup  -->
-                            <a href="/signup.html" class="header-navbar__items usersignup">Đăng Ký </a>
-                            <a href="/login.html" class="header-navbar__items userlogin">Đăng Nhập </a>
+                            </div>
 
-                            <!-- profile  -->
-                            <li class="navbar-group profile">
-                                <img src="/assets/img/user/profile/avatar.png" alt="avataruser"
-                                    class="navbar__item-avatar-img">
-                                <a href="" class="header-navbar__items">Durza
-                                </a>
-                                <div class="header-navbar__profile">
-                                    <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
-                                    <a href="" class="header-navbar__profile--items">Đơn mua</a>
-                                    <a href="#" class="header-navbar__profile--items profile-logout">Đăng xuất</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!--  header with search  -->
-                    <div class="header-with-search">
-                        <!-- logo -->
-                        <div class="header-with-search__logo-wrapper  hiden-on-mobile hiden-on-mobile-s">
-                            <a href="index.html" class="header-with-search__logo">
-                                <img src="/assets/img/header/logo-full-white.png" alt="logo"
-                                    class="header-with-search__logo-img">
+
+                        </li>
+                        <!-- help -->
+                        <li class="navbar-group">
+                            <a href="" class="header-navbar__items">
+                                <span class="ti ti-help-alt navbar__items-icon"></span>
+                                <span class="navbar__items-title">Hỗ trợ</span>
                             </a>
-                        </div>
-                        <!-- menu mobile -->
-                        <div class="header-with-search__mbmenu hiden-on-tablet  hiden-on-mobile">
-                            <span class="header-with-search__mbmenu-span ti-menu"></span>
-                            <div class="mbmenu-content">
-                                <div class="mbmenu-content-wrapper">
-                                    <div class="mbmenu-list-items">
-                                        <a href="" class="mbmenu-items">
-                                            <div class="mbmenu-items__group">
-                                                <span class="ti-home"></span>
-                                                <p>Trang chủ</p>
-                                            </div>
-                                        </a>
-                                        <a href="" class="mbmenu-items">
-                                            <div class="mbmenu-items__group">
-                                                <span class="ti-truck"></span>
-                                                <p>Kênh người bán</p>
-                                            </div>
-                                        </a>
-                                        <a href="" class="mbmenu-items">
-                                            <div class="mbmenu-items__group">
-                                                <span class="ti-world"></span>
-                                                <p>Kết nối</p>
-
-                                            </div>
-                                        </a>
-                                        <a href="" class="mbmenu-items">
-                                            <div class="mbmenu-items__group">
-
-                                                <span class="ti-bell"></span>
-                                                <p>Thông báo</p>
-                                            </div>
-                                        </a>
-                                        <a href="" class="mbmenu-items">
-                                            <div class="mbmenu-items__group">
-
-                                                <span class="ti-help-alt"></span>
-                                                <p>Hỗ trợ</p>
-                                            </div>
-                                        </a>
-                                        <a href="/signup.html" class="mbmenu-items usersignup">
-                                            <div class="mbmenu-items__group">
-                                                <span class="ti-user"></span>
-                                                <p>Đăng ký</p>
-
-                                            </div>
-                                        </a>
-                                        <a href="/login.html" class="mbmenu-items userlogin">
-                                            <div class="mbmenu-items__group">
-                                                <span class="ti-user"></span>
-                                                <p>Đăng nhập</p>
-
-                                            </div>
-                                        </a>
-                                        <a href="/profile.html" class="mbmenu-items profile">
-                                            <div class="mbmenu-items__group">
-                                                <span class="ti-user"></span>
-                                                <p>Tài Khoản</p>
-                                            </div>
-                                        </a>
-                                        <a href="" class="mbmenu-items">
-                                            <div class="mbmenu-items__group profile-logout">
-                                                <span class="ti-close"></span>
-                                                <p>Đăng xuất</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                        </li>
+                        <!-- change language -->
+                        <li class="navbar-group">
+                            <a href="" class="header-navbar__items">
+                                <span class="ti ti-world navbar__items-icon"></span>
+                                <span class="navbar__items-title"> Tiếng việt</span>
+                                <span class="ti ti-angle-down navbar__items-icon"></span>
+                            </a>
+                            <div class="navbar__change-language">
+                                <a class="language-vietnam">Tiếng việt</a>
+                                <a class="language-english">English</a>
                             </div>
+                        </li>
+                        <!-- login , signup  -->
 
-                        </div>
-                        <!-- search -->
-                        <div class="header-with-search__search-section">
-                            <div class="search-section__searchbar">
-                                <div class="searchbar-main">
-                                    <div class="searchbar-main__input">
-                                        <!-- input text search-->
-                                        <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi"
-                                            class="searchbar__input">
-                                        <!-- history -->
-                                        <div class="searchbar-main__history">
-                                            <div class="searchbar-main__list-box">
-                                                <a href="" class="searchbar-main__history-item">
-                                                    <span class="main__history-item-name">Mua P&G - Trúng máy hút
-                                                        bụi</span>
-                                                    <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
-                                                        class="main__history-item-img">
-                                                </a>
-                                            </div>
-                                            <div class="searchbar-main__list-box">
-                                                <a href="" class="searchbar-main__history-item">
-                                                    <span class="main__history-item-name">Mua P&G - Trúng máy hút
-                                                        bụi</span>
-                                                    <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
-                                                        class="main__history-item-img">
-                                                </a>
-                                            </div>
+                        <li class="navbar-group link-target element-login">
+                            <a href="/signup.html" class="header-navbar__items usersignup ">Đăng ký </a>
+                            <a href="/login.html" class="header-navbar__items userlogin ">Đăng nhập </a>
+                        </li>
+
+                        <!-- profile-header  -->
+                        <li class="navbar-group profile-header element-login hide-element">
+                            <img src="/assets/img/user/profile/avatar.png" alt="avataruser"
+                                class="navbar__item-avatar-img useravatar">
+                            <a href="" class="header-navbar__items username">Durza
+                            </a>
+                            <div class="header-navbar__profile-header">
+                                <a href="header.html" class="header-navbar__profile-header--items">Tài Khoản của
+                                    tôi</a>
+                                <a href="" class="header-navbar__profile-header--items">Đơn mua</a>
+                                <a href="#" class="header-navbar__profile-header--items btn-logout">Đăng xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--  header with search  -->
+                <div class="header-with-search">
+                    <!-- logo -->
+                    <div class="header-with-search__logo-wrapper  ">
+                        <a href="index.html" class="header-with-search__logo">
+                            <img src="/assets/img/header/logo-full-white.png" alt="logo"
+                                class="header-with-search__logo-img">
+                        </a>
+                    </div>
+                    <!-- search -->
+                    <div class="header-with-search__search-section">
+                        <div class="search-section__searchbar">
+                            <div class="searchbar-main">
+                                <div class="searchbar-main__input">
+                                    <!-- input text search-->
+                                    <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi"
+                                        class="searchbar__input">
+                                    <!-- history -->
+                                    <div class="searchbar-main__history">
+                                        <div class="searchbar-main__list-box">
+                                            <a href="" class="searchbar-main__history-item">
+                                                <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
+                                                    class="main__history-item-img">
+                                            </a>
+                                        </div>
+                                        <div class="searchbar-main__list-box">
+                                            <a href="" class="searchbar-main__history-item">
+                                                <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
+                                                    class="main__history-item-img">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- button search -->
-                                <button class="searchbar-btn">
-                                    <span class="ti ti-search searchbar-btn__icon"></span>
-                                </button>
                             </div>
-                            <!-- suggest search -->
-                            <div class="search-section__search-suggest  hiden-on-mobile-s">
-                                <div class="search-suggest__list-items">
-                                    <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
-                                    <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
-                                    <a href="#" class="search-suggest__items">Bó Hoa</a>
-                                    <a href="#" class="search-suggest__items">Ga Giường</a>
-                                    <a href="#" class="search-suggest__items">Váy Nữ</a>
-                                    <a href="#" class="search-suggest__items">Balo</a>
-                                    <a href="#" class="search-suggest__items">Quần dài</a>
-                                    <a href="#" class="search-suggest__items">Áo sơ mi</a>
-                                </div>
+                            <!-- button search -->
+                            <button class="searchbar-btn">
+                                <span class="ti ti-search searchbar-btn__icon"></span>
+                            </button>
+                        </div>
+                        <!-- suggest search -->
+                        <div class="search-section__search-suggest">
+                            <div class="search-suggest__list-items">
+                                <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
+                                <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
+                                <a href="#" class="search-suggest__items">Bó Hoa</a>
+                                <a href="#" class="search-suggest__items">Ga Giường</a>
+                                <a href="#" class="search-suggest__items">Váy Nữ</a>
+                                <a href="#" class="search-suggest__items">Balo</a>
+                                <a href="#" class="search-suggest__items">Quần dài</a>
+                                <a href="#" class="search-suggest__items">Áo sơ mi</a>
                             </div>
                         </div>
-                        <!-- cart -->
-                        <div class="header-with-search__cart">
-                            <div class="cart__contents">
-                                <!-- number cart -->
-                                <a href="#" class="cart-badge-wrapper">
-                                    <span class="ti-shopping-cart cart-badge-span"></span>
-                                    <span class="cart-number-badge">1</span>
-                                </a>
-                                <!-- cart- content -->
-                                <div class="cart__drawer">
-                                    <div class="cart__drawer-wrapper">
-                                        <p class="cart__drawer-header">
-                                            Sản phẩm mới thêm
-                                        </p>
-                                        <div class="cart__drawer-body">
-                                            <div class="cart__drawer-list-items">
-                                                <a href="" class="cart__drawer-items">
-                                                    <img src="/assets/img/header/nav/cart.png"
-                                                        class="cart__drawer-items-img" alt="vật phẩm"></img>
-                                                    <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
-                                                    <div class="cart__drawer-items-price">175000đ</div>
-                                                </a>
-                                                <a href="" class="cart__drawer-items">
-                                                    <img src="/assets/img/header/nav/cart.png"
-                                                        class="cart__drawer-items-img" alt="vật phẩm"></img>
-                                                    <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
-                                                    <div class="cart__drawer-items-price">175000đ</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="cart__drawer-footer">
-                                            <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
+                    </div>
+                    <!-- cart -->
+                    <div class="header-with-search__cart">
+                        <div class="cart__contents">
+                            <!-- number cart -->
+                            <a href="#" class="cart-badge-wrapper">
+                                <span class="ti-shopping-cart cart-badge-span"></span>
+                                <span class="cart-number-badge element-login hide-element">1</span>
+                            </a>
+                            <!-- cart- content -->
+                            <div class="cart__drawer">
+                                <div class="cart__drawer-wrapper element-login  hide-element">
+                                    <p class="cart__drawer-header">
+                                        Sản phẩm mới thêm
+                                    </p>
+                                    <div class="cart__drawer-body">
+                                        <div class="cart__drawer-list-items">
+                                            <a href="" class="cart__drawer-items">
+                                                <img src="/assets/img/header/nav/cart.png"
+                                                    class="cart__drawer-items-img" alt="vật phẩm"></img>
+                                                <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
+                                                <div class="cart__drawer-items-price">175000đ</div>
+                                            </a>
+                                            <a href="" class="cart__drawer-items">
+                                                <img src="/assets/img/header/nav/cart.png"
+                                                    class="cart__drawer-items-img" alt="vật phẩm"></img>
+                                                <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
+                                                <div class="cart__drawer-items-price">175000đ</div>
+                                            </a>
                                         </div>
                                     </div>
+                                    <div class="cart__drawer-footer">
+                                        <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
+                                    </div>
+                                </div>
+                                <div class="cart__drawer-wrapper-off element-login ">
+                                    <img src="/assets/img/header/cart.png" alt="">
+                                    <p>Bạn chưa có sản phẩm nào</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </header>
         <div class="search-product">
             <div class="container">

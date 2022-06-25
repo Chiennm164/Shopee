@@ -108,11 +108,6 @@ label {
 
 /*  Trạng thái của input */
 
-/* .input-nofocus {
-    border: none !important;
-    pointer-events: none;
-} */
-
 /* sử dụng tại trang edit profile -> check status*/
 .status4 {
     display: flex !important;
@@ -156,6 +151,60 @@ label {
 }
 
 /* animation coursual */
+
+/* control */
+.carousel-wrap {
+    overflow: hidden;
+}
+
+.carousel-list {
+    transform: translateY(-2px);
+    transition: 0.9s ease-in-out;
+}
+
+.btn-control-carousel-right,
+.btn-control-carousel-left {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    box-shadow: 0 0 0.8125rem 0 var(--box-shadow-color);
+    color: var(--black-color);
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.btn-control-carousel-right:hover,
+.flashsale__list-items:hover .btn-control-carousel-right {
+    animation: hover-button-right 0.5s ease-out;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.btn-control-carousel-left:hover,
+.flashsale__list-items:hover .btn-control-carousel-left {
+    animation: hover-button-left 0.5s ease-out;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.btn-control-carousel-left {
+    left: -12px;
+    display: none;
+    z-index: 2;
+}
+
+.btn-control-carousel-right {
+    right: -12px;
+    z-index: 2;
+}
+
 @keyframes hover-button-left {
     form {}
 

@@ -11,76 +11,76 @@
     <!-- link fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- link icons -->
-    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
-
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
     <!-- base css  -->
-    <link rel="stylesheet" href="assets/css/support/base.css">
+    <link rel="stylesheet" href="/assets/css/support/base.css">
     <!--  link Header css -->
-    <link rel="stylesheet" href="assets/css/container/header.css">
+    <link rel="stylesheet" href="/assets/css/header/header.css">
     <!--  link product css -->
-    <link rel="stylesheet" href="assets/css/product/product.css">
-
+    <link rel="stylesheet" href="/assets/css/product/product.css">
     <!-- footer css -->
-    <link rel="stylesheet" href="assets/css/container/footer.css">
-
-    <!-- link reponsive css -->
-    <link rel="stylesheet" href="/assets/css/support/reponsiveBoostrap.css">
+    <link rel="stylesheet" href="/assets/css/container/footer.css">
 </head>
 
 <body>
+    <!-- header  -->
     <header class="header">
-        <div class="col">
-            <div class="container">
-                <!-- Nav bar -->
-                <nav class="header__navbar  hiden-on-mobile-s">
-                    <!-- nav bar left -->
-                    <div class="header-navbar__left">
-                        <!-- seller  -->
-                        <a href="" class="header-navbar__items navbar__separate">Kênh Người Bán </a>
-                        <!-- down app  -->
-                        <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
-                            <div class="navbar-drawer">
-                                <div class="navbar-drawer__contents">
-                                    <img src="/assets/img/header/nav/qrcode.png" alt="qrcode"
-                                        class="navbar-drawer__img-qrcode">
-                                    <div class="navbar-drawer__store">
-                                        <div class="navbar-drawer__store-items">
-                                            <img src="/assets/img/header/nav/appstore.png" alt="appstore"
-                                                class="navbar-drawer__store-img">
-                                        </div>
-                                        <div class="navbar-drawer__store-items">
-                                            <img src="/assets/img/header/nav/ggplay.png" alt="chplay"
-                                                class="navbar-drawer__store-img">
-                                        </div>
-                                        <div class="navbar-drawer__store-items">
-                                            <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery"
-                                                class="navbar-drawer__store-img">
-                                        </div>
+        <div class="container">
+            <!-- Nav bar -->
+            <nav class="header__navbar ">
+                <!-- nav bar left -->
+                <div class="header-navbar__left">
+                    <!-- seller  -->
+                    <a href="" class="header-navbar__items navbar__separate">Kênh Người Bán </a>
+                    <!-- down app  -->
+                    <a href="" class="header-navbar__items navbar__separate">Tải ứng dụng
+                        <div class="navbar-drawer">
+                            <div class="navbar-drawer__contents">
+                                <img src="/assets/img/header/nav/qrcode.png" alt="qrcode"
+                                    class="navbar-drawer__img-qrcode">
+                                <div class="navbar-drawer__store">
+                                    <div class="navbar-drawer__store-items">
+                                        <img src="/assets/img/header/nav/appstore.png" alt="appstore"
+                                            class="navbar-drawer__store-img">
+                                    </div>
+                                    <div class="navbar-drawer__store-items">
+                                        <img src="/assets/img/header/nav/ggplay.png" alt="chplay"
+                                            class="navbar-drawer__store-img">
+                                    </div>
+                                    <div class="navbar-drawer__store-items">
+                                        <img src="/assets/img/header/nav/Appgalery.png" alt="appgalery"
+                                            class="navbar-drawer__store-img">
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </a>
+                    <!--  link fackbook , instagram -->
+                    <div class="header-navbar__items navbar-item__nopointer">Kết nối</div>
+                    <a class="header-navbar__items navbar__item-link">
+                        <span class="ti ti-facebook navbar__items-icon navbar__item-link"></span>
+                        <span class="ti ti-instagram navbar__items-icon navbar__item-link"></span>
+                    </a>
+                </div>
+                <!-- navbar-space -->
+                <div class="navbar-space"></div>
+                <!-- nav bar right -->
+                <ul class="header-navbar__right">
+                    <li class="navbar-group">
+                        <!-- icon noti -->
+                        <a href="" class="header-navbar__items">
+                            <span class="ti ti-bell navbar__items-icon">
+                            </span>
+                            <span class="noti-number element-login hide-element">1</span>
+
+                            <span class="navbar__items-title">
+                                Thông báo
+                            </span>
                         </a>
-                        <!--  link fackbook , instagram -->
-                        <div class="header-navbar__items navbar-item__nopointer">Kết nối</div>
-                        <a class="header-navbar__items navbar__item-link">
-                            <span class="ti ti-facebook navbar__items-icon navbar__item-link"></span>
-                            <span class="ti ti-instagram navbar__items-icon navbar__item-link"></span>
-                        </a>
-                    </div>
-                    <!-- navbar-space -->
-                    <div class="navbar-space"></div>
-                    <!-- nav bar right -->
-                    <ul class="header-navbar__right">
-                        <li class="navbar-group">
-                            <!-- icon noti -->
-                            <a href="" class="header-navbar__items">
-                                <span class="ti ti-bell navbar__items-icon"></span>
-                                <span class="navbar__items-title">
-                                    Thông báo
-                                </span>
-                            </a>
-                            <!-- content noti -->
-                            <div class="navbar-notifications">
+                        <!-- content noti -->
+                        <div class="navbar-notifications">
+                            <div class="navbar-notifications-wrap element-login hide-element">
+
                                 <div class="notifications-header">
                                     Thông báo mới nhận
                                 </div>
@@ -91,359 +91,158 @@
                                     Xem thêm
                                 </a>
                             </div>
-                        </li>
-                        <!-- help -->
-
-                        <li class="navbar-group">
-                            <a href="" class="header-navbar__items">
-                                <span class="ti ti-help-alt navbar__items-icon"></span>
-                                <span class="navbar__items-title">Hỗ trợ</span>
-                            </a>
-                        </li>
-                        <!-- change language -->
-                        <li class="navbar-group">
-                            <a href="" class="header-navbar__items">
-                                <span class="ti ti-world navbar__items-icon"></span>
-                                <span class="navbar__items-title"> Tiếng việt</span>
-                                <span class="ti ti-angle-down navbar__items-icon"></span>
-                            </a>
-                            <div class="navbar__change-language">
-                                <a class="language-vietnam">Tiếng việt</a>
-                                <a class="language-english">English</a>
+                            <div class="navbar-notifications-wrap-off element-login">
+                                <img src="/assets/img/header/noti.png" alt="">
+                                <p>Đăng nhập để xem thông báo</p>
                             </div>
-                        </li>
-                        <!-- login , signup  -->
-                        <a href="/signup.html" class="header-navbar__items usersignup">Đăng Ký </a>
-                        <a href="/login.html" class="header-navbar__items userlogin">Đăng Nhập </a>
+                        </div>
 
-                        <!-- profile  -->
-                        <li class="navbar-group profile">
-                            <img src="/assets/img/user/profile/avatar.png" alt="avataruser"
-                                class="navbar__item-avatar-img">
-                            <a href="" class="header-navbar__items">Durza
-                            </a>
-                            <div class="header-navbar__profile">
-                                <a href="profile.html" class="header-navbar__profile--items">Tài Khoản của tôi</a>
-                                <a href="" class="header-navbar__profile--items">Đơn mua</a>
-                                <a href="#" class="header-navbar__profile--items profile-logout">Đăng xuất</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <!--  header with search  -->
-                <div class="header-with-search">
-                    <!-- logo -->
-                    <div class="header-with-search__logo-wrapper  hiden-on-mobile hiden-on-mobile-s">
-                        <a href="index.html" class="header-with-search__logo">
-                            <img src="/assets/img/header/logo-full-white.png" alt="logo"
-                                class="header-with-search__logo-img">
+
+                    </li>
+                    <!-- help -->
+                    <li class="navbar-group">
+                        <a href="" class="header-navbar__items">
+                            <span class="ti ti-help-alt navbar__items-icon"></span>
+                            <span class="navbar__items-title">Hỗ trợ</span>
                         </a>
-                    </div>
-                    <!-- menu mobile -->
-                    <div class="header-with-search__mbmenu hiden-on-tablet  hiden-on-mobile">
-                        <span class="header-with-search__mbmenu-span ti-menu"></span>
-                        <div class="mbmenu-content">
-                            <div class="mbmenu-content-wrapper">
-                                <div class="mbmenu-list-items">
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-home"></span>
-                                            <p>Trang chủ</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-truck"></span>
-                                            <p>Kênh người bán</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-world"></span>
-                                            <p>Kết nối</p>
-
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-
-                                            <span class="ti-bell"></span>
-                                            <p>Thông báo</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group">
-
-                                            <span class="ti-help-alt"></span>
-                                            <p>Hỗ trợ</p>
-                                        </div>
-                                    </a>
-                                    <a href="/signup.html" class="mbmenu-items usersignup">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-user"></span>
-                                            <p>Đăng ký</p>
-
-                                        </div>
-                                    </a>
-                                    <a href="/login.html" class="mbmenu-items userlogin">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-user"></span>
-                                            <p>Đăng nhập</p>
-
-                                        </div>
-                                    </a>
-                                    <a href="/profile.html" class="mbmenu-items profile">
-                                        <div class="mbmenu-items__group">
-                                            <span class="ti-user"></span>
-                                            <p>Tài Khoản</p>
-                                        </div>
-                                    </a>
-                                    <a href="" class="mbmenu-items">
-                                        <div class="mbmenu-items__group profile-logout">
-                                            <span class="ti-close"></span>
-                                            <p>Đăng xuất</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                    </li>
+                    <!-- change language -->
+                    <li class="navbar-group">
+                        <a href="" class="header-navbar__items">
+                            <span class="ti ti-world navbar__items-icon"></span>
+                            <span class="navbar__items-title"> Tiếng việt</span>
+                            <span class="ti ti-angle-down navbar__items-icon"></span>
+                        </a>
+                        <div class="navbar__change-language">
+                            <a class="language-vietnam">Tiếng việt</a>
+                            <a class="language-english">English</a>
                         </div>
+                    </li>
+                    <!-- login , signup  -->
 
-                    </div>
-                    <!-- search -->
-                    <div class="header-with-search__search-section">
-                        <div class="search-section__searchbar">
-                            <div class="searchbar-main">
-                                <div class="searchbar-main__input">
-                                    <!-- input text search-->
-                                    <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi"
-                                        class="searchbar__input">
-                                    <!-- history -->
-                                    <div class="searchbar-main__history">
-                                        <div class="searchbar-main__list-box">
-                                            <a href="" class="searchbar-main__history-item">
-                                                <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
-                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
-                                                    class="main__history-item-img">
-                                            </a>
-                                        </div>
-                                        <div class="searchbar-main__list-box">
-                                            <a href="" class="searchbar-main__history-item">
-                                                <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
-                                                <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
-                                                    class="main__history-item-img">
-                                            </a>
-                                        </div>
+                    <li class="navbar-group link-target element-login">
+                        <a href="/signup.html" class="header-navbar__items usersignup ">Đăng ký </a>
+                        <a href="/login.html" class="header-navbar__items userlogin ">Đăng nhập </a>
+                    </li>
+
+                    <!-- profile-header  -->
+                    <li class="navbar-group profile-header element-login hide-element">
+                        <img src="/assets/img/user/profile/avatar.png" alt="avataruser"
+                            class="navbar__item-avatar-img useravatar">
+                        <a href="" class="header-navbar__items username">Durza
+                        </a>
+                        <div class="header-navbar__profile-header">
+                            <a href="header.html" class="header-navbar__profile-header--items">Tài Khoản của
+                                tôi</a>
+                            <a href="" class="header-navbar__profile-header--items">Đơn mua</a>
+                            <a href="#" class="header-navbar__profile-header--items btn-logout">Đăng xuất</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!--  header with search  -->
+            <div class="header-with-search">
+                <!-- logo -->
+                <div class="header-with-search__logo-wrapper  ">
+                    <a href="index.html" class="header-with-search__logo">
+                        <img src="/assets/img/header/logo-full-white.png" alt="logo"
+                            class="header-with-search__logo-img">
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="header-with-search__search-section">
+                    <div class="search-section__searchbar">
+                        <div class="searchbar-main">
+                            <div class="searchbar-main__input">
+                                <!-- input text search-->
+                                <input type="text" placeholder="  Mua P&G - Trúng máy hút bụi" class="searchbar__input">
+                                <!-- history -->
+                                <div class="searchbar-main__history">
+                                    <div class="searchbar-main__list-box">
+                                        <a href="" class="searchbar-main__history-item">
+                                            <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                            <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
+                                                class="main__history-item-img">
+                                        </a>
+                                    </div>
+                                    <div class="searchbar-main__list-box">
+                                        <a href="" class="searchbar-main__history-item">
+                                            <span class="main__history-item-name">Mua P&G - Trúng máy hút bụi</span>
+                                            <img src="/assets/img/header/search-history.png" alt="tìm kiếm"
+                                                class="main__history-item-img">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- button search -->
-                            <button class="searchbar-btn">
-                                <span class="ti ti-search searchbar-btn__icon"></span>
-                            </button>
                         </div>
-                        <!-- suggest search -->
-                        <div class="search-section__search-suggest  hiden-on-mobile-s">
-                            <div class="search-suggest__list-items">
-                                <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
-                                <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
-                                <a href="#" class="search-suggest__items">Bó Hoa</a>
-                                <a href="#" class="search-suggest__items">Ga Giường</a>
-                                <a href="#" class="search-suggest__items">Váy Nữ</a>
-                                <a href="#" class="search-suggest__items">Balo</a>
-                                <a href="#" class="search-suggest__items">Quần dài</a>
-                                <a href="#" class="search-suggest__items">Áo sơ mi</a>
-                            </div>
+                        <!-- button search -->
+                        <button class="searchbar-btn">
+                            <span class="ti ti-search searchbar-btn__icon"></span>
+                        </button>
+                    </div>
+                    <!-- suggest search -->
+                    <div class="search-section__search-suggest">
+                        <div class="search-suggest__list-items">
+                            <a href="#" class="search-suggest__items">Khăn Quàng Cổ</a>
+                            <a href="#" class="search-suggest__items">Gấu Nhồi Bông</a>
+                            <a href="#" class="search-suggest__items">Bó Hoa</a>
+                            <a href="#" class="search-suggest__items">Ga Giường</a>
+                            <a href="#" class="search-suggest__items">Váy Nữ</a>
+                            <a href="#" class="search-suggest__items">Balo</a>
+                            <a href="#" class="search-suggest__items">Quần dài</a>
+                            <a href="#" class="search-suggest__items">Áo sơ mi</a>
                         </div>
                     </div>
-                    <!-- cart -->
-                    <div class="header-with-search__cart">
-                        <div class="cart__contents">
-                            <!-- number cart -->
-                            <a href="#" class="cart-badge-wrapper">
-                                <span class="ti-shopping-cart cart-badge-span"></span>
-                                <span class="cart-number-badge">1</span>
-                            </a>
-                            <!-- cart- content -->
-                            <div class="cart__drawer">
-                                <div class="cart__drawer-wrapper">
-                                    <p class="cart__drawer-header">
-                                        Sản phẩm mới thêm
-                                    </p>
-                                    <div class="cart__drawer-body">
-                                        <div class="cart__drawer-list-items">
-                                            <a href="" class="cart__drawer-items">
-                                                <img src="/assets/img/header/nav/cart.png"
-                                                    class="cart__drawer-items-img" alt="vật phẩm"></img>
-                                                <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
-                                                <div class="cart__drawer-items-price">175000đ</div>
-                                            </a>
-                                            <a href="" class="cart__drawer-items">
-                                                <img src="/assets/img/header/nav/cart.png"
-                                                    class="cart__drawer-items-img" alt="vật phẩm"></img>
-                                                <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
-                                                <div class="cart__drawer-items-price">175000đ</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="cart__drawer-footer">
-                                        <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
+                </div>
+                <!-- cart -->
+                <div class="header-with-search__cart">
+                    <div class="cart__contents">
+                        <!-- number cart -->
+                        <a href="#" class="cart-badge-wrapper">
+                            <span class="ti-shopping-cart cart-badge-span"></span>
+                            <span class="cart-number-badge element-login hide-element">1</span>
+                        </a>
+                        <!-- cart- content -->
+                        <div class="cart__drawer">
+                            <div class="cart__drawer-wrapper element-login  hide-element">
+                                <p class="cart__drawer-header">
+                                    Sản phẩm mới thêm
+                                </p>
+                                <div class="cart__drawer-body">
+                                    <div class="cart__drawer-list-items">
+                                        <a href="" class="cart__drawer-items">
+                                            <img src="/assets/img/header/nav/cart.png" class="cart__drawer-items-img"
+                                                alt="vật phẩm"></img>
+                                            <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
+                                            <div class="cart__drawer-items-price">175000đ</div>
+                                        </a>
+                                        <a href="" class="cart__drawer-items">
+                                            <img src="/assets/img/header/nav/cart.png" class="cart__drawer-items-img"
+                                                alt="vật phẩm"></img>
+                                            <div class="cart__drawer-items-content">Giá đỡ máy tính</div>
+                                            <div class="cart__drawer-items-price">175000đ</div>
+                                        </a>
                                     </div>
                                 </div>
+                                <div class="cart__drawer-footer">
+                                    <a href="" type="" class="cart__drawer-btn">Xem giỏ hàng </a>
+                                </div>
+                            </div>
+                            <div class="cart__drawer-wrapper-off element-login ">
+                                <img src="/assets/img/header/cart.png" alt="">
+                                <p>Bạn chưa có sản phẩm nào</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </header>
     <div class="product">
         <div class="container">
             <div class="row">
                 <div class="product-briefing-wrap">
-                    <div class="product-briefing">
-                        <div class="product-briefing__img">
-
-                        </div>
-                        <div class="product-briefing__slider">
-                            <div class="product-briefing__slider-items">
-
-                            </div>
-                            <div class="product-briefing__slider-items">
-
-                            </div>
-                            <div class="product-briefing__slider-items">
-
-                            </div>
-                            <div class="product-briefing__slider-items">
-
-                            </div>
-                            <div class="product-briefing__slider-items">
-
-                            </div>
-                        </div>
-                        <div class="product-briefing__group">
-                            <div class="product-briefing__sharing">
-                                <p>Chia sẻ :</p>
-                                <i class="ti-instagram"></i>
-                                <i class="ti-facebook"></i>
-                                <i class="ti-pinterest"></i>
-                                <i class="ti-twitter"></i>
-                            </div>
-                            <div class="product-briefing__vote">
-                                <i class="ti-heart"></i>
-                                <p>Đã thích (6,8k)</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="product-option">
-                        <div class="product-option-wrap">
-                            <div class="product-option__title">
-                                <p>Áo Phông Nam 2s Clothing Áo Thun Nam Form Rộng Cotton Oversize Basic Street Style Giá
-                                    Rẻ In Hình Cực Ngầu TV106</p>
-                            </div>
-                            <div class="product-option__vote">
-                                <div class="product-option__vote-rate">
-                                    <span>0.0</span>
-                                    <i class="ti-star"></i>
-                                    <i class="ti-star"></i>
-                                    <i class="ti-star"></i>
-                                    <i class="ti-star"></i>
-                                    <i class="ti-star"></i>
-                                </div>
-                                <div class="product-option__vote-review">
-                                    <p>5.7k đánh giá</p>
-                                </div>
-                                <div class="product-option__vote-sold">
-                                    <p>11.7k đã bán</p>
-                                </div>
-
-                            </div>
-                            <div class="product-option__list-items">
-                                <div class="product-option__items">
-                                    <div class="product-option__items-name">Mã Giảm Giá Của Shop</div>
-                                    <div class="product-option__items-content product-option__voucher">
-                                        <i>10%</i>
-                                        <i>10%</i>
-                                        <i>10%</i>
-                                        <i>10%</i>
-                                    </div>
-                                </div>
-                                <div class="product-option__items">
-                                    <div class="product-option__items-name">Vận Chuyển
-                                    </div>
-                                    <div class="product-option__items-content product-option__transport">
-                                        <div class="product-option__transport-to">
-                                            <i class="ti-truck"></i>
-                                            <p>Vận chuyển tới : TP Vinh .</p>
-                                        </div>
-                                        <div class="product-option__transport-price">
-                                            <p>Phí vận chuyển : 1.000 đ. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-option__items">
-                                    <div class="product-option__items-name">Màu Sắc
-                                    </div>
-                                    <div class="product-option__items-content product-option__color">
-                                        <a class="product-option__color-items">Đen TV106</a>
-                                        <a class="product-option__color-items">Trắng TV106</a>
-                                        <a class="product-option__color-items">Vàng bò TV 106</a>
-                                        <a class="product-option__color-items">Xanh AVT TV106</a>
-                                        <a class="product-option__color-items">Bích TV106</a>
-
-
-                                    </div>
-                                </div>
-                                <div class="product-option__items">
-                                    <div class="product-option__items-name">Size</div>
-                                    <div class="product-option__items-content product-option__size">
-                                        <a class="product-option__size-items">S</a>
-                                        <a class="product-option__size-items">M</a>
-                                        <a class="product-option__size-items">L</a>
-                                        <a class="product-option__size-items">XL</a>
-                                        <a class="product-option__size-items">XXL</a>
-                                        <a class="product-option__size-items">XXXL</a>
-                                    </div>
-                                </div>
-                                <div class="product-option__items">
-                                    <div class="product-option__items-name">Số Lượng</div>
-                                    <div class="product-option__items-content product-option__amount">
-                                        <div class="product-option__amount-number">
-                                            <i class="ti-minus"></i>
-                                            <input type="text">
-                                            <i class="ti-plus"></i>
-
-                                        </div>
-                                        <p class="product-option__amount-inventory"> 1110 sản phẩm </p>
-
-                                    </div>
-                                </div>
-
-                                <div class="product-option__items">
-                                    <a class="product-option__btn-addcart">
-                                        Thêm vào giỏ hàng</a>
-                                    <a class="product-option__btn-submit">Mua Ngay</a>
-                                </div>
-
-
-                                <div class="product-option__items">
-                                    <div class="product-option__items-note">
-                                        <p> Shopee Đảm Bảo </p>
-                                        <p>3 Ngày Trả Hàng / Hoàn Tiền </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-
-                        </div>
-
-
-                    </div>
                 </div>
                 <div class="product-shope">
                     <div class="product-shope__info">
@@ -492,75 +291,11 @@
                     <div class="product-about__description">
                         <div class="product-about__title">CHI TIẾT SẢN PHẨM</div>
                         <div class="product-about__description-content">
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Thương hiệu</div>
-                                <div class="product-about__description-content-right">
-                                    2s Clothing</div>
-                            </div>
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Chiều dài tay áo</div>
-                                <div class="product-about__description-content-right">
-                                    Dài 3/4
-                                </div>
-                            </div>
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Cổ áo
-                                </div>
-                                <div class="product-about__description-content-right">
-                                    Cổ tròn
-                                </div>
-                            </div>
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Chất liệu
-                                </div>
-                                <div class="product-about__description-content-right">
-                                    Cotton
-                                </div>
-                            </div>
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Kho hàng
-                                </div>
-                                <div class="product-about__description-content-right">
-                                    22368
-
-                                </div>
-                            </div>
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Mẫu
-                                </div>
-                                <div class="product-about__description-content-right">
-                                    In, Nhuộm
-                                </div>
-                            </div>
-                            <div class="product-about__description-content-wrap">
-                                <div class="product-about__description-content-left">Gửi từ
-                                </div>
-                                <div class="product-about__description-content-right">
-                                    Huyện Mê Linh, Hà Nội
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="product-about__details">
                         <div class="product-about__title">MÔ TẢ SẢN PHẨM</div>
                         <p>
-                            - Tên SP: Áo Phông Nam 2s Clothing Áo Thun Nam Form Rộng Cotton Oversize Basic Street Style
-                            Giá Rẻ In Hình Cực Ngầu TV106<br> - Chất liệu: Vải TC Chất vải có sự co giãn tốt chống bị
-                            nhăn do có thành phần polyester nhưng vẫn
-                            giữ được tính chất như thấm hút mồ hôi tốt, mềm mịn, bóng và có độ bền cao của cotton <br> -
-                            Form áo: OVERSIZE form rộng chuẩn TAY LỠ UNISEX cực đẹp. QUY ĐỊNH BẢO HÀNH, ĐỔI TRẢ<br> 1.
-                            Điều kiện áp dụng (trong vòng 07 ngày kể
-                            từ khi nhận sản phẩm) <br> - Hàng hoá vẫn còn mới, chưa qua sử dụng <br> - Hàng hoá bị lỗi
-                            hoặc hư hỏng do vận chuyển hoặc do nhà sản xuất <br> 2. Trường hợp được chấp nhận: <br> -
-                            Hàng không đúng size, kiểu dáng như quý khách
-                            đặt hàng <br> - Không đủ số lượng, không đủ bộ như trong đơn hàng <br> 3. Trường hợp không
-                            đủ điều kiện áp dụng chính sách: <br> - Quá 07 ngày kể từ khi Quý khách nhận hàng <br> - Gửi
-                            lại hàng không đúng mẫu mã, không phải
-                            sản phẩm của 2s clothing.<br> - Không thích, không hợp, đặt nhầm mã, nhầm màu,... <br> Do
-                            màn hình và điều kiện ánh sáng khác nhau, màu sắc thực tế của sản phẩm có thể chênh lệch
-                            khoảng 3-5%<br> #aophongnam #aophong #phongnam
-                            #phong #nam<br> #ao #thun #unisex #freesize #tay #lo #pull #2sclothing #2s #aonhom #form
-                            #rong #fullbox #phong #local #brand<br>
                         </p>
                     </div>
 
@@ -904,7 +639,7 @@
 
         </div>
     </footer>
-    <script src="/assets/js/product.js"></script>
+    <script src="/assets/js/product/product.js"></script>
 </body>
 
 </html>

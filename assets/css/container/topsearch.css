@@ -48,8 +48,9 @@
 }
 
 .topSearch-body__list-items {
+    width: 200%;
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
     justify-content: space-around;
 }
 
@@ -59,7 +60,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--white-color);
-    width: 200px;
+    min-width: 200px;
     margin-top: 20px;
     font-weight: 400;
     cursor: pointer;
