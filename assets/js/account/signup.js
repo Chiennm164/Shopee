@@ -32,7 +32,7 @@ for (let i = 0; i < 6; i++) {
     code.push(arrText[b])
 }
 // api 
-const apiUser = "http://localhost:3000/user"
+const apiUser = "https://shoppy-coppy-db.herokuapp.com/user"
 
 function start() {
     handleInput()

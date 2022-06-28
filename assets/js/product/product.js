@@ -1,17 +1,13 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-const apiUser = "http://localhost:3000/user";
-const apiProduct = "http://localhost:3000/products";
-
-
+const apiUser = "https://shoppy-coppy-db.herokuapp.com/user";
+const apiProduct = "https://shoppy-coppy-db.herokuapp.com/products";
 
 function start() {
     renderProduct()
 }
 start()
-
-
 function renderProduct() {
     const selectProduct = JSON.parse(localStorage.getItem("productSelect"))
     const wrap = $('.product-briefing-wrap')
@@ -26,10 +22,10 @@ function renderProduct() {
         let listItemOption = element.map((e) => {
             return `<a class="product-option__color-items">${e}</a>`
         }).join('')
-        htmlOption += `   <div class="product-option__items">
-        <div class="product-option__items-name"> ${name}
+        htmlOption += `   <div class="product-option__item">
+        <div class="product-option__item-name"> ${name}
         </div>
-        <div class="product-option__items-content product-option__color">
+        <div class="product-option__item-content product-option__color">
            ${listItemOption}
         </div>
         </div>`
@@ -69,7 +65,7 @@ function renderProduct() {
                                     <p>${selectProduct.name}</p>
                                 </div>
                                 <div class="product-option__vote">
-                                    <div class="product-option__vote-rate">
+                                    <div class="product-option__vote-star">
                                         <span>0.0</span>
                                         <i class="ti-star"></i>
                                         <i class="ti-star"></i>
@@ -85,17 +81,17 @@ function renderProduct() {
                                     </div>
                                 </div>
                                 <div class="product-option__list-items">
-                                    <div class="product-option__items">
-                                        <div class="product-option__items-name">Mã Giảm Giá Của Shop</div>
-                                        <div class="product-option__items-content product-option__voucher">
+                                    <div class="product-option__item">
+                                        <div class="product-option__item-name">Mã Giảm Giá Của Shop</div>
+                                        <div class="product-option__item-content product-option__voucher">
                                             <i>${selectProduct.voucher}%</i>
                                             
                                         </div>
                                     </div>
-                                    <div class="product-option__items">
-                                        <div class="product-option__items-name">Vận Chuyển
+                                    <div class="product-option__item">
+                                        <div class="product-option__item-name">Vận Chuyển
                                         </div>
-                                        <div class="product-option__items-content product-option__transport">
+                                        <div class="product-option__item-content product-option__transport">
                                             <div class="product-option__transport-to">
                                                 <i class="ti-truck"></i>
                                                 <p>Vận chuyển tới : TP Vinh .</p>
@@ -106,9 +102,9 @@ function renderProduct() {
                                         </div>
                                     </div>
                                     ${htmlOption}
-                                    <div class="product-option__items">
-                                        <div class="product-option__items-name">Số Lượng</div>
-                                        <div class="product-option__items-content product-option__amount">
+                                    <div class="product-option__item">
+                                        <div class="product-option__item-name">Số Lượng</div>
+                                        <div class="product-option__item-content product-option__amount">
                                             <div class="product-option__amount-number">
                                                 <i class="ti-minus"></i>
                                                 <input type="text">
@@ -117,13 +113,13 @@ function renderProduct() {
                                             <p class="product-option__amount-inventory">${selectProduct.amount} sản phẩm </p>
                                         </div>
                                     </div>
-                                    <div class="product-option__items">
+                                    <div class="product-option__item">
                                         <button class="product-option__btn-addcart">
                                             Thêm vào giỏ hàng</button>
                                         <button class="product-option__btn-submit">Mua Ngay</button>
                                     </div>
-                                    <div class="product-option__items">
-                                        <div class="product-option__items-note">
+                                    <div class="product-option__item">
+                                        <div class="product-option__item-note">
                                             <p> Shopee Đảm Bảo </p>
                                             <p>3 Ngày Trả Hàng / Hoàn Tiền </p>
                                         </div>
@@ -140,4 +136,15 @@ function renderProduct() {
     wrap3.innerHTML = selectProduct.describe.map((value) => {
         return `${value}<br/> `
     }).join('');
+
+    handlerBtnAddProduct(selectProduct)
+
+}
+function handlerBtnAddProduct() {
+    const btnAddProduct = $('.product-option__btn-addcart');
+    let cart = [];
+    btnAddProduct.addEventListener('click', () => {
+
+    })
+
 }

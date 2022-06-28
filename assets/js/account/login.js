@@ -6,7 +6,7 @@ const btnSubmit = $(".form-login__btn-submit")
 
 let message = $$('.form-message');
 let userIdApi;
-const apiUser = "http://localhost:3000/user"
+const apiUser = "https://shoppy-coppy-db.herokuapp.com/user"
 
 const createdAt = new Date().getTime();
 
@@ -42,9 +42,8 @@ function checkDataUser(valueInputName, valueInputPassword) {
                 localStorage.setItem('codeUser', data.code);
                 localStorage.setItem('statusUser', data.status);
                 localStorage.setItem('idUser', data.id);
-
-                alert("M khau chinh xac");
                 checkStatus(data.status)
+                alert("M khau chinh xac");
             } else {
                 showMessage(passWord, "Mật khẩu không chính xác", true);
             }

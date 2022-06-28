@@ -1,9 +1,9 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-const apiUser = "http://localhost:3000/user";
-const apiProduct = "http://localhost:3000/products";
-const apiTopSearch = "http://localhost:3000/topSearch";
+const apiUser = "https://shoppy-coppy-db.herokuapp.com/user";
+const apiProduct = "https://shoppy-coppy-db.herokuapp.com/products";
+const apiTopSearch = "https://shoppy-coppy-db.herokuapp.com/topSearch";
 function start() {
     handlerUser()
     sliderShow()
@@ -96,7 +96,7 @@ function sliderShow() {
     var btnChose = $$('.slider-nav__items')
     var imgsLength;
     var btnChoseLength = btnChose.length;
-    const imageApi = "http://localhost:3000/sliderBanner"
+    const imageApi = "https://shoppy-coppy-db.herokuapp.com/sliderBanner"
 
     function getImage() {
         fetch(imageApi).then(function (response) {
@@ -174,7 +174,7 @@ function sliderShow() {
 }
 //****************************** handler noti   ******************************
 function handlerNoti() {
-    const apiNoti = "http://localhost:3000/notifications"
+    const apiNoti = "https://shoppy-coppy-db.herokuapp.com/notifications"
     const amountNoti = $('.noti-number')
     const eNotification = $('.notification')
     imgnoti = $$('.notifications-contents__img')

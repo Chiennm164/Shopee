@@ -87,8 +87,9 @@
     flex-direction: row;
 }
 
-.product-option__vote-rate {
+.product-option__vote-star {
     padding: 0 20px;
+    color: red;
 }
 
 .product-option__vote-review {
@@ -106,12 +107,12 @@
     padding-left: 30px;
 }
 
-.product-option__items {
+.product-option__item {
     display: flex;
     padding-bottom: 30px;
 }
 
-.product-option__items-name {
+.product-option__item-name {
     width: 20%;
     padding-right: 10px;
     text-transform: capitalize;
@@ -119,7 +120,7 @@
 
 }
 
-.product-option__items-content {
+.product-option__item-content {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -236,14 +237,14 @@
     color: #fff;
 }
 
-.product-option__items-note {
+.product-option__item-note {
     padding-top: 20px;
     width: 100%;
     border-top: 1px solid #ccc;
     display: flex;
 }
 
-.product-option__items-note p:last-child {
+.product-option__item-note p:last-child {
     padding-left: 20px;
     color: rgba(0, 0, 0, .54);
 }

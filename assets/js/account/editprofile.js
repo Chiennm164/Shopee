@@ -7,7 +7,7 @@ const btnAccount = $('.profile__user-infor-account');
 const btnAddress = $('.profile__user-infor-address')
 const btnInforUser = $('.profile__user-infor-profile')
 const listBtn = $$('.profile__nav-body-items a')
-const apiUser = "http://localhost:3000/user";
+const apiUser = "https://shoppy-coppy-db.herokuapp.com/user";
 
 start()
 function start() {
