@@ -11,8 +11,8 @@ function start() {
     handlerCarousel()
     getProduct()
     getTopSearch()
-    const listEProduct = $$('.select-product')
-    console.log(listEProduct);
+    handlerClickChangePage()
+
 }
 start()
 // ****************************** Check User ******************************
@@ -283,7 +283,7 @@ function getProduct() {
         handlerSuggest(products)
         handlerFlashSale(products)
         handlerCategory(products)
-        handlerClickProduct(products)
+        handlerClickChangePage(products)
 
     })
 }
@@ -407,12 +407,22 @@ function handlerTopSearch(listTopSearch) {
     topSearchWrap.innerHTML = htmls;
 
 }
-function handlerClickProduct(products) {
+
+function handlerClickChangePage(products) {
+
     const listEProduct = $$('.select-product')
     listEProduct.forEach((product) => {
         product.addEventListener('click', (e) => {
             e.preventDefault()
             localStorage.setItem("productSelect", JSON.stringify(products[e.currentTarget.dataset.id]))
+            window.location.href = "/assets/html/product/product.html";
+
         })
     })
+    const clickUser = $('.header-navbar__profile-header--items')
+    clickUser.onclick = () => {
+        window.location.href = "/assets/html/account/profile.html";
+    }
+
+
 }

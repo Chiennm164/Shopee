@@ -51,6 +51,7 @@ function createUser(formDataUser) {
         return response.json();
     }).then(function () {
         alert("đăng kí thành công")
+        window.location.href = "/assets/html/account/login.html";
     })
 }
 // Xử lý thao tác người với form input

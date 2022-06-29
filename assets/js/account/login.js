@@ -44,6 +44,8 @@ function checkDataUser(valueInputName, valueInputPassword) {
                 localStorage.setItem('idUser', data.id);
                 checkStatus(data.status)
                 alert("M khau chinh xac");
+                window.location.href = "/index.html";
+
             } else {
                 showMessage(passWord, "Mật khẩu không chính xác", true);
             }
