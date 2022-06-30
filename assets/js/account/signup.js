@@ -138,7 +138,7 @@ function formUser(idUser, userNameForm, passWordForm, emailForm) {
         phone: 0,
         birthOfDate: "",
         gender: 1,
-        money: 0,
+        money: 100,
         code: code.join('')
     }
     createUser(formDataUser);

@@ -25,7 +25,7 @@ function start() {
         handlerChangePassword()
     })
     btnAddress.addEventListener('click', () => {
-        handlerUserAddress()
+        renderInforAddress()
     })
     btnInforUser.addEventListener('click', () => {
         renderDefault()
@@ -57,12 +57,12 @@ function handlerStatus() {
         switch (Number(status)) {
             case 2:
             case 3:
-                handlerStatus3(presentUser)
                 console.log('Người dùng có thông tin đầy đủ');
+                handlerStatus3(presentUser)
                 break;
             case 4:
-                handlerStatus4(presentUser)
                 console.log('Người dùng chưa có thông tin');
+                handlerStatus4(presentUser, status)
                 break;
         };
         showDefault(presentUser);
@@ -131,16 +131,23 @@ function handlerStatus3(presentUser) {
         const btnEdit = $('.btnEdit');
         btnEdit.addEventListener('click', () => {
             btnWrap.innerHTML = `<p href="#" class="btnSave">Lưu </p>`
-            handlerStatus4(presentUser);
+            handlerStatus4(presentUser, "");
         })
     }
 }
 // ***************************************** Status=4   *****************************************
-function handlerStatus4(presentUser) {
+function handlerStatus4(presentUser, status) {
+    console.log(presentUser);
+    if (!(status == '')) {
+        const btnWrap = $('.btn-edit-profile')
+        const email = $('.form-edit-profile-group input[name="email"]')
+        console.log(email);
+        email.value = presentUser.email
+        btnWrap.innerHTML = `<p href="#" class="btnSave">Lưu</p>`
 
-    // thay đổi input birthday
-    const wrapBirthOfDate = $('.birthofdate');
-    wrapBirthOfDate.innerHTML = ` <div class="input-setbirthday-wrap">
+        // thay đổi input birthday
+        const wrapBirthOfDate = $('.birthofdate');
+        wrapBirthOfDate.innerHTML = ` <div class="input-setbirthday-wrap">
                                       <input type="text" name="day" placeholder="Ngày "
                                           class=" setbirthday status ">
                                   </div>
@@ -152,45 +159,71 @@ function handlerStatus4(presentUser) {
                                       <input type="text" name="year" placeholder="Năm"
                                           class=" setbirthday status ">
                                   </div>`
-    // truyền giá trị cho các ô input của birthday
-    let a = presentUser.birthOfDate.split('/');
-    console.log(a);
-    const valueBirthOfDay = $$('.setbirthday');
-    valueBirthOfDay.forEach(element => {
-        if (element.name == 'day') {
-            element.value = a[0];
-        }
-        if (element.name == 'month') {
-            element.value = a[1];
-        }
-        if (element.name == 'year') {
-            element.value = a[2];
-        }
-    });
-    // mở cho người dùng thay đổi input
-    let elementStatus = $$(".status")
-    elementStatus.forEach((e) => {
-        e.classList.add('status4')
-        e.classList.remove('status3')
-    });
-    // add sự kiện on blur để check trống hay không // validate bước 1
-    elementStatus.forEach((element) => {
-        element.addEventListener('blur', () => {
-            if (element.value == '') {
-                element.classList.add('border-error');
-            } else {
-                element.classList.remove('border-error');
+        // mở cho người dùng thay đổi input
+        let elementStatus = $$(".status")
+        elementStatus.forEach((e) => {
+            e.classList.add('status4')
+            e.classList.remove('status3')
+        });
+        const btnSave = $('.btnSave');
+        btnSave.addEventListener('click', () => {
+            console.log('check form');
+            // validate bước 2
+            checkForm();
+        })
+    } else {
+        // thay đổi input birthday
+        const wrapBirthOfDate = $('.birthofdate');
+        wrapBirthOfDate.innerHTML = ` <div class="input-setbirthday-wrap">
+                                      <input type="text" name="day" placeholder="Ngày "
+                                          class=" setbirthday status ">
+                                  </div>
+                                  <div class="input-setbirthday-wrap">
+                                      <input type="text" name="month" placeholder="Tháng"
+                                          class=" setbirthday status ">
+                                  </div>
+                                  <div class="input-setbirthday-wrap">
+                                      <input type="text" name="year" placeholder="Năm"
+                                          class=" setbirthday status ">
+                                  </div>`
+        // mở cho người dùng thay đổi input
+        let elementStatus = $$(".status")
+        elementStatus.forEach((e) => {
+            e.classList.add('status4')
+            e.classList.remove('status3')
+        });
+        // truyền giá trị cho các ô input của birthday
+        let a = presentUser.birthOfDate.split('/');
+        console.log(a);
+        const valueBirthOfDay = $$('.setbirthday');
+        valueBirthOfDay.forEach(element => {
+            if (element.name == 'day') {
+                element.value = a[0];
+            }
+            if (element.name == 'month') {
+                element.value = a[1];
+            }
+            if (element.name == 'year') {
+                element.value = a[2];
             }
         });
-    })
-    const btnSave = $('.btnSave');
-    btnSave.addEventListener('click', () => {
-        console.log('check form');
-        // validate bước 2
-        checkForm();
-    })
-
-
+        // add sự kiện on blur để check trống hay không // validate bước 1
+        elementStatus.forEach((element) => {
+            element.addEventListener('blur', () => {
+                if (element.value == '') {
+                    element.classList.add('border-error');
+                } else {
+                    element.classList.remove('border-error');
+                }
+            });
+        })
+        const btnSave = $('.btnSave');
+        btnSave.addEventListener('click', () => {
+            console.log('check form');
+            // validate bước 2
+            checkForm();
+        })
+    }
 }
 // ***************************************** CheckForm      *****************************************
 function checkForm() {
@@ -280,6 +313,8 @@ function patchDataForm(valuesForm) {
         return response.json();
     }).then(function () {
         alert('Cập nhật thành công');
+        window.location.href = "/assets/html/account/profile.html";
+
     })
 }
 // ***************************************** Handler Change password  *****************************************
@@ -368,11 +403,9 @@ function renderFormChangePassWord() {
             </div > `
 }
 // ***************************************** Handler User Add Address  *****************************************
-function handlerUserAddress() {
-    const listAddress = JSON.parse(localStorage.getItem('listAddress'))
+function handlerUserAddress(listAddress) {
     if (!(listAddress == "")) {
         console.log(listAddress);
-        renderInforAddress(true, listAddress);
         const setDefault = $$('.setDefault');
         setDefault.forEach((e) => {
             // console.log(e.dataset.value);
@@ -380,37 +413,37 @@ function handlerUserAddress() {
                 e.classList.remove('hide-element')
             }
         })
+        const btnEdit = $$(".show-address-edit")
+        const btnDelete = $$(".show-address-delete")
+        // btnedit address
+        btnEdit.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault()
+                formAddNewAddress.classList.remove('hide-element');
+                validateFormAddress(listAddress, btn.dataset.index);
+            })
+        })
+        //btn delete address
+        btnDelete.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault()
+                listAddress.splice(btn.dataset.index, 1)
+                let newAddress = {
+                    address: [...listAddress]
+                }
+                patchDataForm(newAddress);
+            })
+        })
     } else {
-        renderInforAddress(false, false);
+        console.log('no adress');
     }
     const btnAdd = $(".btn-add-address")
-    const btnEdit = $$(".show-address-edit")
-    const btnDelete = $$(".show-address-delete")
     const formAddNewAddress = $(".add-address");
+
     // btn add new address
     btnAdd.addEventListener('click', () => {
         formAddNewAddress.classList.remove('hide-element');
         validateFormAddress(listAddress)
-    })
-    // btnedit address
-    btnEdit.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            formAddNewAddress.classList.remove('hide-element');
-            validateFormAddress(listAddress, btn.dataset.index);
-        })
-    })
-    //btn delete address
-    btnDelete.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            listAddress.splice(btn.dataset.index, 1)
-            let newAddress = {
-                address: [...listAddress]
-            }
-            patchDataForm(newAddress);
-
-        })
     })
 
 }
@@ -481,6 +514,9 @@ function validateFormAddress(listAddress, index) {
     btnBack.addEventListener('click', (e) => {
         e.preventDefault()
         formAddNewAddress.classList.add('hide-element');
+        listInput.forEach(element => {
+            element.value = '';
+        });
     })
 
     btnSubmit.addEventListener('click', (e) => {
@@ -548,9 +584,12 @@ function handlerEditAddress(listAddress, index) {
     // console.log(listAddress);
 }
 // ***************************************** Render Form Add Address  *****************************************
-function renderInforAddress(condition, listAddress) {
+function renderInforAddress() {
+
     let htmls = ""
-    if (condition && !(listAddress == false)) {
+    let listAddress = ''
+    if (!(localStorage.getItem('listAddress') === '')) {
+        listAddress = JSON.parse(localStorage.getItem('listAddress'))
         htmls = listAddress.map((address, index) => {
             return ` <div class="show-address">
             <div class="show-address-wrap">
@@ -579,10 +618,10 @@ function renderInforAddress(condition, listAddress) {
                 </div>
             </div>`
         }).join('')
-
     } else {
         htmls = `<p class="noti-add-address"> Bạn chưa có địa chỉ </p>`
     }
+
     profileMain.innerHTML = ` <div class="profile__main-wrap">
     <div div class="profile__main-wrapper">
         <div class="profile-main-add-address__header ">
@@ -597,7 +636,7 @@ function renderInforAddress(condition, listAddress) {
         </div>
     </div>
 </div>`
-
+    handlerUserAddress(listAddress)
 }
 // ***************************************** Render Infor User  *****************************************
 function renderDefault() {
@@ -659,7 +698,7 @@ function renderDefault() {
                       class="form-input-edit-profile  status ">
                     </div>
                 </div>
-               <div class='btn-edit-profile'> </div>
+               <div class='btn-edit-profile'>Save </div>
             </form>
         </div>
         <div class="profile__main-body-upavatar">
